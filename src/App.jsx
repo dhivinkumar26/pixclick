@@ -1,12 +1,22 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
-    <div>
-      <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-    </div>
+    <Router>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<></>} />
+        <Route path="/profit" element={<></>} />
+        <Route path="/make-links" element={<></>} />
+        <Route path="/profile" element={<></>} />
+      </Routes>
+
+      <Footer />
+    </Router>
   )
 }
 
