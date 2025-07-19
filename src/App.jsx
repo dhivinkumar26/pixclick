@@ -6,7 +6,7 @@ import OTP from './components/Login&signup/otp'
 import Signup from './pages/login&signup'
 import Makelinks from './pages/MakeLinkPages'
 
->>>>>>> origin/kathir
+
 
 const App = () => {
   return (
