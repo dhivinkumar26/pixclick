@@ -4,7 +4,7 @@ import Login from '../components/Login&signup/login'
 
 
 
-const AboutUs = () => {
+const Signup = () => {
   return (
     <div>
       <Sign_header />
@@ -15,4 +15,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default Signup

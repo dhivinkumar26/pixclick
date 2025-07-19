@@ -11,8 +11,8 @@ const App = () => {
       {/* Content wrapper: Constrains max width on larger screens and centers content within */}
       <div className="w-full max-w-sm sm:max-w-md bg-white p-6 sm:p-8 rounded-lg shadow-lg">
         {/* Back arrow */}
-        <div className="self-start mb-6">
-          <FaArrowLeft className="text-gray-500 text-lg cursor-pointer hover:text-gray-700 transition-colors" />
+        <div className="self-start mb-4">
+          <span className="text-xl cursor-pointer">&#8592;</span>
         </div>
 
         {/* Title */}
@@ -49,7 +49,7 @@ const App = () => {
             <FcGoogle className="text-1xl sm:text-2xl" />
           </button>
         </div>
-<br />
+
         {/* Terms */}
         <p className="text-left text-gray-500 text-xs sm:text-sm mb-6 leading-relaxed">
           By continuing, you agree to PixClick's{" "}
