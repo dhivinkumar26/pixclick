@@ -1,1 +1,9 @@
 @import "tailwindcss";
+.swiper-button-prev,
+.swiper-button-next {
+  color: black;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #22c55e; /* Tailwind green-500 */
+}
