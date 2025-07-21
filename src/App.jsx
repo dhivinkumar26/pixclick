@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import OTP from './components/Login&signup/otp'
-import Signup from './pages/login&signup'
-import Makelinks from './pages/MakeLinkPages'
+import Signup from './Pages/login&signup'
+import Makelinks from './Pages/MakeLinkPages'
+import Homepage from './pages/Homepage'
 
 
 
@@ -14,12 +15,13 @@ const App = () => {
       <Header />
 
       <Routes>
-        <Route path="/" element={<></>} />
+        <Route path="/" element={<Homepage/>} />
         <Route path="/otp" element={<OTP/>} />
         <Route path="/login" element={<Signup/>} />
-        <Route path="/profit" element={<></>} />
+        
+        
         <Route path="/make-links" element={<Makelinks/>} />
-        <Route path="/profile" element={<></>} />
+       
       </Routes>
       {/* <Homepage/> */}
 
