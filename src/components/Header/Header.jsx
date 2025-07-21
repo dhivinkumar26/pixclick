@@ -180,7 +180,7 @@ const Header = () => {
 
             {/* Web Navigation (md:flex) */}
             <div className="hidden md:flex items-center space-x-4 text-lg">
-              <Link to="/profit-rates" className="flex items-center space-x-1 hover:text-green-400">
+              <Link to="/partners" className="flex items-center space-x-1 hover:text-green-400">
                 <span className="bg-yellow-400 text-green-930 rounded-full px-0.5 py-0.5 text-sm">₹ </span>
                 <span>Profit Rates</span>
               </Link>
@@ -247,7 +247,7 @@ const Header = () => {
               <ul>
                 <li className="mb-2">
                   <Link
-                    to="/profit-rates"
+                    to="/partners"
                     className="flex items-center p-3 text-gray-800 hover:bg-gray-100 rounded-md text-base"
                     onClick={toggleProfileModal}
                   >

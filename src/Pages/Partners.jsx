@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
-import Tabs from "../components/Tabs";
-import PartnerCard from "../components/PartnerCard";
+import Header from "../components/Profit rates/Header";
+import Tabs from "../components/Profit rates/Tabs";
+import PartnerCard from "../components/Profit rates/PartnerCard";
 
 // Dummy partners data
 const partners = [
@@ -36,7 +36,7 @@ const Partners = () => {
       <input
         type="text"
         placeholder="Partners"
-        className="w-full border px-4 py-2 rounded mb-4"
+        className="w-full  shadow px-4 py-2 rounded mb-4"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
