@@ -74,7 +74,7 @@ const EarnSection = () => {
             <span className="text-xl font-semibold text-black">₹30.00</span>
           </div>
           <a
-            href="https://your-earn-link.com"
+            href="/profitshala"
             className="text-sm border border-black px-0 md:px-4 py-3 rounded-full flex items-center gap-2 hover:bg-black hover:text-white transition"
           >
             Learn How To Earn More

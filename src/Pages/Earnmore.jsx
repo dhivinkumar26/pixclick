@@ -1,5 +1,5 @@
 import React from 'react'
-import GetHelp from '../Earnmore/Gethelp'
+import GetHelp from '../components/Earnmore/Gethelp'
 
 const Earnmore = () => {
   return (
