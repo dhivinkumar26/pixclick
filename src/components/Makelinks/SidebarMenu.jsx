@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React from "react";
 
-export default function SidebarMenu() {
-  const menuItems = [
+// components/Sidebar.jsx
+export default function Sidebar() {
+  const menu = [
     "My Earnings",
     "Reports",
     "Profit Didn't Track?",
@@ -9,29 +10,17 @@ export default function SidebarMenu() {
     "Payment History",
     "Account Settings",
   ];
-
-  const [active, setActive] = useState("My Earnings"); // default active
-
   return (
-    <div className="w-[250px] bg-white shadow-sm border-r min-h-screen">
-      <div className="text-sm text-gray-600 px-6 py-4">
-        <span className="text-gray-400">Home / </span>
-        <span className="font-semibold text-black">Make Links</span>
-      </div>
-
-      <ul>
-        {menuItems.map((item, index) => (
-          <li
-            key={index}
-            onClick={() => setActive(item)}
-            className={`px-6 py-4 text-sm border-b cursor-pointer 
-              ${active === item ? "border-l-4 border-green-600 bg-gray-50 font-medium" : "border-l-4 border-transparent"}
-              hover:bg-gray-100 transition-all`}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
+    <div className="w-full md:w-64 bg-white shadow p-4 rounded mb-4 md:mb-0">
+      {menu.map((item, idx) => (
+        <div
+          key={idx}
+          className="py-3 px-4 border-b text-sm hover:bg-gray-100 cursor-pointer"
+        >
+          {item}
+        </div>
+      ))}
     </div>
   );
 }
+
