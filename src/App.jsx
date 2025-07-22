@@ -16,6 +16,10 @@ import TipsTricks from "./components/Earnmorechild/Tipstricks"
 import RealUserStories from "./components/Earnmorechild/Realuserstories"
 import Affiliaters from "./components/Earnmorechild/Affilaters"
 import ContactUs from "./components/Earnmorechild/ContactUs"
+import Myprofile from './Pages/Myprofile'
+import TermsConditions from './components/Footer useful reads/Termsconditions'
+import Privacy from "./components/Footer useful reads/privacy"
+import Antispam from "./components/Footer useful reads/Antispampolicy"
 
 
 
@@ -29,11 +33,14 @@ const App = () => {
         <Route path="/otp" element={<OTP/>} />
         <Route path="/login" element={<Signup/>} />
         <Route path="/partners" element={<Partners />} />
+        <Route path="/terms" element={<TermsConditions/>}/>
+        <Route path="/privacy" element={<Privacy/>}/>
+        <Route path="/anti-spam" element={<Antispam/>}/>
 
         
         
         <Route path="/make-links" element={<Makelinks/>} />
-        <Route path="/profile" element={<></>} />
+         <Route path="/profile" element={<Myprofile/>} />
         <Route path="/profitshala" element={<Earnmore />}>
           <Route path="earnkaro-basics" element={<EarnkaroBasics />} />
           <Route path="all-about-profit" element={<AllAboutProfit />} />
@@ -41,7 +48,9 @@ const App = () => {
           <Route path="real-user-stories" element={<RealUserStories />} />
           <Route path="affiliaters" element={<Affiliaters />} />
           <Route path="contact-us" element={<ContactUs />} />
+         
         </Route>
+      
        
       </Routes>
       {/* <Homepage/> */}
