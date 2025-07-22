@@ -4,6 +4,8 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import OTP from './components/Login&signup/otp'
 import Signup from './pages/login&signup'
+import Makelinks from './pages/MakeLinkPages'
+
 
 
 const App = () => {
@@ -16,9 +18,10 @@ const App = () => {
         <Route path="/otp" element={<OTP/>} />
         <Route path="/login" element={<Signup/>} />
         <Route path="/profit" element={<></>} />
-        <Route path="/make-links" element={<></>} />
+        <Route path="/make-links" element={<Makelinks/>} />
         <Route path="/profile" element={<></>} />
       </Routes>
+      {/* <Homepage/> */}
 
       <Footer />
     </Router>
