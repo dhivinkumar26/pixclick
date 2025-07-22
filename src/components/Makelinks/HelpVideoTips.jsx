@@ -3,7 +3,7 @@ import { Info } from "lucide-react";
 
 export default function HelpSection() {
   return (
-    <div className="bg-white shadow-md px-6 py-6 w-full max-w-[1203px] mx-auto ">
+    <div className="bg-white shadow-md  px-6 py-6 w-full max-w-[1203px] mx-auto  mb-10">
       {/* Video Section */}
       <h2 className="text-center text-[22px] font-bold mb-6">
         How to Make a Link <span className="font-semibold">Easily</span>

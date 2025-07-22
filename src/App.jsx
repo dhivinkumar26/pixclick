@@ -6,8 +6,6 @@ import OTP from './components/Login&signup/otp'
 import Signup from './pages/login&signup'
 import Makelinks from './pages/MakeLinkPages'
 import Earnmore from './Pages/Earnmore'
-import Signups from './Pages/login&signup'
-import Makelink from './Pages/MakeLinkPages'
 import Homepage from './Pages/Homepage'
 import Partners from './Pages/Partners'
 
@@ -23,9 +21,6 @@ const App = () => {
         <Route path="/otp" element={<OTP/>} />
         <Route path="/login" element={<Signup/>} />
         <Route path="/partners" element={<Partners />} />
-
-        
-        
         <Route path="/make-links" element={<Makelinks/>} />
         <Route path="/profile" element={<></>} />
         <Route path="/profitshala" element={<Earnmore/>} />

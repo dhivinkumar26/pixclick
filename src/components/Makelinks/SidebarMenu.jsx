@@ -1,37 +1,34 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function SidebarMenu() {
+export default function SidebarMenu({ onMenuSelect }) {
   const menu = [
-    { label: "My Earnings", path: "/my-earnings" },
-    { label: "Reports", path: "/reports" },
-    { label: "Profit Didn't Track?", path: "/profit-track" },
-    { label: "Request Payment", path: "/request-payment" },
-    { label: "Payment History", path: "/payment-history" },
-    { label: "Account Settings", path: "/account-settings" },
+   
+    { label: "My Earnings", key: "my-earnings" },
+    { label: "Reports", key: "reports" },
+    { label: "Profit Didn't Track?", key: "profitTrack" },
+    { label: "Request", key: "Request" },
+    { label: "PaymentHistory", key: "PaymentHistory" },
+    { label: "Account Settings", key: "account-settings" },
   ];
 
   return (
-    <div className="w-full md:w-[390px] shadow mb-4 md:mb-0 ml-0 md:ml-8">
+    <div className="w-full md:w-[360px] max-w-[360px] bg-white  shadow-md overflow-hidden max-h-[400px]">
       {/* Breadcrumb */}
-      <div className="text-sm mb-4 text-gray-600 ml-9 mt-3">
-        <Link to="/" className="text-blue-600 hover:underline">Home</Link> / Make Links
+      <div className="text-[18px] font-medium text-gray-600 px-6 py-4 border-b border-gray-200">
+        <Link to="/" className="text-black hover:underline">Home</Link>
       </div>
 
-      {/* Menu */}
-      <div className="w-full bg-white shadow-md h-[360px] py-0">
+      {/* Sidebar Menu */}
+      <div className="">
         {menu.map((item, idx) => (
-          <NavLink
+          <div
             key={idx}
-            to={item.path}
-            className={({ isActive }) =>
-              `block px-6 py-4 border-b border-gray-200 text-lg font-medium ${
-                isActive ? "text-blue-600" : "text-black"
-              }`
-            }
+            onClick={() => onMenuSelect(item.key)}
+            className="px-6 py-4 border-b border-gray-100 text-[16px] text-gray-700 hover:text-black cursor-pointer"
           >
             {item.label}
-          </NavLink>
+          </div>
         ))}
       </div>
     </div>
