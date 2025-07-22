@@ -1,5 +1,5 @@
 import React from 'react'
-import Sign_header from './../components/Login&signup/header'
+import Sign_header from '../components/Login&signup/header'
 import Login from '../components/Login&signup/login'
 
 
