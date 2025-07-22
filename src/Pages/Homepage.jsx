@@ -1,6 +1,6 @@
 import React from 'react'
-import Hero from "../Home/Herosection.jsx";
-import Tabs from "../Home/TabSection.jsx"
+import Hero from "../components/Home/Herosection.jsx";
+import Tabs from "../components/Home/TabSection.jsx"
 
 
 
