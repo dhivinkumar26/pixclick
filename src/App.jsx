@@ -5,6 +5,10 @@ import Footer from './components/Footer/Footer'
 import OTP from './components/Login&signup/otp'
 import Signup from './pages/login&signup'
 import Makelinks from './pages/MakeLinkPages'
+import Earnings from './pages/MyEarnings'
+import Total_Earnings from './Pages/Total_Earnings'
+import Report from './Pages/Report'
+
 
 
 
@@ -19,6 +23,9 @@ const App = () => {
         <Route path="/login" element={<Signup/>} />
         <Route path="/profit" element={<></>} />
         <Route path="/make-links" element={<Makelinks/>} />
+         <Route path="/earnings" element={<Earnings/>} />
+         <Route path="/total_earn" element={<Total_Earnings/>} />
+         <Route path="/report" element={<Report/>} />
         <Route path="/profile" element={<></>} />
       </Routes>
       {/* <Homepage/> */}
