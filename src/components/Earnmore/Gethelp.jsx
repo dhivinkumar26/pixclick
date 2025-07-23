@@ -44,7 +44,7 @@ const cards = [
 
 const Earnmore = () => {
   const location = useLocation();
-  const pathParts = location.pathname.split("/").filter(Boolean); // ['profitshala', 'earnkaro-basics']
+  const pathParts = location.pathname.split("/").filter(Boolean);
 
   const getPageTitle = (slug) => {
     switch (slug) {
@@ -62,28 +62,48 @@ const Earnmore = () => {
         return "Affiliaters";
       case "contact-us":
         return "Contact Us";
+      case "how-to-find-retailers-on-earnkaro":
+        return "How to find available retailers on EarnKaro?";
+      case "how-to-earn-money-through-affiliate-marketing":
+        return "How to earn money through affiliate marketing?";
+      case "how-to-check-link-performance":
+        return "How to check link performance?";
+      case "how-to-change-language":
+        return "How to change language on EarnKaro?";
       default:
-        return "";
+        return slug.replace(/-/g, " ");
     }
   };
 
   return (
     <div className="pb-10 bg-green-500 sm:bg-green-500 lg:bg-gray-100">
-      {/* Header with Breadcrumb */}
+      {/* ✅ Updated Breadcrumb */}
       <div className="relative">
         <div className="bg-gradient-to-b from-green-400 to-green-600 p-6 hidden sm:block">
           <div className="text-white font-bold text-lg space-x-1">
             <Link to="/" className="hover:text-gray-200">Home</Link>
+
             {pathParts.includes("profitshala") && (
               <>
                 <span>/</span>
                 <Link to="/profitshala" className="hover:text-gray-200">Get Help</Link>
               </>
             )}
-            {pathParts.length > 1 && (
+
+            {pathParts.includes("earnkaro-basics") && (
               <>
                 <span>/</span>
-                <span>{getPageTitle(pathParts[1])}</span>
+                <Link to="/profitshala/earnkaro-basics" className="hover:text-gray-200">
+                  EarnKaro Basics
+                </Link>
+              </>
+            )}
+
+            {/* ✅ Grandchild route */}
+            {pathParts.length >= 3 && (
+              <>
+                <span>/</span>
+                <span>{getPageTitle(pathParts[2])}</span>
               </>
             )}
           </div>
