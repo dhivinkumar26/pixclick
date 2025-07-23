@@ -198,15 +198,16 @@ export default function OrderDetailsPage() {
                 <span className="font-bold text-lg text-gray-800">₹30</span>
                 </div>
                 <span className="bg-yellow-400 text-yellow-900 text-xs px-2 py-1 rounded-full">Pending</span>
-                <FaChevronRight className="text-gray-500" />
+                <Link to="/bonus"><FaChevronRight className="text-gray-500" /></Link>
                 </div>
               </div>
             )}
 
             {/* Banner */}
             <div className="mt-6 ">
+                <Link to="/make-links">
               <img src="https://placehold.co/600x80/dcfce7/16a34a?text=Share+More+to+Earn+More"
-                alt="Banner" className="w-full rounded shadow" />
+                alt="Banner" className="w-full rounded shadow" /></Link>
                 
             </div>
           </div>

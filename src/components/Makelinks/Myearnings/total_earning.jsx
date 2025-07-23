@@ -6,6 +6,7 @@ import {
   FaChevronUp,
   FaInfo
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const MyEarnings = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -27,7 +28,7 @@ const MyEarnings = () => {
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 -mt-12 sm:-mt-16 lg:-mt-20">
         {/* Breadcrumb */}
         <div className="flex text-sm sm:text-base text-white mb-5 sm:mb-6">
-          <span className="hover:underline cursor-pointer">Home</span>
+          <Link to="/"><span className="hover:underline cursor-pointer">Home</span></Link>
           <span className="mx-1">/</span>
           <span className="font-semibold">My Earnings</span>
         </div>
@@ -45,12 +46,12 @@ const MyEarnings = () => {
 
                 <div className="flex items-center text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
                   <span className="mr-3">₹30.00</span>
-                  <button
+                 <Link to="/my-earnings"> <button
                     className="flex items-center text-green-600 text-base sm:text-lg font-medium hover:underline py-1 px-2 -ml-2"
                     aria-label="Go back"
                   >
                     <FaChevronLeft className="mr-1 text-xs sm:text-sm" /> Back
-                  </button>
+                  </button></Link>
                 </div>
 
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pt-4 border-t border-gray-200">
