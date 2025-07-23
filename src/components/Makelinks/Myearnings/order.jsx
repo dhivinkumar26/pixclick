@@ -1,86 +1,159 @@
-import React from "react";
-import { FaDownload } from "react-icons/fa"; // For the download icon
-import { Link } from "react-router-dom"; // For navigation links
+import React, { useState, useEffect } from "react";
+import { FaDownload, FaChevronDown, FaChevronUp, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function OrderDetailsPage() {
-  return (
-    <div className="bg-gray-100 min-h-screen font-sans w-full pb-10"> {/* Changed mb-10 to pb-10 for consistent padding */}
-      {/* Top green gradient section */}
-      <div className="w-full bg-gradient-to-b from-green-600 to-green-500 h-16 md:h-20 lg:h-28"></div>
+  const statusOptions = ["Pending", "Confirmed", "Paid", "Requested", "Cancelled"];
+  const dateOptions = ["This month", "Last 30 Days", "Last month", "Last 3 months"];
 
-      {/* Main content wrapper with responsive horizontal padding and negative top margin */}
+  // States for filter selection
+  const [showStatus, setShowStatus] = useState(true);
+  const [showDates, setShowDates] = useState(true);
+  const [selectedStatus, setSelectedStatus] = useState([]);
+  const [selectedDateOption, setSelectedDateOption] = useState("");
+  const [dateRange, setDateRange] = useState({ from: "", till: "" });
+
+  const [appliedFilters, setAppliedFilters] = useState(null);
+
+  // Auto-update date range when date option is selected
+  useEffect(() => {
+    if (selectedDateOption) {
+      const today = new Date();
+      let fromDate = "";
+      if (selectedDateOption === "This month") {
+        fromDate = new Date(today.getFullYear(), today.getMonth(), 1);
+      } else if (selectedDateOption === "Last 30 Days") {
+        fromDate = new Date(today.setDate(today.getDate() - 30));
+      } else if (selectedDateOption === "Last month") {
+        fromDate = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+      } else if (selectedDateOption === "Last 3 months") {
+        fromDate = new Date(today.getFullYear(), today.getMonth() - 3, 1);
+      }
+      const from = fromDate.toISOString().split("T")[0];
+      const till = new Date().toISOString().split("T")[0];
+      setDateRange({ from, till });
+    }
+  }, [selectedDateOption]);
+
+  const handleStatusChange = (status) => {
+    setSelectedStatus((prev) =>
+      prev.includes(status) ? prev.filter((s) => s !== status) : [...prev, status]
+    );
+  };
+
+  const handleDateOptionChange = (option) => {
+    setSelectedDateOption(option);
+  };
+
+  const handleApply = () => {
+    setAppliedFilters({
+      status: [...selectedStatus],
+      dateOption: selectedDateOption,
+      dateRange: { ...dateRange },
+    });
+  };
+
+  const handleReset = () => {
+    setSelectedStatus([]);
+    setSelectedDateOption("");
+    setDateRange({ from: "", till: "" });
+    setAppliedFilters(null);
+  };
+
+  return (
+    <div className="bg-gray-100 min-h-screen font-sans w-full pb-10">
+      <div className="w-full bg-gradient-to-b from-green-600 to-green-500 h-16 md:h-20 lg:h-28"></div>
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 -mt-12 sm:-mt-16 lg:-mt-20">
-        {/* Breadcrumb Navigation */}
-        <div className="flex text-sm sm:text-base text-white mb-5 sm:mb-6">
-          {/* Home link */}
-          <Link to="/" className="hover:underline cursor-pointer">Home</Link>
+        {/* Breadcrumb */}
+        <div className="flex text-sm sm:text-base text-white mb-5">
+          <Link to="/" className="hover:underline">Home</Link>
           <span className="mx-1">/</span>
-          {/* My Earnings link */}
-          <Link to="/my-earnings" className="hover:underline cursor-pointer font-semibold">My Earnings</Link> {/* Assuming a route for My Earnings */}
+          <Link to="/my-earnings" className="hover:underline font-semibold">My Earnings</Link>
           <span className="mx-1">/</span>
-          {/* Current page (Order Details) */}
           <span className="font-semibold">Order Details</span>
         </div>
 
-        {/* Main content area: Filter Sidebar and Order Details Card */}
-        {/* Uses flexbox for responsive layout: column on small screens, row on medium and up */}
-        <div className="flex flex-col md:flex-row gap-4 p-4 md:p-6 bg-transparent"> {/* bg-transparent to let child cards define their own background */}
-          {/* Filter Sidebar */}
-          <div className="bg-white rounded-lg shadow p-4 w-full md:w-64 flex-shrink-0"> {/* flex-shrink-0 to prevent shrinking on larger screens */}
+        <div className="flex flex-col md:flex-row gap-4 p-4">
+          {/* Sidebar */}
+          <div className="bg-white rounded-lg shadow p-4 w-full md:w-64">
             <h3 className="font-semibold mb-3 text-gray-800">Filter By</h3>
-            <hr className="mb-3 border-gray-200" /> {/* Added border color for clarity */}
-
-            {/* Status Filter Section */}
-            <div className="mb-4">
-              <h4 className="text-gray-700 font-medium mb-2">Status</h4>
-              <div className="flex flex-col gap-1 text-sm text-gray-600">
-                {["Pending", "Confirmed", "Paid", "Requested", "Cancelled"].map(
-                  (status) => (
-                    <label key={status} className="flex items-center gap-2 cursor-pointer hover:text-gray-800">
-                      <input type="checkbox" className="form-checkbox text-green-600 rounded" /> {/* Styled checkbox */}
-                      {status}
-                    </label>
-                  )
-                )}
-              </div>
-            </div>
-
             <hr className="mb-3 border-gray-200" />
 
-            {/* Dates Filter Section */}
+            {/* Status */}
             <div className="mb-4">
-              <h4 className="text-gray-700 font-medium mb-2">Dates</h4>
-              <p className="text-xs text-gray-500 mb-2">Select transactions of</p>
-              <div className="flex flex-col gap-1 text-sm text-gray-600">
-                {["This month", "Last 30 Days", "Last month", "Last 3 months"].map(
-                  (date) => (
-                    <label key={date} className="flex items-center gap-2 cursor-pointer hover:text-gray-800">
-                      <input type="checkbox" className="form-checkbox text-green-600 rounded" /> {/* Styled checkbox */}
-                      {date}
+              <div className="flex justify-between items-center cursor-pointer mb-2"
+                onClick={() => setShowStatus(!showStatus)}>
+                <h4 className="text-gray-700 font-medium">Status</h4>
+                {showStatus ? <FaChevronUp /> : <FaChevronDown />}
+              </div>
+              {showStatus && (
+                <>
+                  <p className="text-xs text-gray-500 mb-2">Show only</p>
+                  {statusOptions.map((status) => (
+                    <label key={status} className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        checked={selectedStatus.includes(status)}
+                        onChange={() => handleStatusChange(status)}
+                        className="form-checkbox text-green-600"
+                      />
+                      {status}
                     </label>
-                  )
-                )}
-              </div>
+                  ))}
+                </>
+              )}
+            </div>
+            <hr className="mb-3 border-gray-200" />
 
-              <p className="text-xs text-gray-500 mt-3 mb-1">Select date range</p>
-              <div className="flex flex-col sm:flex-row gap-2"> {/* Responsive flex for date inputs */}
-                <input
-                  type="date"
-                  className="w-full sm:w-1/2 border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 focus:ring-green-500 focus:border-green-500" // Added focus styles
-                />
-                <input
-                  type="date"
-                  className="w-full sm:w-1/2 border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 focus:ring-green-500 focus:border-green-500" // Added focus styles
-                />
+            {/* Dates */}
+            <div className="mb-4">
+              <div className="flex justify-between items-center cursor-pointer mb-2"
+                onClick={() => setShowDates(!showDates)}>
+                <h4 className="text-gray-700 font-medium">Dates</h4>
+                {showDates ? <FaChevronUp /> : <FaChevronDown />}
               </div>
+              {showDates && (
+                <>
+                  <p className="text-xs text-gray-500 mb-2">Select transactions of</p>
+                  {dateOptions.map((option) => (
+                    <label key={option} className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        checked={selectedDateOption === option}
+                        onChange={() => handleDateOptionChange(option)}
+                        className="form-checkbox text-green-600"
+                      />
+                      {option}
+                    </label>
+                  ))}
+                  <p className="text-xs text-gray-500 mt-3 mb-1">Select date range</p>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex flex-col text-xs text-gray-700">
+                      <span>From</span>
+                      <input type="date"
+                        value={dateRange.from}
+                        onChange={(e) => setDateRange({ ...dateRange, from: e.target.value })}
+                        className="border rounded px-2 py-1 text-sm" />
+                    </div>
+                    <div className="flex flex-col text-xs text-gray-700">
+                      <span>Till</span>
+                      <input type="date"
+                        value={dateRange.till}
+                        onChange={(e) => setDateRange({ ...dateRange, till: e.target.value })}
+                        className="border rounded px-2 py-1 text-sm" />
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
 
-            {/* Apply & Reset buttons */}
-            <div className="flex gap-2 mt-4"> {/* Increased top margin for buttons */}
-              <button className="flex-1 bg-green-600 text-white text-sm py-2 rounded-md hover:bg-green-700 transition-colors duration-200 shadow-sm"> {/* Added hover, transition, shadow */}
+            <div className="flex gap-2 mt-4">
+              <button onClick={handleApply}
+                className="flex-1 bg-green-600 text-white text-sm py-2 rounded hover:bg-green-700">
                 APPLY
               </button>
-              <button className="flex-1 bg-gray-200 text-gray-700 text-sm py-2 rounded-md hover:bg-gray-300 transition-colors duration-200 shadow-sm"> {/* Added hover, transition, shadow */}
+              <button onClick={handleReset}
+                className="flex-1 bg-gray-200 text-gray-700 text-sm py-2 rounded hover:bg-gray-300">
                 RESET
               </button>
             </div>
@@ -88,46 +161,53 @@ export default function OrderDetailsPage() {
 
           {/* Order Details Card */}
           <div className="bg-white rounded-lg shadow p-4 flex-1">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2"> {/* Responsive flex for title and button */}
-              <h3 className="font-semibold text-gray-800 text-lg">Order Details</h3> {/* Increased text size for title */}
-              <button className="flex items-center gap-1 bg-green-600 text-white text-xs px-3 py-2 rounded-md hover:bg-green-700 transition-colors duration-200 shadow-sm"> {/* Added hover, transition, shadow, increased padding */}
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="font-semibold text-gray-800 text-lg">Order Details</h3>
+              <button className="flex items-center gap-1 bg-green-600 text-white text-xs px-3 py-2 rounded hover:bg-green-700">
                 <FaDownload className="w-3 h-3" /> Download Report
               </button>
             </div>
-            <hr className="mb-3 border-gray-200" />
+            <hr className="mb-3 text-gray-300" />
 
-            {/* Order item example */}
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 p-2 border border-gray-200 rounded-md"> {/* Added border and padding for visual separation */}
-              <div className="flex items-center gap-3 mb-2 sm:mb-0"> {/* Added mb for mobile stacking */}
-                {/* Placeholder for logo */}
-                <img
-                  src="https://placehold.co/40x40/e0e0e0/333333?text=Logo" // Updated placeholder for better visual
-                  alt="Brand Logo"
-                  className="rounded-md object-cover" // Added object-cover for image fitting
-                  onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/40x40/cccccc/000000?text=Logo"; }} // Fallback
-                />
-                <div className="flex flex-col text-sm">
-                  <span className="text-gray-700">Bonus Type</span>
-                  <span className="font-medium text-gray-900">Sign Up</span> {/* Darker text for emphasis */}
+            {/* Show applied filters card */}
+            {appliedFilters ? (
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <strong>Status:</strong> {appliedFilters.status.join(", ") || "None"}
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <strong>Date Option:</strong> {appliedFilters.dateOption || "None"}
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <strong>Date Range:</strong> {appliedFilters.dateRange.from} to {appliedFilters.dateRange.till}
                 </div>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-lg text-gray-800">₹30</span> {/* Increased size for profit */}
-                <span className="bg-yellow-400 text-yellow-900 text-xs px-2 py-1 rounded-full font-semibold"> {/* Darker text for pending status */}
-                  Pending
-                </span>
+            ) : (
+              // Default card
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 p-2 border rounded">
+                <div className="flex items-center gap-3 mb-2 sm:mb-0">
+                  <img src="https://placehold.co/40x40" alt="Logo" className="rounded" />
+                  <div className="flex flex-col text-sm">
+                    <span className="text-gray-700">Bonus Type</span>
+                    <span className="font-medium text-gray-900">Sign Up</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-6">
+                    <div className="flex flex-col text-sm">
+                <span className="text-gray-700">Bonus</span> 
+                <span className="font-bold text-lg text-gray-800">₹30</span>
+                </div>
+                <span className="bg-yellow-400 text-yellow-900 text-xs px-2 py-1 rounded-full">Pending</span>
+                <FaChevronRight className="text-gray-500" />
+                </div>
               </div>
-            </div>
+            )}
 
-            {/* Share banner */}
-            <div className="mt-6"> {/* Increased top margin */}
-              {/* Placeholder for banner */}
-              <img
-                src="https://placehold.co/600x80/dcfce7/16a34a?text=Share+More+to+Earn+More" // Updated placeholder for better visual
-                alt="Share More Banner"
-                className="w-full rounded-lg shadow-md object-cover" // Added shadow and object-cover
-                onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/600x80/cccccc/000000?text=Banner"; }} // Fallback
-              />
+            {/* Banner */}
+            <div className="mt-6 ">
+              <img src="https://placehold.co/600x80/dcfce7/16a34a?text=Share+More+to+Earn+More"
+                alt="Banner" className="w-full rounded shadow" />
+                
             </div>
           </div>
         </div>

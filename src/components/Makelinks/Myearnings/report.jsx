@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Info } from "lucide-react";
 import { Link } from "react-router-dom";
-
+ 
 export default function ReportsPage() {
   const [showModal, setShowModal] = useState(false); // State for modal
-
+ 
   return (
     <div className="min-h-screen w-full flex justify-center items-start bg-gray-50 p-4 sm:p-8 lg:p-20">
       <div className="w-full">
@@ -13,19 +13,19 @@ export default function ReportsPage() {
           <Link to="/" className="text-gray-700 hover:underline">Home</Link> /{" "}
           <span className="font-semibold text-black">Reports</span>
         </div>
-
+ 
         {/* Page Title */}
         <h2 className="text-3xl font-bold mb-4 shadow bg-white rounded-lg p-3 sm:p-4">
           REPORTS
         </h2>
-
+ 
         {/* Profit Summary Card */}
         <div className="bg-white shadow rounded-lg p-6 mb-6">
           <h3 className="text-lg font-semibold mb-4 flex items-center gap-1 text-gray-800">
             All Time Total Profit <Info className="w-4 h-4 text-gray-400" />
             <span className="ml-2 font-bold text-4xl text-black">₹30.0</span>
           </h3>
-
+ 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-md">
             <div className="flex items-center gap-2 text-orange-500 font-bold p-4 border border-gray-300 rounded-md">
               <span className="bg-orange-200 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">⏳</span>
@@ -48,7 +48,7 @@ export default function ReportsPage() {
               Cancelled ₹0
             </div>
           </div>
-
+ 
           <div
             className="text-semibold text-blue-800 mt-3 underline cursor-pointer"
             onClick={() => setShowModal(true)}
@@ -56,7 +56,7 @@ export default function ReportsPage() {
             What’s this?
           </div>
         </div>
-
+ 
         {/* Performance Breakdown */}
         <div className="bg-white shadow rounded-lg p-6 mb-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
@@ -68,7 +68,7 @@ export default function ReportsPage() {
               <option>Filter by</option>
             </select>
           </div>
-
+ 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center text-md">
             <div className="bg-pink-100 rounded-md p-4">
               <p className="font-bold text-gray-700">Clicks</p>
@@ -90,7 +90,7 @@ export default function ReportsPage() {
             </div>
           </div>
         </div>
-
+ 
         {/* Performance by Brands Table */}
         <div className="bg-white shadow rounded-lg p-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
@@ -102,7 +102,7 @@ export default function ReportsPage() {
               <option>Filter by</option>
             </select>
           </div>
-
+ 
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left border-t">
               <thead className="bg-gray-50 text-gray-600">
@@ -123,7 +123,7 @@ export default function ReportsPage() {
           </div>
         </div>
       </div>
-
+ 
       {/* Modal */}
       {showModal && (
         <>
