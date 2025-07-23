@@ -6,8 +6,7 @@ import OTP from './components/Login&signup/otp'
 import Signup from './Pages/login&signup'
 import Makelinks from './Pages/MakeLinkPages'
 import Homepage from './pages/Homepage'
-
-
+import CategoryLayout from './components/CategoryLayout'
 
 const App = () => {
   return (
@@ -15,15 +14,14 @@ const App = () => {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Homepage/>} />
-        <Route path="/otp" element={<OTP/>} />
-        <Route path="/login" element={<Signup/>} />
-        
-        
-        <Route path="/make-links" element={<Makelinks/>} />
-       
+        <Route path="/" element={<Homepage />} />
+        <Route path="/otp" element={<OTP />} />
+        <Route path="/login" element={<Signup />} />
+        <Route path="/make-links" element={<Makelinks />} />
+
+        {/* Dynamic category route with sidebar */}
+        <Route path="/:category" element={<CategoryLayout />} />
       </Routes>
-      {/* <Homepage/> */}
 
       <Footer />
     </Router>
