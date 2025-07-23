@@ -38,8 +38,8 @@ const Footer = () => {
             </li>
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
-              <a href="anti-spam" className="hover:text-red-500">Anti-Spam Policy</a>
-            </li>
+              <a href="#" className="hover:text-red-500">Anti-Spam Policy</a>
+             </li>
           </ul>
         </div>
 
