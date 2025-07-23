@@ -21,6 +21,7 @@ import ContactUs from "./components/Earnmorechild/ContactUs"
 import TermsConditions from './components/Footer useful reads/Termsconditions'
 import Privacy from "./components/Footer useful reads/privacy"
 import Antispam from "./components/Footer useful reads/Antispampolicy"
+import MainProfile from './Pages/MainProfile'
 
 const App = () => {
   return (
@@ -34,6 +35,9 @@ const App = () => {
         <Route path="/login" element={<Signup />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/make-links" element={<Makelinks />} />
+
+        {/* MyProfile Routes */}
+        <Route path="/myprofile" element={<MainProfile/>} />
 
         {/* Footer useful reads */}
         <Route path="/terms" element={<TermsConditions />} />

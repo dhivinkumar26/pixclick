@@ -188,7 +188,7 @@ const Header = () => {
                 <FaLink className="text-lg" />
                 <span>Make Links</span>
               </Link>
-              <Link to="/profile" className="flex items-center space-x-1 border-l border-white pl-4 hover:text-green-400">
+              <Link to="/myprofile" className="flex items-center space-x-1 border-l border-white pl-4 hover:text-green-400">
                 <FaUser className="text-lg" />
                 <span>My Profile</span>
               </Link>
