@@ -22,6 +22,10 @@ import Privacy from "./components/Footer useful reads/privacy"
 import Antispam from "./components/Footer useful reads/Antispampolicy"
 
 
+import Signup from './Pages/login&signup'
+import Makelinks from './Pages/MakeLinkPages'
+import Homepage from './pages/Homepage'
+import CategoryLayout from './components/CategoryLayout'
 
 const App = () => {
   return (
@@ -52,8 +56,14 @@ const App = () => {
         </Route>
       
        
+        <Route path="/" element={<Homepage />} />
+        <Route path="/otp" element={<OTP />} />
+        <Route path="/login" element={<Signup />} />
+        <Route path="/make-links" element={<Makelinks />} />
+
+        {/* Dynamic category route with sidebar */}
+        <Route path="/:category" element={<CategoryLayout />} />
       </Routes>
-      {/* <Homepage/> */}
 
       <Footer />
     </Router>

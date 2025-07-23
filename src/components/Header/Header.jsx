@@ -36,11 +36,11 @@ const Sidebar = ({ isOpen, onClose }) => {
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
-              <Link to="/retailers" className="flex items-center w-full" onClick={onClose}>
+              {/* <Link to="/retailers" className="flex items-center w-full" onClick={onClose}>
                 <img src="https://img.icons8.com/ios-filled/24/333333/shop.png" alt="Retailer Category" className="mr-3"/>
                 Retailer Category
                 <span className="ml-auto text-gray-400">+</span>
-              </Link>
+              </Link> */}
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
               <Link to="/electronics" className="flex items-center w-full" onClick={onClose}>
@@ -57,14 +57,14 @@ const Sidebar = ({ isOpen, onClose }) => {
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
-              <Link to="/men-fashion" className="flex items-center w-full" onClick={onClose}>
+              <Link to="/mensfashion" className="flex items-center w-full" onClick={onClose}>
                 <img src="https://img.icons8.com/ios-filled/24/333333/t-shirt.png" alt="Men's Fashion" className="mr-3"/>
                 Men's Fashion
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
-              <Link to="/women-fashion" className="flex items-center w-full" onClick={onClose}>
+              <Link to="/womensfashion" className="flex items-center w-full" onClick={onClose}>
                 <FaFemale className="mr-3 text-gray-700 text-lg" />
                 Women's Fashion
                 <span className="ml-auto text-gray-400">+</span>
