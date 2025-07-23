@@ -15,6 +15,13 @@ import Partners from './Pages/Partners';
 import Makelinks from './pages/MakeLinkPages';
 import CategoryLayout from './components/CategoryLayout';
 
+// Shibu branch pages
+import Earnings from './pages/MyEarnings';
+import Total_Earnings from './Pages/Total_Earnings';
+import Report from './Pages/Report';
+import Order from './Pages/Order';
+import Bonus from './Pages/Bonus';
+
 // Earnmore Nested Pages
 import Earnmore from './Pages/Earnmore';
 import EarnkaroBasics from './components/Earnmorechild/Earnkarobasics';
@@ -50,6 +57,14 @@ const App = () => {
         <Route path="/partners" element={<Partners />} />
         <Route path="/make-links" element={<Makelinks />} />
 
+        {/* 🔹 Shibu branch additional pages */}
+        <Route path="/earnings" element={<Earnings />} />
+        <Route path="/total_earn" element={<Total_Earnings />} />
+        <Route path="/report" element={<Report />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/bonus" element={<Bonus />} />
+        <Route path="/profile" element={<></>} /> {/* Empty placeholder */}
+
         {/* 🔹 Footer - Legal Pages */}
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<Privacy />} />
@@ -73,7 +88,7 @@ const App = () => {
         <Route path="/payment-history" element={<History />} />
         <Route path="/account-settings" element={<AccountSettings />} />
 
-        {/* 🔹 Category Layout (Dynamic) */}
+        {/* 🔹 Dynamic category page */}
         <Route path="/:category" element={<CategoryLayout />} />
       </Routes>
 
