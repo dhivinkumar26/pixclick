@@ -9,13 +9,10 @@ import Earnmore from './Pages/Earnmore';
 import Homepage from './Pages/Homepage';
 import Partners from './Pages/Partners';
 import CategoryLayout from './components/CategoryLayout';
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
-import OTP from './components/Login&signup/otp'
-import Signup from './pages/login&signup'
-import Makelinks from './pages/MakeLinkPages'
+
+
+
+
 import Earnings from './pages/MyEarnings'
 import Total_Earnings from './Pages/Total_Earnings'
 import Report from './Pages/Report'
