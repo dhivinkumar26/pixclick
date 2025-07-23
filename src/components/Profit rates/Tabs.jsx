@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Tabs = ({ activeTab, setActiveTab }) => {
   const tabs = ["Popular", "A-Z", "% Profit", "Flat Profit"];
   return (
-    <div className="flex space-x-8 border-b mb-4">
+    <div className="flex w-full justify-around  mb-4">
       {tabs.map((tab) => (
         <button
           key={tab}
