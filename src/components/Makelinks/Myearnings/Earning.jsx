@@ -95,7 +95,7 @@ const MyEarnings = () => {
       {showModal && (
         <>
           <div
-            className="fixed inset-0 bg-black/50 z-40"
+            className="fixed inset-0 bg-black/80 z-40"
             onClick={() => setShowModal(false)}
           ></div>
           <div className="fixed inset-0 flex items-center justify-center z-50">

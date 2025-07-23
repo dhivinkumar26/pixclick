@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState,} from 'react';
 import {
   FaChevronLeft,
   FaInfoCircle,
@@ -9,16 +9,10 @@ import {
 
 const MyEarnings = () => {
   const [openSection, setOpenSection] = useState(null);
-  const [spinSecondIcon, setSpinSecondIcon] = useState(false);
+  
   const [showModal, setShowModal] = useState(false); // NEW: Modal state
 
-  useEffect(() => {
-    setSpinSecondIcon(true);
-    const timer = setTimeout(() => {
-      setSpinSecondIcon(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
+
 
   const toggleSection = (sectionName) => {
     setOpenSection((prev) => (prev === sectionName ? null : sectionName));

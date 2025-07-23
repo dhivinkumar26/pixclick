@@ -8,6 +8,7 @@ import Makelinks from './pages/MakeLinkPages'
 import Earnings from './pages/MyEarnings'
 import Total_Earnings from './Pages/Total_Earnings'
 import Report from './Pages/Report'
+import Order from './Pages/Order'
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
          <Route path="/earnings" element={<Earnings/>} />
          <Route path="/total_earn" element={<Total_Earnings/>} />
          <Route path="/report" element={<Report/>} />
+         <Route path="/order" element={<Order/>} />
         <Route path="/profile" element={<></>} />
       </Routes>
       {/* <Homepage/> */}
