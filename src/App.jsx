@@ -1,26 +1,33 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
-import OTP from './components/Login&signup/otp'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import OTP from './components/Login&signup/otp';
+import Signup from './Pages/login&signup';
+import Makelinks from './pages/MakeLinkPages';
+import Earnmore from './Pages/Earnmore';
+import Homepage from './Pages/Homepage';
+import Partners from './Pages/Partners';
+import CategoryLayout from './components/CategoryLayout';
 
-import Signup from './Pages/login&signup'
-import Makelinks from './Pages/MakeLinkPages'
-import Earnmore from './Pages/Earnmore'
-import Homepage from './Pages/Homepage'
-import Partners from './Pages/Partners'
-import CategoryLayout from './components/CategoryLayout'
+import EarnkaroBasics from "./components/Earnmorechild/Earnkarobasics";
+import AllAboutProfit from "./components/Earnmorechild/Allaboutprofit";
+import TipsTricks from "./components/Earnmorechild/Tipstricks";
+import RealUserStories from "./components/Earnmorechild/Realuserstories";
+import Affiliaters from "./components/Earnmorechild/Affilaters";
+import ContactUs from "./components/Earnmorechild/ContactUs";
 
-import EarnkaroBasics from "./components/Earnmorechild/Earnkarobasics"
-import AllAboutProfit from "./components/Earnmorechild/Allaboutprofit"
-import TipsTricks from "./components/Earnmorechild/Tipstricks"
-import RealUserStories from "./components/Earnmorechild/Realuserstories"
-import Affiliaters from "./components/Earnmorechild/Affilaters"
-import ContactUs from "./components/Earnmorechild/ContactUs"
+import TermsConditions from './components/Footer useful reads/Termsconditions';
+import Privacy from "./components/Footer useful reads/privacy";
+import Antispam from "./components/Footer useful reads/Antispampolicy";
 
-import TermsConditions from './components/Footer useful reads/Termsconditions'
-import Privacy from "./components/Footer useful reads/privacy"
-import Antispam from "./components/Footer useful reads/Antispampolicy"
+// import MyEarnings from "./components/Makelinks/"
+import Reports from "./components/Makelinks/Reports/Reports";
+import ProfitTrack from "./components/Makelinks/ProfitTrack/Track";
+import Request from "./components/Makelinks/Request/ShareMoreModal";
+import History from "./components/Makelinks/History/History";
+import AccountSettings from './components/Makelinks/Account/AccountSettings';
+
 
 const App = () => {
   return (
@@ -52,11 +59,19 @@ const App = () => {
 
         {/* Dynamic category route with sidebar */}
         <Route path="/:category" element={<CategoryLayout />} />
+
+        {/* Makelinks Sidebar Pages */}
+        {/* <Route path="/my-earnings" element={<MyEarnings />} /> */}
+        <Route path="/reports" element={<Reports />} />
+        <Route path="/profit-track" element={<ProfitTrack />} />
+        <Route path="/request" element={<Request />} />
+        <Route path="/payment-history" element={<History />} /> 
+        <Route path="/account-settings" element={<AccountSettings />} />
       </Routes>
 
       <Footer />
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;

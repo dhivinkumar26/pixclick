@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import SidebarMenu from "../components/Makelinks/SidebarMenu";
 import ProfitLinkForm from "../components/Makelinks/ProfitLinkForm";
-import QuickConvertLinks from "../components/Makelinks/QuickConvertLinks";
-import HelpVideoTips from "../components/Makelinks/HelpVideoTips";
-import Report from "../components/Makelinks/Reports/Reports";
-import ProfitTrack from "./../components/Makelinks/ProfitTrack/Track";
+import QuickConvertCarousel from "../components/Makelinks/QuickConvertLinks";
+import HelpVideoTips from "./../components/Makelinks/HelpVideoTips";
+import RequestSection from "./../components/Makelinks/Request/ShareMoreModal";
 import PaymentHistory from "./../components/Makelinks/History/History";
-import Request from "../components/Makelinks/Request/ShareMoreModal";
+import AccountSettings from "./../components/Makelinks/Account/AccountSettings";
+import  ProfitTrack from "./../components/Makelinks/ProfitTrack/Track";
+
 
 export default function MakeLinkPage() {
   const [selectedMenu, setSelectedMenu] = useState("make-links");
@@ -19,15 +20,14 @@ export default function MakeLinkPage() {
         {selectedMenu === "make-links" && (
           <>
             <ProfitLinkForm />
-            <QuickConvertLinks />
+            <QuickConvertCarousel/>
             <HelpVideoTips />
           </>
         )}
-
-        {selectedMenu === "reports" && <Report />}
-        {selectedMenu === "profitTrack" && <ProfitTrack />}
-        {selectedMenu === "PaymentHistory" && <PaymentHistory />} 
-        {selectedMenu === "Request" && <Request />} {/* ✅ Fixed line */}
+        {selectedMenu === "track" && <ProfitTrack />}
+        {selectedMenu === "request" && <RequestSection />}
+        {selectedMenu === "payment" && <PaymentHistory />}
+        {selectedMenu === "settings" && <AccountSettings />}
       </div>
     </div>
   );
