@@ -16,7 +16,7 @@ import TipsTricks from "./components/Earnmorechild/Tipstricks"
 import RealUserStories from "./components/Earnmorechild/Realuserstories"
 import Affiliaters from "./components/Earnmorechild/Affilaters"
 import ContactUs from "./components/Earnmorechild/ContactUs"
-import Myprofile from './Pages/Myprofile'
+
 import TermsConditions from './components/Footer useful reads/Termsconditions'
 import Privacy from "./components/Footer useful reads/privacy"
 import Antispam from "./components/Footer useful reads/Antispampolicy"
@@ -40,7 +40,7 @@ const App = () => {
         
         
         <Route path="/make-links" element={<Makelinks/>} />
-         <Route path="/profile" element={<Myprofile/>} />
+        
         <Route path="/profitshala" element={<Earnmore />}>
           <Route path="earnkaro-basics" element={<EarnkaroBasics />} />
           <Route path="all-about-profit" element={<AllAboutProfit />} />
