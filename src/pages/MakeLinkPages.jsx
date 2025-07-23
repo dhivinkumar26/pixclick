@@ -22,7 +22,10 @@ export default function MakeLinkPage() {
             <ProfitLinkForm />
             <QuickConvertCarousel/>
             <HelpVideoTips />
+            
           </>
+
+          
         )}
         {selectedMenu === "track" && <ProfitTrack />}
         {selectedMenu === "request" && <RequestSection />}
