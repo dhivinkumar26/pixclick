@@ -39,7 +39,7 @@ const Footer = () => {
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
               <a href="#" className="hover:text-red-500">Anti-Spam Policy</a>
-            </li>
+             </li>
           </ul>
         </div>
 

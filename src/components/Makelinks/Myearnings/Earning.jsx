@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaWallet,
   FaClipboardList,
@@ -7,17 +7,16 @@ import {
   FaHeadphones,
 } from "react-icons/fa";
 
-// Note: Ensure the Tailwind CSS CDN script is loaded in your HTML file:
-// <script src="https://cdn.tailwindcss.com"></script>
-
 const MyEarnings = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <div className="bg-gray-100 min-h-screen font-sans w-full mb-10"> {/* Added w-full here */}
+    <div className="bg-gray-100 min-h-screen font-sans w-full mb-10">
       {/* Top green gradient */}
       <div className="w-full bg-gradient-to-b from-green-600 to-green-500 h-16 md:h-20 lg:h-28"></div>
 
-      {/* Main content wrapper - removed max-w-7xl and adjusted padding */}
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 -mt-12 sm:-mt-16 lg:-mt-20"> {/* More generous and responsive horizontal padding */}
+      {/* Main content */}
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 -mt-12 sm:-mt-16 lg:-mt-20">
         {/* Breadcrumb */}
         <div className="flex text-sm sm:text-base text-white mb-5 sm:mb-6">
           <span className="hover:underline cursor-pointer">Home</span>
@@ -35,7 +34,7 @@ const MyEarnings = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-3">
               <span className="text-4xl sm:text-5xl font-bold text-gray-900">₹30.00</span>
               <button className="text-green-600 text-base sm:text-lg flex items-center font-medium hover:underline">
-                Explore <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
+                Explore <span className="ml-2">→</span>
               </button>
             </div>
             <div className="border-t border-dotted border-gray-300 my-3"></div>
@@ -48,57 +47,87 @@ const MyEarnings = () => {
           </div>
         </div>
 
-        {/* Bottom 4 green cards */}
+        {/* Bottom cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-7">
-          {/* Order Details */}
-          <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer">
+          <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 cursor-pointer transition-transform">
             <div className="bg-white rounded-full p-4 mb-4">
               <FaClipboardList className="text-green-600 text-xl sm:text-2xl" />
             </div>
             <h3 className="text-white font-bold text-xl mb-2">Order Details</h3>
             <div className="w-full border-t border-dotted border-green-200 opacity-75 mb-3"></div>
-            <p className="text-white text-base flex items-center font-medium">
-              View More <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
-            </p>
+            <p className="text-white text-base flex items-center font-medium">View More <span className="ml-2">→</span></p>
           </div>
 
-          {/* Reports */}
-          <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer">
+          <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 cursor-pointer transition-transform">
             <div className="bg-white rounded-full p-4 mb-4">
               <FaChartBar className="text-green-600 text-xl sm:text-2xl" />
             </div>
             <h3 className="text-white font-bold text-xl mb-2">Reports</h3>
             <div className="w-full border-t border-dotted border-green-200 opacity-75 mb-3"></div>
-            <p className="text-white text-base flex items-center font-medium">
-              Know More <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
-            </p>
+            <p className="text-white text-base flex items-center font-medium">Know More <span className="ml-2">→</span></p>
           </div>
 
-          {/* Request Payment */}
-          <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer">
+          {/* Request Payment - show modal on click */}
+          <div
+            className="bg-gradient-to-b from-green-400 to-green-600 rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 cursor-pointer transition-transform"
+            onClick={() => setShowModal(true)}
+          >
             <div className="bg-white rounded-full p-4 mb-4">
               <FaRupeeSign className="text-green-600 text-xl sm:text-2xl" />
             </div>
             <h4 className="text-white font-bold text-xl mb-2">Request Payment</h4>
             <div className="w-full border-t border-dotted border-green-200 opacity-75 mb-3"></div>
-            <p className="text-white text-base flex items-center font-medium">
-              Get Paid <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
-            </p>
+            <p className="text-white text-base flex items-center font-medium">Get Paid <span className="ml-2">→</span></p>
           </div>
 
-          {/* Get Help */}
-          <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 cursor-pointer">
+          <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 cursor-pointer transition-transform">
             <div className="bg-white rounded-full p-4 mb-4">
               <FaHeadphones className="text-green-600 text-xl sm:text-2xl" />
             </div>
             <h4 className="text-white font-bold text-xl mb-2">Get Help</h4>
             <div className="w-full border-t border-dotted border-green-200 opacity-75 mb-3"></div>
-            <p className="text-white text-base flex items-center font-medium">
-              Learn More <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
-            </p>
+            <p className="text-white text-base flex items-center font-medium">Learn More <span className="ml-2">→</span></p>
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {showModal && (
+        <>
+          <div
+            className="fixed inset-0 bg-black/50 z-40"
+            onClick={() => setShowModal(false)}
+          ></div>
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6 text-center relative">
+              {/* Close button */}
+              <button
+                className="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
+              {/* Image */}
+              <img
+                src="/path/to/your/uploaded/image.png" // replace this with real path
+                alt="Share More"
+                className="mx-auto mb-4 w-24"
+              />
+              <h3 className="text-lg sm:text-xl font-semibold mb-3">Share More to Earn More</h3>
+              <p className="text-gray-600 mb-5 text-sm sm:text-base">
+                You need a minimum of ₹10 Confirmed Profit to transfer your earnings to your bank account.
+                All you need to do is share Crazy Deals via EarnKaro!
+              </p>
+              <button
+                className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
+                onClick={() => setShowModal(false)}
+              >
+                SHARE BEST DEALS
+              </button>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
