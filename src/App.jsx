@@ -22,6 +22,24 @@ import TermsConditions from './components/Footer useful reads/Termsconditions'
 import Privacy from "./components/Footer useful reads/privacy"
 import Antispam from "./components/Footer useful reads/Antispampolicy"
 import MainProfile from './Pages/MainProfile'
+import MyEarnings from './components/MyProfile/Money/MyEarnings'
+import RequestPayment from './components/MyProfile/Money/RequestPayment'
+import PaymentHistory from './components/MyProfile/Money/PaymentHistory'
+import Reports from './components/MyProfile/Reports/Reports'
+import FlipKartReport from './components/MyProfile/Reports/FlipkartReport'
+import MyLinksPerformance from './components/MyProfile/Reports/MyLinksPerformance'
+import ProfitShare from './components/MyProfile/ExclusiveTools/ProfitShare'
+import EKAffiliaters from './components/MyProfile/ExclusiveTools/EKAffiliaters'
+import JoinTelegram from './components/MyProfile/ExclusiveDeals/JoinTelegram'
+import HowEKWorks from './components/MyProfile/EarnKaroAcademy/HowEKWorks'
+import TopEarners from './components/MyProfile/EarnKaroAcademy/TopEarners'
+import ReferEarn from './components/MyProfile/EarnExtraProfit/ReferEarn'
+import ReferralNetwork from './components/MyProfile/EarnExtraProfit/ReferralNetwork'
+import ProfitTrack from './components/MyProfile/GetHelp/ProfitTrack'
+import EmailUs from './components/MyProfile/GetHelp/EmailUs'
+import AccountSettings from './components/MyProfile/More/AccountSettings'
+import PrivacyPolicy from './components/MyProfile/More/PrivacyPolicy'
+import Logout from './components/MyProfile/More/Logout'
 
 const App = () => {
   return (
@@ -38,6 +56,26 @@ const App = () => {
 
         {/* MyProfile Routes */}
         <Route path="/myprofile" element={<MainProfile/>} />
+        <Route path="/my-earnings" element={<MyEarnings/>} />
+        <Route path='/request-payment' element={<RequestPayment/>}/>
+        <Route path='/payment-history' element={<PaymentHistory/>} />
+        <Route path='/reports' element={<Reports/>} />  
+        <Route path='/flipkart-report' element={<FlipKartReport/>} />
+        <Route path='/my-links-performance' element={<MyLinksPerformance/>} />
+        <Route path='/profit-share' element={<ProfitShare/>} />
+        <Route path='/ek-affiliaters' element={<EKAffiliaters/>} />
+        <Route path='/join-telegram' element={<JoinTelegram/>} />
+        <Route path='/how-ek-works' element={<HowEKWorks/>} />
+        <Route path='/top-earners' element={<TopEarners/>} />
+        <Route path='/refer-earn' element={<ReferEarn/>} />
+        <Route path='/referral-network' element={<ReferralNetwork/>} />
+        <Route path='/profit-track' element={<ProfitTrack/>} />
+        <Route path='/email-us' element={<EmailUs/>} />
+        <Route path='/account-settings' element={<AccountSettings/>} />
+        <Route path='/terms-conditions' element={<TermsConditions/>} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
+        <Route path='/logout' element={<Logout/>} />
+
 
         {/* Footer useful reads */}
         <Route path="/terms" element={<TermsConditions />} />

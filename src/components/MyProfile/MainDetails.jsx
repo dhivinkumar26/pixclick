@@ -20,7 +20,7 @@ import {
 import { IoSettingsOutline } from "react-icons/io5";
 import { PiNoteDuotone } from "react-icons/pi";
 
-// Helper to convert label to URL-friendly path
+//convert label to URL-friendly path
 const generatePath = (label) =>
   "/" + label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
