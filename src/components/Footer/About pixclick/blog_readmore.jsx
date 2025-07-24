@@ -19,7 +19,7 @@ export default function ReadMoreBlog() {
   if (!blog) return <p className="text-center py-8">Blog not found!</p>;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div className=" mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20  py-8 grid grid-cols-1 md:grid-cols-4 gap-6">
       {/* Left Sidebar */}
       <div className="hidden md:block space-y-6">
         <div className="bg-white shadow rounded p-4 text-center">
