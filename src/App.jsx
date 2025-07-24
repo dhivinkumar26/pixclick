@@ -15,6 +15,11 @@ import Partners from './Pages/Partners';
 import Makelinks from './pages/MakeLinkPages';
 import CategoryLayout from './components/CategoryLayout';
 
+//homepage
+import MostPopularStores from './components/Home/MostPopularStores';
+
+
+
 // My earnings
 import Earnings from './components/Makelinks/Myearnings/Earning';
 import Total_Earnings from './components/Makelinks/Myearnings/total_earning';
@@ -144,6 +149,8 @@ const App = () => {
 
         {/* Dynamic category page */}
         <Route path="/:category" element={<CategoryLayout />} />
+
+        <Route path='/most-popular-stores' element={<MostPopularStores />} />
       </Routes>
       <Footer />
     </Router>
