@@ -30,7 +30,7 @@ const FilterSidebar = () => {
     const { category } = useParams();
     const filters = filtersByCategory[category] || {};
 
-    const [minPrice, setMinPrice] = useState(199);
+    const [minPrice, setMinPrice] = useState(99);
     const [maxPrice, setMaxPrice] = useState(12999);
     const [selectedSellers, setSelectedSellers] = useState([]);
     const [selectedBrands, setSelectedBrands] = useState([]);
