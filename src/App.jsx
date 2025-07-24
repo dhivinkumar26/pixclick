@@ -54,11 +54,26 @@ import Request from './components/Makelinks/Request/ShareMoreModal';
 import History from './components/Makelinks/History/History';
 import AccountSettings from './components/Makelinks/Account/AccountSettings';
 
+// ThulasiShree branch MyProfile Pages
+import MainProfile from './Pages/MainProfile';
+import RequestPayment from './components/MyProfile/Money/RequestPayment';
+import FlipKartReport from './components/MyProfile/Reports/FlipkartReport';
+import MyLinksPerformance from './components/MyProfile/Reports/MyLinksPerformance';
+import ProfitShare from './components/MyProfile/ExclusiveTools/ProfitShare';
+import EKAffiliaters from './components/MyProfile/ExclusiveTools/EKAffiliaters';
+import JoinTelegram from './components/MyProfile/ExclusiveDeals/JoinTelegram';
+import HowEKWorks from './components/MyProfile/EarnKaroAcademy/HowEKWorks';
+import TopEarners from './components/MyProfile/EarnKaroAcademy/TopEarners';
+import ReferEarn from './components/MyProfile/EarnExtraProfit/ReferEarn';
+import ReferralNetwork from './components/MyProfile/EarnExtraProfit/ReferralNetwork';
+import EmailUs from './components/MyProfile/GetHelp/EmailUs';
+import PrivacyPolicy from './components/MyProfile/More/PrivacyPolicy';
+import Logout from './components/MyProfile/More/Logout';
+
 const App = () => {
   return (
     <Router>
       <Header />
-
       <Routes>
         {/* 🔹 Public Routes */}
         <Route path="/" element={<Homepage />} />
@@ -66,7 +81,6 @@ const App = () => {
         <Route path="/login" element={<Signup />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/make-links" element={<Makelinks />} />
-        <Route path="/profile" element={<></>} /> {/* Empty placeholder */}
 
         {/* 🔹 Shibu branch additional pages */}
         <Route path="/earnings" element={<Earnings />} />
@@ -75,34 +89,13 @@ const App = () => {
         <Route path="/order" element={<Order />} />
         <Route path="/bonus" element={<Bonus />} />
 
-        {/* 🔹 Footer - Legal Pages */}
-        <Route path="/terms" element={<TermsConditions />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/anti-spam" element={<Antispam />} />
-
-        {/* 🔹 Footer - Useful Reads */}
-        <Route path="/about" element={<About />} />
-
-        {/* 🔹 Earnmore Nested Routes */}
+        {/* 🔹 Earnmore Nested & Grandchild Routes */}
         <Route path="/profitshala" element={<Earnmore />}>
           <Route path="earnkaro-basics" element={<EarnkaroBasics />}>
-            {/* ✅ Earnmore Grandchild routes */}
-            <Route
-              path="how-to-earn-money-through-affiliate-marketing"
-              element={<Earnmoneythroughaffiliatemarketing />}
-            />
-            <Route
-              path="how-to-find-retailers-on-earnkaro"
-              element={<Findavailableretailersonearnkaro />}
-            />
-            <Route
-              path="how-to-check-link-performance"
-              element={<Checklinkperformance />}
-            />
-            <Route
-              path="how-to-change-language"
-              element={<Changelanguageonearnkaro />}
-            />
+            <Route path="how-to-earn-money-through-affiliate-marketing" element={<Earnmoneythroughaffiliatemarketing />} />
+            <Route path="how-to-find-retailers-on-earnkaro" element={<Findavailableretailersonearnkaro />} />
+            <Route path="how-to-check-link-performance" element={<Checklinkperformance />} />
+            <Route path="how-to-change-language" element={<Changelanguageonearnkaro />} />
           </Route>
           <Route path="all-about-profit" element={<AllAboutProfit />} />
           <Route path="tips-tricks" element={<TipsTricks />} />
@@ -119,10 +112,30 @@ const App = () => {
         <Route path="/payment-history" element={<History />} />
         <Route path="/account-settings" element={<AccountSettings />} />
 
+        {/* 🔹 ThulasiShree branch MyProfile Pages */}
+        <Route path="/myprofile" element={<MainProfile />} />
+        <Route path="/request-payment" element={<RequestPayment />} />
+        <Route path="/flipkart-report" element={<FlipKartReport />} />
+        <Route path="/my-links-performance" element={<MyLinksPerformance />} />
+        <Route path="/profit-share" element={<ProfitShare />} />
+        <Route path="/ek-affiliaters" element={<EKAffiliaters />} />
+        <Route path="/join-telegram" element={<JoinTelegram />} />
+        <Route path="/how-ek-works" element={<HowEKWorks />} />
+        <Route path="/top-earners" element={<TopEarners />} />
+        <Route path="/refer-earn" element={<ReferEarn />} />
+        <Route path="/referral-network" element={<ReferralNetwork />} />
+        <Route path="/email-us" element={<EmailUs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/logout" element={<Logout />} />
+
+        {/* 🔹 Footer Useful Reads */}
+        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/anti-spam" element={<Antispam />} />
+
         {/* 🔹 Dynamic category page */}
         <Route path="/:category" element={<CategoryLayout />} />
       </Routes>
-
       <Footer />
     </Router>
   );
