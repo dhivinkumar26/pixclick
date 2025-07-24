@@ -9,7 +9,7 @@ export default function WelcomeBonusCard() {
       <div className="w-full h-14 md:h-18 lg:h-22 bg-gradient-to-b from-green-600 to-green-500"></div>
 
       {/* Container overlapping top bar */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 -mt-8 sm:-mt-10 lg:-mt-12">
+      <div className="container mx-auto px-8 sm:px-12 md:px-16 lg:px-18 xl:px-22 -mt-8 sm:-mt-10 lg:-mt-16 relative z-10">
 
         {/* Breadcrumb */}
         {/* Added flex-wrap to allow items to wrap to the next line on small screens */}
@@ -24,16 +24,18 @@ export default function WelcomeBonusCard() {
         </div>
 
         {/* Logo card */}
-        <div className="relative flex justify-center">
-          <div className="absolute bottom-[-16px] bg-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg shadow-md">
-            <span className="text-base sm:text-lg font-bold text-gray-800">PIX <span className="text-green-600">CLICK</span></span>
+        <div className="flex justify-center">
+          <div className="inline-block bg-white px-6 py-2 rounded-lg shadow-md">
+            <span className="text-lg font-bold text-gray-800">
+              PIX <span className="text-green-600">CLICK</span>
+            </span>
           </div>
         </div>
       </div>
 
       {/* Main bonus card */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 mt-8 md:mt-12 lg:mt-16">
-        <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6 sm:p-8 md:p-10 flex flex-col items-center text-center mt-12">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 mt-16">
+        <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6 sm:p-8 md:p-10 flex flex-col items-center text-center">
 
           {/* Bonus icon */}
           <div className="mb-6 sm:mb-8">
