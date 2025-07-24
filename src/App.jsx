@@ -1,19 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Layouts
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 // Auth
-import OTP from './components/Login&signup/otp';
-import Signup from './pages/login&signup';
+import OTP from "./components/Login&signup/otp";
+import Signup from "./pages/login&signup";
 
 // Pages
-import Homepage from './Pages/Homepage';
-import Partners from './Pages/Partners';
-import Makelinks from './pages/MakeLinkPages';
-import CategoryLayout from './components/CategoryLayout';
+import Homepage from "./Pages/Homepage";
+import Partners from "./Pages/Partners";
+import Makelinks from "./pages/MakeLinkPages";
+import CategoryLayout from "./components/CategoryLayout";
 
 // My earnings
 import Earnings from './components/Makelinks/Myearnings/Earning';
@@ -23,19 +23,31 @@ import Order from './components/Makelinks/Myearnings/order';
 import Bonus from './components/Makelinks/Myearnings/bonus';
 
 // Earnmore Nested Pages
-import Earnmore from './Pages/Earnmore';
-import EarnkaroBasics from './components/Earnmorechild/Earnkarobasics';
-import AllAboutProfit from './components/Earnmorechild/Allaboutprofit';
-import TipsTricks from './components/Earnmorechild/Tipstricks';
-import RealUserStories from './components/Earnmorechild/Realuserstories';
-import Affiliaters from './components/Earnmorechild/Affilaters';
-import ContactUs from './components/Earnmorechild/ContactUs';
+import Earnmore from "./Pages/Earnmore";
+import EarnkaroBasics from "./components/Earnmorechild/Earnkarobasics";
+import AllAboutProfit from "./components/Earnmorechild/Allaboutprofit";
+import TipsTricks from "./components/Earnmorechild/Tipstricks";
+import RealUserStories from "./components/Earnmorechild/Realuserstories";
+import Affiliaters from "./components/Earnmorechild/Affilaters";
+import ContactUs from "./components/Earnmorechild/ContactUs";
 
-// Earnmore Grandchild Pages
-import Earnmoneythroughaffiliatemarketing from './components/Earnmorechild/Earnkarobasicgrandchild/Earnmoneythroughaffiliatemarketing';
-import Findavailableretailersonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Findavailableretailersonearnkaro';
-import Changelanguageonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Changelanguageonearnkaro';
-import Checklinkperformance from './components/Earnmorechild/Earnkarobasicgrandchild/Checklinkperformance';
+// Earnmorebasic Grandchild Pages
+import Earnmoneythroughaffiliatemarketing from "./components/Earnmorechild/Earnkarobasicgrandchild/Earnmoneythroughaffiliatemarketing";
+import Findavailableretailersonearnkaro from "./components/Earnmorechild/Earnkarobasicgrandchild/Findavailableretailersonearnkaro";
+import Changelanguageonearnkaro from "./components/Earnmorechild/Earnkarobasicgrandchild/Changelanguageonearnkaro";
+import Checklinkperformance from "./components/Earnmorechild/Earnkarobasicgrandchild/Checklinkperformance";
+
+// All about profit grandchild pages
+import Howtocheckprofitrates from "./components/Earnmorechild/Allaboutprofitgrandchild/Howtoheckprofitrates";
+import Howtomakeprofitlinks from "./components/Earnmorechild/Allaboutprofitgrandchild/Howtomakeprofitlinks";
+import Howisyourprofittracked from "./components/Earnmorechild/Allaboutprofitgrandchild/Howisyourprofittracked";
+import Howtocheckyourearnedprofit from "./components/Earnmorechild/Allaboutprofitgrandchild/Howtocheckyourearnedprofit";
+import Howtotransfermoneytoyourbankaccount from "./components/Earnmorechild/Allaboutprofitgrandchild/Howtotransfermoneytoyourbankaccount";
+import Howtoreferandearnprofitforalifetime from "./components/Earnmorechild/Allaboutprofitgrandchild/Howtoreferandearnprofitforalifetime";
+import Howisreferralearningsdifferentfrompartnerprofitearnings from "./components/Earnmorechild/Allaboutprofitgrandchild/Howisreferralearningsdifferentfrompartnerprofitearnings";
+
+// Tips & Tricks grandchild pages
+import Howtofindexclusivedealsontheappdaily from "./components/Earnmorechild/Tipstricksgrandchild/Howtofindexclusivedealsontheappdaily"
 
 // About PixClick
 import FAQ from './components/Footer/About pixclick/faq';
@@ -48,12 +60,12 @@ import Privacy from './components/Footer/Footer useful reads/privacy';
 import Antispam from './components/Footer/Footer useful reads/Antispampolicy';
 
 // Makelinks Sidebar Pages
-import MyEarnings from './components/Makelinks/Myearnings/Earning';
-import Reports from './components/Makelinks/Reports/Reports';
-import ProfitTrack from './components/Makelinks/ProfitTrack/Track';
-import Request from './components/Makelinks/Request/ShareMoreModal';
-import History from './components/Makelinks/History/History';
-import AccountSettings from './components/Makelinks/Account/AccountSettings';
+import MyEarnings from "./components/Makelinks/Myearnings/Earning";
+import Reports from "./components/Makelinks/Reports/Reports";
+import ProfitTrack from "./components/Makelinks/ProfitTrack/Track";
+import Request from "./components/Makelinks/Request/ShareMoreModal";
+import History from "./components/Makelinks/History/History";
+import AccountSettings from "./components/Makelinks/Account/AccountSettings";
 
 // MyProfile Pages
 import MainProfile from './Pages/MainProfile';
@@ -93,13 +105,60 @@ const App = () => {
         {/* Earnmore Nested & Grandchild Routes */}
         <Route path="/profitshala" element={<Earnmore />}>
           <Route path="earnkaro-basics" element={<EarnkaroBasics />}>
-            <Route path="how-to-earn-money-through-affiliate-marketing" element={<Earnmoneythroughaffiliatemarketing />} />
-            <Route path="how-to-find-retailers-on-earnkaro" element={<Findavailableretailersonearnkaro />} />
-            <Route path="how-to-check-link-performance" element={<Checklinkperformance />} />
-            <Route path="how-to-change-language" element={<Changelanguageonearnkaro />} />
+            <Route
+              path="how-to-earn-money-through-affiliate-marketing"
+              element={<Earnmoneythroughaffiliatemarketing />}
+            />
+            <Route
+              path="how-to-find-retailers-on-earnkaro"
+              element={<Findavailableretailersonearnkaro />}
+            />
+            <Route
+              path="how-to-check-link-performance"
+              element={<Checklinkperformance />}
+            />
+            <Route
+              path="how-to-change-language"
+              element={<Changelanguageonearnkaro />}
+            />
           </Route>
-          <Route path="all-about-profit" element={<AllAboutProfit />} />
-          <Route path="tips-tricks" element={<TipsTricks />} />
+          <Route path="all-about-profit" element={<AllAboutProfit />}>
+            <Route
+              path="how-to-check-profit-rates"
+              element={<Howtocheckprofitrates />}
+            />
+            <Route
+              path="how-to-make-profit-links"
+              element={<Howtomakeprofitlinks />}
+            />
+            <Route
+              path="how-is-your-profit-tracked"
+              element={<Howisyourprofittracked />}
+            />
+            <Route
+              path="how-to-check-your-earned-profit"
+              element={<Howtocheckyourearnedprofit />}
+            />
+            <Route
+              path="how-to-transfer-money-to-your-bank-account"
+              element={<Howtotransfermoneytoyourbankaccount />}
+            />
+            <Route
+              path="how-to-refer-and-earn-profit-for-a-lifetime"
+              element={<Howtoreferandearnprofitforalifetime />}
+            />
+            <Route
+              path="how-is-referral-earnings-different-from-partner-profit-earnings"
+              element={
+                <Howisreferralearningsdifferentfrompartnerprofitearnings />
+              }
+            />
+          </Route>
+          <Route path="tips-tricks" element={<TipsTricks />} >
+          <Route path="how-to-find-exclusive-deals-on-the-app-daily" element={<Howtofindexclusivedealsontheappdaily />} />
+
+          </Route>
+
           <Route path="real-user-stories" element={<RealUserStories />} />
           <Route path="affiliaters" element={<Affiliaters />} />
           <Route path="contact-us" element={<ContactUs />} />
