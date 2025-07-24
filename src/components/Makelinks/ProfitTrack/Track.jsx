@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import AddMissingProfitModal from './AddMissingProfitModal'; // Ensure this path is correct relative to MissingProfit.jsx
 
 const MissingProfit = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    console.log('Opening modal. isModalOpen set to true.'); // Debugging log
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    console.log('Closing modal. isModalOpen set to false.'); // Debugging log
+  };
+
   return (
     <div className="max-w-6xl mx-auto mt-6 md:mt-10 bg-white shadow-xl rounded-2xl p-4 md:p-8 border border-gray-200 mb-3">
       <h2 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6">MISSING PROFIT?</h2>
@@ -20,10 +33,16 @@ const MissingProfit = () => {
           There are no missing profit tickets submitted.
         </div>
 
-        <button className="text-green-600 border border-green-600 font-semibold px-4 py-2 text-sm md:text-base rounded hover:bg-green-50 w-full md:w-auto">
+        <button
+          onClick={openModal} // This button will set isModalOpen to true
+          className="text-green-600 border border-green-600 font-semibold px-4 py-2 text-sm md:text-base rounded hover:bg-green-50 w-full md:w-auto"
+        >
           ADD TICKET
         </button>
       </div>
+
+      {/* Render the modal component, passing its visibility state and close function */}
+      <AddMissingProfitModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

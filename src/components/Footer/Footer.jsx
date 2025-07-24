@@ -15,7 +15,7 @@ const Footer = () => {
             </li>
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
-              <a href="#" className="hover:text-red-500">Blog</a>
+              <a href="/blog" className="hover:text-red-500">Blog</a>
             </li>
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
@@ -38,7 +38,7 @@ const Footer = () => {
             </li>
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
-              <a href="#" className="hover:text-red-500">Anti-Spam Policy</a>
+              <a href="anti-spam" className="hover:text-red-500">Anti-Spam Policy</a>
              </li>
           </ul>
         </div>
@@ -49,7 +49,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
-              <a href="#" className="hover:text-red-500">Get Help</a>
+              <a href="/profitshala" className="hover:text-red-500">Get Help</a>
             </li>
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
