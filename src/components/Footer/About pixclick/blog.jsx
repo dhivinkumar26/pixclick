@@ -2,7 +2,14 @@ import React, { useState } from "react";
 
 export default function BlogSection() {
   const blogs = [
-    { id: 1, title: "Blog 1 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1612837017391-5b7a75142a5e" },
+    {
+      id: 1,
+      title: "Barely half of banks’ own employees would recommend their international payment services to customers",
+      author: "Olivia Rhye",
+      date: "25 Jan 2022",
+      image: "https://images.unsplash.com/photo-1612837017391-5b7a75142a5e"
+    },
+    // add 12 more dummy blogs
     { id: 2, title: "Blog 2 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1581091226825-4c4c80b0d340" },
     { id: 3, title: "Blog 3 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1556742400-b5da3b9384d2" },
     { id: 4, title: "Blog 4 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1593642532973-d31b6557fa68" },
@@ -12,22 +19,22 @@ export default function BlogSection() {
     { id: 8, title: "Blog 8 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4" },
     { id: 9, title: "Blog 9 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1564869732902-e6c6c6b6c6b6" },
     { id: 10, title: "Blog 10 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1511200008-887f6717d7e4" },
-    { id: 11, title: "Blog 11 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1532634860-0fe4d58a6615" },
-    { id: 12, title: "Blog 12 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e" },
-    { id: 13, title: "Blog 13 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1558981001-5b63ca2d5d59" }
+    { id: 11, title: "Blog 11 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" },
+    { id: 12, title: "Blog 12 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1544717305-2782549b5136" },
+    { id: 13, title: "Blog 13 title here", author: "Olivia Rhye", date: "25 Jan 2022", image: "https://images.unsplash.com/photo-1532635223-978cd4c46e7b" }
   ];
 
-  const [visibleCount, setVisibleCount] = useState(4);
+  const [visibleCount, setVisibleCount] = useState(4); // initially 5 small blogs after big one
 
   const handleViewMore = () => {
     setVisibleCount((prev) => prev + 4);
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className=" mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20  py-8">
       <h2 className="text-2xl font-bold mb-6">Latest News</h2>
 
-      {/* Top featured blog (first blog) */}
+      {/* Top big blog */}
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         <div className="rounded-lg overflow-hidden bg-white shadow">
           <img src={blogs[0].image} alt="" className="w-full h-64 object-cover" />
@@ -39,9 +46,9 @@ export default function BlogSection() {
         </div>
       </div>
 
-      {/* Small cards */}
+      {/* Small blogs */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        {blogs.slice(1, visibleCount).map((blog) => (
+        {blogs.slice(1, visibleCount + 1).map((blog) => (
           <div key={blog.id} className="bg-white shadow rounded-lg overflow-hidden">
             <img src={blog.image} alt="" className="w-full h-28 object-cover" />
             <div className="p-2">
@@ -54,7 +61,7 @@ export default function BlogSection() {
       </div>
 
       {/* View More button */}
-      {visibleCount < blogs.length && (
+      {visibleCount + 1 < blogs.length && (
         <div className="text-center">
           <button
             onClick={handleViewMore}
