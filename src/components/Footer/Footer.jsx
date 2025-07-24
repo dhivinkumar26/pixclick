@@ -11,7 +11,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
-              <a href="/about-us" className="hover:text-red-500">About Us</a>
+              <a href="/about" className="hover:text-red-500">About Us</a>
             </li>
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
