@@ -40,7 +40,7 @@ export default function BlogSection() {
           <img src={blogs[0].image} alt="" className="w-full h-64 object-cover" />
         </div>
         <div className="flex flex-col justify-center">
-          <p className="text-xs uppercase text-gray-500 mb-2">Finance Advicer</p>
+          <p className="text-xs uppercase text-green-500 mb-2">Finance Advicer</p>
           <h3 className="text-lg md:text-xl font-semibold mb-2">{blogs[0].title}</h3>
           <p className="text-sm text-gray-500">{blogs[0].author} • {blogs[0].date}</p>
         </div>
@@ -52,7 +52,7 @@ export default function BlogSection() {
           <div key={blog.id} className="bg-white shadow rounded-lg overflow-hidden">
             <img src={blog.image} alt="" className="w-full h-28 object-cover" />
             <div className="p-2">
-              <p className="text-[10px] uppercase text-gray-500 mb-1">Finance Advicer</p>
+              <p className="text-[10px] uppercase text-green-500 mb-1">Finance Advicer</p>
               <p className="text-xs font-medium truncate">{blog.title}</p>
               <p className="text-[10px] text-gray-500 mt-1">{blog.author} • {blog.date}</p>
             </div>
@@ -65,7 +65,7 @@ export default function BlogSection() {
         <div className="text-center">
           <button
             onClick={handleViewMore}
-            className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-900 text-sm"
+            className="bg-green-800 text-white px-4 py-2 rounded-xl hover:bg-gray-900 text-sm"
           >
             View More
           </button>
