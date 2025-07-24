@@ -21,6 +21,7 @@ import ContactUs from "./components/Earnmorechild/ContactUs"
 import TermsConditions from './components/Footer useful reads/Termsconditions'
 import Privacy from "./components/Footer useful reads/privacy"
 import Antispam from "./components/Footer useful reads/Antispampolicy"
+import MostPopularStores from './components/Home/MostPopularStores'
 
 const App = () => {
   return (
@@ -52,6 +53,8 @@ const App = () => {
 
         {/* Dynamic category route with sidebar */}
         <Route path="/:category" element={<CategoryLayout />} />
+
+        <Route path="/most-popular-stores" element={<MostPopularStores />} />
       </Routes>
 
       <Footer />

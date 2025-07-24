@@ -1,6 +1,9 @@
 import React from 'react'
 import Hero from "../components/Home/Herosection.jsx";
-import Tabs from "../components/Home/TabSection.jsx"
+import Tabs from "../components/Home/TabSection.jsx";
+// import RetailerSection from "../components/Home/RetailerSection.jsx";
+import RetailerCarousel from "../components/Home/RetailerCarousel.jsx";
+
 
 
 
@@ -11,6 +14,10 @@ const Homepage = () => {
     <div>
       <Hero/>
       <Tabs/>
+      {/* <RetailerSection/> */}
+      <RetailerCarousel/>
+      
+      
     </div>
   )
 }
