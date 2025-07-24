@@ -22,7 +22,7 @@ export default function PaymentHistory() {
           </p>
 
           <Link
-            to="/make-links"
+            to="/"
             className="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition"
           >
             Make Link Now

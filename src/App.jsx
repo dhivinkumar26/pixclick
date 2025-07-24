@@ -15,12 +15,12 @@ import Partners from './Pages/Partners';
 import Makelinks from './pages/MakeLinkPages';
 import CategoryLayout from './components/CategoryLayout';
 
-// Shibu branch pages
-import Earnings from './pages/MyEarnings';
-import Total_Earnings from './Pages/Total_Earnings';
-import Report from './Pages/Report';
-import Order from './Pages/Order';
-import Bonus from './Pages/Bonus';
+// My earnings
+import Earnings from './components/Makelinks/Myearnings/Earning';
+import Total_Earnings from './components/Makelinks/Myearnings/total_earning';
+import Report from './components/Makelinks/Myearnings/report';
+import Order from './components/Makelinks/Myearnings/order';
+import Bonus from './components/Makelinks/Myearnings/bonus';
 
 // Earnmore Nested Pages
 import Earnmore from './Pages/Earnmore';
@@ -37,10 +37,14 @@ import Findavailableretailersonearnkaro from './components/Earnmorechild/Earnkar
 import Changelanguageonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Changelanguageonearnkaro';
 import Checklinkperformance from './components/Earnmorechild/Earnkarobasicgrandchild/Checklinkperformance';
 
+//About PixClick
+import FAQ from './components/Footer/About pixclick/faq';
+import Blog from './components/Footer/About pixclick/blog';
+
 // Footer Useful Reads
-import TermsConditions from './components/Footer useful reads/Termsconditions';
-import Privacy from './components/Footer useful reads/privacy';
-import Antispam from './components/Footer useful reads/Antispampolicy';
+import TermsConditions from './components/Footer/Footer useful reads/Termsconditions';
+import Privacy from './components/Footer/Footer useful reads/privacy';
+import Antispam from './components/Footer/Footer useful reads/Antispampolicy';
 
 // Makelinks Sidebar Pages
 import MyEarnings from './components/Makelinks/Myearnings/Earning';
@@ -50,7 +54,7 @@ import Request from './components/Makelinks/Request/ShareMoreModal';
 import History from './components/Makelinks/History/History';
 import AccountSettings from './components/Makelinks/Account/AccountSettings';
 
-// ThulasiShree branch MyProfile Pages
+// MyProfile Pages
 import MainProfile from './Pages/MainProfile';
 import RequestPayment from './components/MyProfile/Money/RequestPayment';
 import FlipKartReport from './components/MyProfile/Reports/FlipkartReport';
@@ -78,7 +82,7 @@ const App = () => {
         <Route path="/partners" element={<Partners />} />
         <Route path="/make-links" element={<Makelinks />} />
 
-        {/* 🔹 Shibu branch additional pages */}
+        {/* 🔹 My earnings additional pages */}
         <Route path="/earnings" element={<Earnings />} />
         <Route path="/total_earn" element={<Total_Earnings />} />
         <Route path="/report" element={<Report />} />
@@ -108,7 +112,7 @@ const App = () => {
         <Route path="/payment-history" element={<History />} />
         <Route path="/account-settings" element={<AccountSettings />} />
 
-        {/* 🔹 ThulasiShree branch MyProfile Pages */}
+        {/* 🔹 MyProfile Pages */}
         <Route path="/myprofile" element={<MainProfile />} />
         <Route path="/request-payment" element={<RequestPayment />} />
         <Route path="/flipkart-report" element={<FlipKartReport />} />
@@ -123,6 +127,10 @@ const App = () => {
         <Route path="/email-us" element={<EmailUs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/logout" element={<Logout />} />
+        
+        {/* 🔹 About PixClick */}
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/blog" element={<Blog />} />
 
         {/* 🔹 Footer Useful Reads */}
         <Route path="/terms" element={<TermsConditions />} />
