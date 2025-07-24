@@ -9,8 +9,8 @@ export default function WelcomeBonusCard() {
       <div className="w-full h-14 md:h-18 lg:h-22 bg-gradient-to-b from-green-600 to-green-500"></div>
 
       {/* Container overlapping top bar */}
-      <div className="container mx-auto px-8 sm:px-12 md:px-16 lg:px-18 xl:px-22 -mt-8 sm:-mt-10 lg:-mt-12">
-        
+      <div className="container mx-auto px-8 sm:px-12 md:px-16 lg:px-18 xl:px-22 -mt-8 sm:-mt-10 lg:-mt-16 relative z-10">
+
         {/* Breadcrumb */}
         <div className="flex text-sm sm:text-base text-white mb-5">
           <Link to="/" className="hover:underline">Home</Link>
@@ -21,16 +21,18 @@ export default function WelcomeBonusCard() {
         </div>
 
         {/* Logo card */}
-        <div className="relative flex justify-center">
-          <div className="absolute bottom-[-16px] bg-white px-8 py-4 rounded-lg shadow-md">
-            <span className="text-lg font-bold text-gray-800">PIX <span class="text-green-600">CLICK</span></span>
+        <div className="flex justify-center">
+          <div className="inline-block bg-white px-6 py-2 rounded-lg shadow-md">
+            <span className="text-lg font-bold text-gray-800">
+              PIX <span className="text-green-600">CLICK</span>
+            </span>
           </div>
         </div>
       </div>
 
       {/* Main bonus card */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 mt-8">
-        <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6 sm:p-8 md:p-10 flex flex-col items-center text-center mt-12">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 mt-16">
+        <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6 sm:p-8 md:p-10 flex flex-col items-center text-center">
 
           {/* Bonus icon */}
           <div className="mb-6">
@@ -55,7 +57,7 @@ export default function WelcomeBonusCard() {
           <p className="text-gray-700 text-base sm:text-lg mb-4">
             Here's a <strong className="text-green-700">₹30</strong> bonus to get you started.
           </p>
-<br />
+
           {/* Reminder message */}
           <div className="bg-green-100 border border-green-200 text-green-800 text-sm px-4 py-3 rounded-lg mb-6 leading-relaxed">
             Get at least 1 order before <strong>01-Aug-2025</strong> to prevent this bonus from expiring.
