@@ -44,7 +44,7 @@ const cards = [
 
 const Earnmore = () => {
   const location = useLocation();
-  const pathParts = location.pathname.split("/").filter(Boolean); // ['profitshala', 'earnkaro-basics']
+  const pathParts = location.pathname.split("/").filter(Boolean);
 
   const getPageTitle = (slug) => {
     switch (slug) {
@@ -62,28 +62,63 @@ const Earnmore = () => {
         return "Affiliaters";
       case "contact-us":
         return "Contact Us";
+      case "how-to-find-retailers-on-earnkaro":
+        return "How to find available retailers on EarnKaro?";
+      case "how-to-earn-money-through-affiliate-marketing":
+        return "How to earn money through affiliate marketing?";
+      case "how-to-check-link-performance":
+        return "How to check link performance?";
+      case "how-to-change-language":
+        return "How to change language on EarnKaro?";
+      case "how-to-check-profit-rates":
+        return "How to check profit rates?";
+      case "how-to-make-profit-links":
+        return "How to make profit links?";
+      case "how-is-your-profit-tracked":
+        return "How is your profit tracked?";
+      case "how-to-check-your-earned-profit":
+        return "How to check your earned profit?";
+      case "how-to-transfer-money-to-your-bank-account":
+        return "How to transfer money to your bank account?";
+      case "how-to-refer-and-earn-profit-for-a-lifetime":
+        return "How to refer and earn profit for a lifetime?";
+      case "how-is-referral-earnings-different-from-partner-profit-earnings":
+        return "How is referral earnings different from partner profit earnings?";
       default:
-        return "";
+        return slug.replace(/-/g, " ");
     }
   };
 
   return (
     <div className="pb-10 bg-green-500 sm:bg-green-500 lg:bg-gray-100">
-      {/* Header with Breadcrumb */}
+      {/* ✅ Updated Breadcrumb */}
       <div className="relative">
         <div className="bg-gradient-to-b from-green-400 to-green-600 p-6 hidden sm:block">
           <div className="text-white font-bold text-lg space-x-1">
             <Link to="/" className="hover:text-gray-200">Home</Link>
-            {pathParts.includes("profitshala") && (
+
+            {pathParts[0] === "profitshala" && (
               <>
                 <span>/</span>
-                <Link to="/profitshala" className="hover:text-gray-200">Get Help</Link>
+                <Link to="/profitshala" className="hover:text-gray-200">
+                  {getPageTitle("profitshala")}
+                </Link>
               </>
             )}
-            {pathParts.length > 1 && (
+
+            {pathParts[1] && (
               <>
                 <span>/</span>
-                <span>{getPageTitle(pathParts[1])}</span>
+                <Link to={`/profitshala/${pathParts[1]}`} className="hover:text-gray-200">
+                  {getPageTitle(pathParts[1])}
+                </Link>
+              </>
+            )}
+
+            {pathParts.length >= 3 && (
+              <>
+                <span>/</span>
+                <span>{getPageTitle(pathParts[2])}</span>
               </>
             )}
           </div>

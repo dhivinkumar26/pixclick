@@ -1,37 +1,56 @@
-import { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default function SidebarMenu() {
-  const menuItems = [
-    "My Earnings",
-    "Reports",
-    "Profit Didn't Track?",
-    "Request Payment",
-    "Payment History",
-    "Account Settings",
-  ];
-
-  const [active, setActive] = useState("My Earnings"); // default active
-
+export default function SidebarMenu({ onMenuSelect }) {
   return (
-    <div className="w-[250px] bg-white shadow-sm border-r min-h-screen">
-      <div className="text-sm text-gray-600 px-6 py-4">
-        <span className="text-gray-400">Home / </span>
-        <span className="font-semibold text-black">Make Links</span>
+    <div className="w-full md:w-[360px] max-w-full md:max-w-[360px] bg-white shadow-md overflow-y-auto md:max-h-[400px] max-h-screen">
+      {/* Optional Breadcrumb */}
+      <div className="text-base md:text-[18px] font-medium text-gray-600 px-4 md:px-6 py-3 md:py-4 border-b border-gray-200">
+        <Link to="/" className="text-black hover:underline">Home</Link>
       </div>
 
-      <ul>
-        {menuItems.map((item, index) => (
-          <li
-            key={index}
-            onClick={() => setActive(item)}
-            className={`px-6 py-4 text-sm border-b cursor-pointer 
-              ${active === item ? "border-l-4 border-green-600 bg-gray-50 font-medium" : "border-l-4 border-transparent"}
-              hover:bg-gray-100 transition-all`}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
+      {/* Sidebar Nav Links */}
+      <div>
+        {/* Page navigation */}
+        <Link
+          to="/my-earnings"
+          className="block px-4 md:px-6 py-3 md:py-4 border-b border-gray-100 text-sm md:text-[16px] text-gray-700 hover:text-black"
+        >
+          My Earnings
+        </Link>
+        <Link
+          to="/reports"
+          className="block px-4 md:px-6 py-3 md:py-4 border-b border-gray-100 text-sm md:text-[16px] text-gray-700 hover:text-black"
+        >
+          Reports
+        </Link>
+
+        {/* In-page content switch */}
+        <button
+          onClick={() => onMenuSelect("track")}
+          className="w-full text-left px-4 md:px-6 py-3 md:py-4 border-b border-gray-100 text-sm md:text-[16px] text-gray-700 hover:text-black"
+        >
+          Profit Didn't Track?
+        </button>
+        <button
+          onClick={() => onMenuSelect("request")}
+          className="w-full text-left px-4 md:px-6 py-3 md:py-4 border-b border-gray-100 text-sm md:text-[16px] text-gray-700 hover:text-black"
+        >
+          Request
+        </button>
+        <button
+          onClick={() => onMenuSelect("payment")}
+          className="w-full text-left px-4 md:px-6 py-3 md:py-4 border-b border-gray-100 text-sm md:text-[16px] text-gray-700 hover:text-black"
+        >
+          Payment History
+        </button>
+        <button
+          onClick={() => onMenuSelect("settings")}
+          className="w-full text-left px-4 md:px-6 py-3 md:py-4 border-b border-gray-100 text-sm md:text-[16px] text-gray-700 hover:text-black"
+        >
+          Account Settings
+        </button>
+      </div>
     </div>
   );
 }
