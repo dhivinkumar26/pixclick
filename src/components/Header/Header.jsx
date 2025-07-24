@@ -71,14 +71,14 @@ const Sidebar = ({ isOpen, onClose }) => {
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
-              <Link to="/men-footwear" className="flex items-center w-full" onClick={onClose}>
+              <Link to="/menfootwear" className="flex items-center w-full" onClick={onClose}>
                 <img src="https://img.icons8.com/ios-filled/24/333333/mens-shoe.png" alt="Men's Footwear" className="mr-3"/>
                 Men's Footwear
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
-              <Link to="/women-footwear" className="flex items-center w-full" onClick={onClose}>
+              <Link to="/womenfootwear" className="flex items-center w-full" onClick={onClose}>
                 <img src="https://img.icons8.com/ios-filled/24/333333/womens-shoe.png" alt="Women's Footwear" className="mr-3"/>
                 Women's Footwear
                 <span className="ml-auto text-gray-400">+</span>
@@ -92,21 +92,21 @@ const Sidebar = ({ isOpen, onClose }) => {
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
-              <Link to="/health-personal-care" className="flex items-center w-full" onClick={onClose}>
+              <Link to="/healthpersonalcare" className="flex items-center w-full" onClick={onClose}>
                 <FaHeartbeat className="mr-3 text-gray-700 text-lg" />
                 Health & Personal Care
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
-              <Link to="/baby-products" className="flex items-center w-full" onClick={onClose}>
+              <Link to="/babyproducts" className="flex items-center w-full" onClick={onClose}>
                 <img src="https://img.icons8.com/ios-filled/24/333333/baby-bottle.png" alt="Baby Products" className="mr-3"/>
                 Baby Products
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
-              <Link to="/home-kitchen" className="flex items-center w-full" onClick={onClose}>
+              <Link to="/homeandkitchen" className="flex items-center w-full" onClick={onClose}>
                 <img src="https://img.icons8.com/ios-filled/24/333333/kitchen-room.png" alt="Home & Kitchen" className="mr-3"/>
                 Home & Kitchen
                 <span className="ml-auto text-gray-400">+</span>
