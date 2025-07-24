@@ -38,9 +38,13 @@ import Changelanguageonearnkaro from './components/Earnmorechild/Earnkarobasicgr
 import Checklinkperformance from './components/Earnmorechild/Earnkarobasicgrandchild/Checklinkperformance';
 
 // Footer Useful Reads
-import TermsConditions from './components/Footer useful reads/Termsconditions';
-import Privacy from './components/Footer useful reads/privacy';
-import Antispam from './components/Footer useful reads/Antispampolicy';
+import TermsConditions from './components/Footer/Footer useful reads/Termsconditions';
+import Privacy from './components/Footer/Footer useful reads/privacy';
+import Antispam from './components/Footer/Footer useful reads/Antispampolicy';
+
+//Footer About pixclick
+
+import About from './components/Footer/About';
 
 // Makelinks Sidebar Pages
 import MyEarnings from './components/Makelinks/Myearnings/Earning';
@@ -75,6 +79,9 @@ const App = () => {
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/anti-spam" element={<Antispam />} />
+
+        {/* 🔹 Footer - Useful Reads */}
+        <Route path="/about" element={<About />} />
 
         {/* 🔹 Earnmore Nested Routes */}
         <Route path="/profitshala" element={<Earnmore />}>
