@@ -41,6 +41,7 @@ import Checklinkperformance from './components/Earnmorechild/Earnkarobasicgrandc
 import AboutHero from './components/Footer/About pixclick/AboutUs'; // ✅ Correct path and name
 import FAQ from './components/Footer/About pixclick/faq';
 import Blog from './components/Footer/About pixclick/blog';
+import Read_more from './components/Footer/About pixclick/blog_readmore';
 
 // Footer Useful Reads
 import TermsConditions from './components/Footer/Footer useful reads/Termsconditions';
@@ -76,21 +77,21 @@ const App = () => {
     <Router>
       <Header />
       <Routes>
-        {/* 🔹 Public Routes */}
+        {/* Public Routes */}
         <Route path="/" element={<Homepage />} />
         <Route path="/otp" element={<OTP />} />
         <Route path="/login" element={<Signup />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/make-links" element={<Makelinks />} />
 
-        {/* 🔹 My earnings additional pages */}
+        {/* My earnings additional pages */}
         <Route path="/earnings" element={<Earnings />} />
         <Route path="/total_earn" element={<Total_Earnings />} />
         <Route path="/report" element={<Report />} />
         <Route path="/order" element={<Order />} />
         <Route path="/bonus" element={<Bonus />} />
 
-        {/* 🔹 Earnmore Nested & Grandchild Routes */}
+        {/* Earnmore Nested & Grandchild Routes */}
         <Route path="/profitshala" element={<Earnmore />}>
           <Route path="earnkaro-basics" element={<EarnkaroBasics />}>
             <Route path="how-to-earn-money-through-affiliate-marketing" element={<Earnmoneythroughaffiliatemarketing />} />
@@ -105,7 +106,7 @@ const App = () => {
           <Route path="contact-us" element={<ContactUs />} />
         </Route>
 
-        {/* 🔹 Makelinks Sidebar Pages */}
+        {/* Makelinks Sidebar Pages */}
         <Route path="/my-earnings" element={<MyEarnings />} />
         <Route path="/reports" element={<Reports />} />
         <Route path="/profit-track" element={<ProfitTrack />} />
@@ -113,7 +114,7 @@ const App = () => {
         <Route path="/payment-history" element={<History />} />
         <Route path="/account-settings" element={<AccountSettings />} />
 
-        {/* 🔹 MyProfile Pages */}
+        {/* MyProfile Pages */}
         <Route path="/myprofile" element={<MainProfile />} />
         <Route path="/request-payment" element={<RequestPayment />} />
         <Route path="/flipkart-report" element={<FlipKartReport />} />
@@ -128,18 +129,20 @@ const App = () => {
         <Route path="/email-us" element={<EmailUs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/logout" element={<Logout />} />
-        
-        {/* 🔹 About PixClick */}
-        <Route path="/about-us" element={<AboutHero />} /> 
+
+        {/* About PixClick */}
+        <Route path="/about" element={<AboutHero />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blog" element={<Blog />} />
+        {/* updated dynamic read page */}
+        <Route path="/read/:id" element={<Read_more />} />
 
-        {/* 🔹 Footer Useful Reads */}
+        {/* Footer Useful Reads */}
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/anti-spam" element={<Antispam />} />
 
-        {/* 🔹 Dynamic category page */}
+        {/* Dynamic category page */}
         <Route path="/:category" element={<CategoryLayout />} />
       </Routes>
       <Footer />

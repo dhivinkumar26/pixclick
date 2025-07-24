@@ -70,6 +70,20 @@ const Earnmore = () => {
         return "How to check link performance?";
       case "how-to-change-language":
         return "How to change language on EarnKaro?";
+      case "how-to-check-profit-rates":
+        return "How to check profit rates?";
+      case "how-to-make-profit-links":
+        return "How to make profit links?";
+      case "how-is-your-profit-tracked":
+        return "How is your profit tracked?";
+      case "how-to-check-your-earned-profit":
+        return "How to check your earned profit?";
+      case "how-to-transfer-money-to-your-bank-account":
+        return "How to transfer money to your bank account?";
+      case "how-to-refer-and-earn-profit-for-a-lifetime":
+        return "How to refer and earn profit for a lifetime?";
+      case "how-is-referral-earnings-different-from-partner-profit-earnings":
+        return "How is referral earnings different from partner profit earnings?";
       default:
         return slug.replace(/-/g, " ");
     }
@@ -83,23 +97,24 @@ const Earnmore = () => {
           <div className="text-white font-bold text-lg space-x-1">
             <Link to="/" className="hover:text-gray-200">Home</Link>
 
-            {pathParts.includes("profitshala") && (
+            {pathParts[0] === "profitshala" && (
               <>
                 <span>/</span>
-                <Link to="/profitshala" className="hover:text-gray-200">Get Help</Link>
-              </>
-            )}
-
-            {pathParts.includes("earnkaro-basics") && (
-              <>
-                <span>/</span>
-                <Link to="/profitshala/earnkaro-basics" className="hover:text-gray-200">
-                  EarnKaro Basics
+                <Link to="/profitshala" className="hover:text-gray-200">
+                  {getPageTitle("profitshala")}
                 </Link>
               </>
             )}
 
-            {/* ✅ Grandchild route */}
+            {pathParts[1] && (
+              <>
+                <span>/</span>
+                <Link to={`/profitshala/${pathParts[1]}`} className="hover:text-gray-200">
+                  {getPageTitle(pathParts[1])}
+                </Link>
+              </>
+            )}
+
             {pathParts.length >= 3 && (
               <>
                 <span>/</span>

@@ -22,8 +22,54 @@ const filtersByCategory = {
         subcategories: ["Shirts", "T-Shirts", "Jeans", "Kurta & Kurtis", "Dresses"],
         sellers: ["Amazon", "Flipkart", "AJIO"],
         brands: ["Fig", "RIO", "DNMX", "Fusion", "MYSHKA", "Outryt"],
+    },
+    menfootwear: {
+        subcategories: ["Formal Shoes", "Casual Shoes", "Sneakers", "Running Shoes", "Slippers & Flip Flops"],
+        sellers: ["Amazon", "Flipkart", "AJIO"],
+        brands: ["Puma", "NIKE", "FILA", "Skechers", "Campus", "Lee Cooper", "TAURENE", "AFROJACK", "ASICS", "CROCS"],
+    },
+    womenfootwear: {
+        subcategories: ["Casual Shoes", "Sandals", "Sports Shoes", "Heels"],
+        sellers: ["Amazon", "Flipkart", "AJIO"],
+        brands: ["HI-ATTITUDE", "Skechers", "Carlton London", "Marc Loire", "WALKFREE", "PERFORMAX",
+            "NIKE", "SAPATOS", "BANJOYSHOES", "CATWALK", "LONDON STEPS", "STAR STYLE", "TRY FEET",
+            "AJIO", "Campus", "VAN HEUSEN", "ARBUNORE", "MFT Couture", "RED TAPE", "SHEZONE"]
+    },
+    beauty: {
+        subcategories: [
+            "Face Wash", "Face Cream", "Foundation", "Lipstick",
+            "Serum", "Toner", "Moisturizer", "Sunscreen", "Kajal"],
+        sellers: ["Amazon", "Flipkart", "Nykaa", "AJIO"],
+        brands: [
+            "Lakme", "Maybelline", "Mamaearth", "L'Oreal", "Plum", "Biotique", "NIVEA", "The Body Shop",
+            "Pond's", "Dot & Key", "mCaffeine", "WOW", "Neutrogena", "Lacto Calamine", "Minimalist",
+            "The Derma Co", "Good Vibes", "RENEE", "Faces Canada", "Swiss Beauty", "Insight", "SUGAR", "Blue Heaven"
+        ]
+    },
+    healthpersonalcare: {
+        subcategories: ["Toothpaste", "Shampoo", "Deodorant", "Soaps", "Face Wash", "Hair Oil", "Talc", "Lotion", "Intimate Hygiene", "Shaving & Razors"],
+        sellers: ["Amazon", "Flipkart", "Nykaa", "BigBasket"],
+        brands: [
+            "Colgate", "Dove", "NIVEA", "Lifebuoy", "Head & Shoulders", "Gillette", "Dettol", "Fiama", "Himalaya",
+            "Parachute", "Pears", "Vaseline", "Pond's", "Beardo", "The Man Company", "WOW", "Dabur", "Tresemme",
+            "Clinic Plus", "VWash", "Santoor", "Old Spice"]
+    },
+    babyproducts: {
+        subcategories: ["Diapers", "Baby Lotion", "Shampoo", "Body Wash", "Wipes", "Powder", "Oils", "Creams & Rash Care", "Toothbrush", "Accessories"],
+        sellers: ["Amazon", "FirstCry", "Flipkart", "Nykaa Baby", "MeeMee Official"],
+        brands: ["Pampers", "Johnson's", "Himalaya", "MamyPoko", "Sebamed", "Mee Mee", "Mamaearth", "Chicco", "Baby Dove", "Pigeon", "Farlin", "Babyhug", "The Moms Co."]
+    },
+    homeandkitchen: {
+        subcategories: ["Cookware","Storage Containers","Kitchen Appliances","Furniture","Dining","HomFurnishings"],
+        sellers: ["Amazon", "Flipkart", "AJIO"],
+        brands: ["Milton", "Prestige", "Pigeon", "Philips", "Cello","Borosil", "AmazonBasics", "Butterfly"]
     }
-    // Add more categories as needed
+
+
+
+
+
+
 };
 
 const FilterSidebar = () => {
