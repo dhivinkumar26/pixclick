@@ -31,6 +31,12 @@ import RealUserStories from './components/Earnmorechild/Realuserstories';
 import Affiliaters from './components/Earnmorechild/Affilaters';
 import ContactUs from './components/Earnmorechild/ContactUs';
 
+// Earnmore Grandchild Pages
+import Earnmoneythroughaffiliatemarketing from './components/Earnmorechild/Earnkarobasicgrandchild/Earnmoneythroughaffiliatemarketing';
+import Findavailableretailersonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Findavailableretailersonearnkaro';
+import Changelanguageonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Changelanguageonearnkaro';
+import Checklinkperformance from './components/Earnmorechild/Earnkarobasicgrandchild/Checklinkperformance';
+
 // Footer Useful Reads
 import TermsConditions from './components/Footer useful reads/Termsconditions';
 import Privacy from './components/Footer useful reads/privacy';
@@ -56,6 +62,7 @@ const App = () => {
         <Route path="/login" element={<Signup />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/make-links" element={<Makelinks />} />
+        <Route path="/profile" element={<></>} /> {/* Empty placeholder */}
 
         {/* 🔹 Shibu branch additional pages */}
         <Route path="/earnings" element={<Earnings />} />
@@ -63,7 +70,6 @@ const App = () => {
         <Route path="/report" element={<Report />} />
         <Route path="/order" element={<Order />} />
         <Route path="/bonus" element={<Bonus />} />
-        <Route path="/profile" element={<></>} /> {/* Empty placeholder */}
 
         {/* 🔹 Footer - Legal Pages */}
         <Route path="/terms" element={<TermsConditions />} />
@@ -72,7 +78,25 @@ const App = () => {
 
         {/* 🔹 Earnmore Nested Routes */}
         <Route path="/profitshala" element={<Earnmore />}>
-          <Route path="earnkaro-basics" element={<EarnkaroBasics />} />
+          <Route path="earnkaro-basics" element={<EarnkaroBasics />}>
+            {/* ✅ Earnmore Grandchild routes */}
+            <Route
+              path="how-to-earn-money-through-affiliate-marketing"
+              element={<Earnmoneythroughaffiliatemarketing />}
+            />
+            <Route
+              path="how-to-find-retailers-on-earnkaro"
+              element={<Findavailableretailersonearnkaro />}
+            />
+            <Route
+              path="how-to-check-link-performance"
+              element={<Checklinkperformance />}
+            />
+            <Route
+              path="how-to-change-language"
+              element={<Changelanguageonearnkaro />}
+            />
+          </Route>
           <Route path="all-about-profit" element={<AllAboutProfit />} />
           <Route path="tips-tricks" element={<TipsTricks />} />
           <Route path="real-user-stories" element={<RealUserStories />} />
@@ -80,7 +104,7 @@ const App = () => {
           <Route path="contact-us" element={<ContactUs />} />
         </Route>
 
-        {/* 🔹 Sidebar (Makelinks) Pages */}
+        {/* 🔹 Makelinks Sidebar Pages */}
         <Route path="/my-earnings" element={<MyEarnings />} />
         <Route path="/reports" element={<Reports />} />
         <Route path="/profit-track" element={<ProfitTrack />} />
