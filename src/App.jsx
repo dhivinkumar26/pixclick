@@ -38,6 +38,7 @@ import Changelanguageonearnkaro from './components/Earnmorechild/Earnkarobasicgr
 import Checklinkperformance from './components/Earnmorechild/Earnkarobasicgrandchild/Checklinkperformance';
 
 //About PixClick
+import AboutHero from './components/Footer/About pixclick/AboutUs'; // ✅ Correct path and name
 import FAQ from './components/Footer/About pixclick/faq';
 import Blog from './components/Footer/About pixclick/blog';
 
@@ -45,13 +46,6 @@ import Blog from './components/Footer/About pixclick/blog';
 import TermsConditions from './components/Footer/Footer useful reads/Termsconditions';
 import Privacy from './components/Footer/Footer useful reads/privacy';
 import Antispam from './components/Footer/Footer useful reads/Antispampolicy';
-<<<<<<< HEAD
-
-//Footer About pixclick
-
-import About from './components/Footer/About';
-=======
->>>>>>> origin/Mayakannan
 
 // Makelinks Sidebar Pages
 import MyEarnings from './components/Makelinks/Myearnings/Earning';
@@ -136,6 +130,7 @@ const App = () => {
         <Route path="/logout" element={<Logout />} />
         
         {/* 🔹 About PixClick */}
+        <Route path="/about-us" element={<AboutHero />} /> 
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blog" element={<Blog />} />
 
