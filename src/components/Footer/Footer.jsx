@@ -19,7 +19,7 @@ const Footer = () => {
             </li>
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
-              <a href="#" className="hover:text-red-500">FAQs</a>
+              <a href="/faq" className="hover:text-red-500">FAQs</a>
             </li>
           </ul>
         </div>

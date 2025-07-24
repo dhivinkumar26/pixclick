@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import img1 from "./../../assets/MakeLinks/img6.jpeg";
 import img2 from "./../../assets/MakeLinks/img8.png";
 import img3 from "./../../assets/MakeLinks/img7.jpeg";
-
+import { Link  } from "react-router-dom";
 const brands = [
   { name: "Flipkart", img: "https://logo.clearbit.com/flipkart.com" },
   { name: "Myntra", img: "https://logo.clearbit.com/myntra.com" },
@@ -48,9 +48,10 @@ export default function QuickConvertCarousel() {
       </div>
 
       <div className="text-center mt-5 sm:mt-6">
+        <Link to="/partners">
         <button className="bg-green-600 text-white px-5 sm:px-6 py-2 rounded-full hover:bg-green-700 text-sm font-medium">
           SEE OUR PARTNERS
-        </button>
+        </button></Link>
       </div>
     </div>
   );
