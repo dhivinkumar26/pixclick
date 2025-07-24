@@ -449,17 +449,22 @@ const CategoryPage = () => {
                 {products.map((p) => (
                     <div
                         key={p.id}
-                        className="relative border rounded-lg shadow-md p-4 flex flex-col items-center bg-white"
+                        className="relative border rounded-sm shadow-md p-4 flex flex-col items-center bg-white"
                     >
                         {/* On Sale Ribbon */}
-                        <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-bl">
+                        <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-bl rounded-tr z-10">
                             On Sale
                         </div>
 
                         {/* Product Image */}
-                        <div className="w-24 h-24 flex items-center justify-center bg-gray-100 mb-4 rounded">
+                        <div className="w-full h-48 flex items-center justify-center mb-4 bg-gray-100 rounded overflow-hidden">
                             {p.image ? (
-                                <img src={p.image} alt={p.name} loading="lazy" className="object-contain max-h-full" />
+                                <img
+                                    src={p.image}
+                                    alt={p.name}
+                                    loading="lazy"
+                                    className="object-cover h-full cursor-pointer"
+                                />
                             ) : (
                                 <span className="text-xs text-gray-500">Image Coming Soon</span>
                             )}
@@ -467,7 +472,7 @@ const CategoryPage = () => {
 
                         {/* Product Info */}
                         <div className="text-center mb-4">
-                            <p className="text-gray-500 text-sm">
+                            <p className="text-gray-500 text-sm mb-1">
                                 Brand: <span className="font-medium">{p.brand}</span>
                             </p>
                             <p className="font-semibold">{p.name}</p>
@@ -480,11 +485,11 @@ const CategoryPage = () => {
                         </div>
 
                         {/* Buttons */}
-                        <div className="flex gap-2">
-                            <button className="px-3 cursor-pointer py-1 border border-gray-300 text-sm rounded hover:bg-gray-100">
+                        <div className="flex gap-2 w-full justify-center">
+                            <button className="px-4 py-1 border cursor-pointer border-gray-300 text-sm rounded hover:bg-gray-100">
                                 COPY LINK
                             </button>
-                            <button className="px-3 cursor-pointer py-1 bg-green-500 text-white text-sm rounded hover:bg-green-600">
+                            <button className="px-4 py-1 bg-green-500 cursor-pointer text-white text-sm rounded hover:bg-green-600">
                                 SHARE NOW
                             </button>
                         </div>
@@ -492,6 +497,7 @@ const CategoryPage = () => {
                 ))}
             </div>
         </div>
+
 
 
     );
