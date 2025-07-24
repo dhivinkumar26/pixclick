@@ -5,6 +5,7 @@ import axis from "../../assets/Home/axis.png";
 import flipkart from "../../assets/Home/flipkart.png";
 import ajio from "../../assets/Home/ajio.png";
 import { Link } from "react-router-dom";
+import MostPopularStores from "./MostPopularStores";
 
 const cardData = [
   { title: "HSBC PLATINUM CREDIT CARD", logo: hsbc, profit: "Flat Rs 3000 Profit" },

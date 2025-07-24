@@ -7,7 +7,9 @@ import OTP from './components/Login&signup/otp'
 import Signup from './Pages/login&signup'
 import Makelinks from './Pages/MakeLinkPages'
 import Earnmore from './Pages/Earnmore'
-import Homepage from './Pages/Homepage'
+ 
+
+import Homepage from './pages/Homepage'
 import Partners from './Pages/Partners'
 import CategoryLayout from './components/CategoryLayout'
 
@@ -18,9 +20,9 @@ import RealUserStories from "./components/Earnmorechild/Realuserstories"
 import Affiliaters from "./components/Earnmorechild/Affilaters"
 import ContactUs from "./components/Earnmorechild/ContactUs"
 
-import TermsConditions from './components/Footer useful reads/Termsconditions'
-import Privacy from "./components/Footer useful reads/privacy"
-import Antispam from "./components/Footer useful reads/Antispampolicy"
+import TermsConditions from './components/Footer/Footerusefulreads/Termsconditions'
+import Privacy from "./components/Footer/Footerusefulreads/privacy"
+import Antispam from "./components/Footer/Footerusefulreads/Antispampolicy"
 
 const App = () => {
   return (
@@ -35,16 +37,16 @@ const App = () => {
         <Route path="/make-links" element={<Makelinks />} />
 
         {/* My earnings additional pages */}
-        <Route path="/earnings" element={<Earnings />} />
-        <Route path="/total_earn" element={<Total_Earnings />} />
-        <Route path="/report" element={<Report />} />
+        {/* <Route path="/earnings" element={<Earning />} /> */}
+        {/* <Route path="/total_earn" element={<Total_Earnings />} /> */}
+        {/* <Route path="/report" element={<Report />} />
         <Route path="/order" element={<Order />} />
-        <Route path="/bonus" element={<Bonus />} />
+        <Route path="/bonus" element={<Bonus />} /> */}
 
         {/* Earnmore Nested & Grandchild Routes */}
         <Route path="/profitshala" element={<Earnmore />}>
           <Route path="earnkaro-basics" element={<EarnkaroBasics />}>
-            <Route path="how-to-earn-money-through-affiliate-marketing" element={<Earnmoneythroughaffiliatemarketing />} />
+            {/* <Route path="how-to-earn-money-through-affiliate-marketing" element={<Earnmoneythroughaffiliatemarketing />} /> */}
             <Route path="how-to-find-retailers-on-earnkaro" element={<Findavailableretailersonearnkaro />} />
             <Route path="how-to-check-link-performance" element={<Checklinkperformance />} />
             <Route path="how-to-change-language" element={<Changelanguageonearnkaro />} />
@@ -94,7 +96,7 @@ const App = () => {
 
         {/* Dynamic category page */}
         <Route path="/:category" element={<CategoryLayout />} />
-
+        {/* homepage */}
         <Route path="/most-popular-stores" element={<MostPopularStores />} />
       </Routes>
       <Footer />
