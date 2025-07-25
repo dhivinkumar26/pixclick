@@ -37,6 +37,14 @@ import Findavailableretailersonearnkaro from './components/Earnmorechild/Earnkar
 import Changelanguageonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Changelanguageonearnkaro';
 import Checklinkperformance from './components/Earnmorechild/Earnkarobasicgrandchild/Checklinkperformance';
 
+import Howtocheckprofitrates from "./components/Earnmorechild/Allaboutprofitgrandchild/Howtoheckprofitrates";
+import Howtomakeprofitlinks from "./components/Earnmorechild/Allaboutprofitgrandchild/Howtomakeprofitlinks";
+import Howisyourprofittracked from "./components/Earnmorechild/Allaboutprofitgrandchild/Howisyourprofittracked";
+import Howtocheckyourearnedprofit from "./components/Earnmorechild/Allaboutprofitgrandchild/Howtocheckyourearnedprofit";
+import Howtotransfermoneytoyourbankaccount from "./components/Earnmorechild/Allaboutprofitgrandchild/Howtotransfermoneytoyourbankaccount";
+import Howtoreferandearnprofitforalifetime from "./components/Earnmorechild/Allaboutprofitgrandchild/Howtoreferandearnprofitforalifetime";
+import Howisreferralearningsdifferentfrompartnerprofitearnings from "./components/Earnmorechild/Allaboutprofitgrandchild/Howisreferralearningsdifferentfrompartnerprofitearnings";
+
 //About PixClick
 import AboutHero from './components/Footer/About pixclick/AboutUs'; // ✅ Correct path and name
 import FAQ from './components/Footer/About pixclick/faq';
