@@ -18,7 +18,7 @@ const MainProfile = () => {
                 <NavLink className={linkStyle}>Profile</NavLink>
             </nav>
             {/* Name box */}
-            <section className='flex justify-between bg-center bg-cover m-5 p-5 rounded-lg' style={{ backgroundImage: `url(${ProfileBG})` }}>
+            <section className='flex justify-between bg-center bg-cover m-5 p-5 rounded-lg overflow-x-auto hide-scrollbar' style={{ backgroundImage: `url(${ProfileBG})` }}>
                 <div className='m-5 px-10 py-5 flex items-center space-x-6 border-t-[1.5px] border-l-[1.5px] border-r-[1.5px] border-b-[5px] border-[rgba(255,255,255,0.3)] rounded-lg'>
                     <span className="bg-white text-green-700 rounded-full w-18 h-18 flex items-center justify-center text-3xl font-bold">M</span>
                     <span className="text-white text-2xl font-semibold">MyName</span>

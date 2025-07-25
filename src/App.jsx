@@ -65,7 +65,7 @@ const App = () => {
         <Route path='/payment-history' element={<PaymentHistory/>} />
         <Route path='/reports' element={<Reports/>} />  
         <Route path='/flipkart-reports' element={<FlipKartReport/>} />
-        <Route path='/my-links-performance' element={<MyLinksPerformance/>} />
+        <Route path='/my-link-performance' element={<MyLinksPerformance/>} />
         <Route path='/profit-share' element={<ProfitShare/>} />
         <Route path='/ek-affiliaters' element={<EKAffiliaters/>} />
         <Route path='/join-telegram' element={<JoinTelegram/>} />
