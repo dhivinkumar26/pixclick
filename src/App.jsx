@@ -23,7 +23,6 @@ import Privacy from "./components/Footer useful reads/privacy"
 import Antispam from "./components/Footer useful reads/Antispampolicy"
 import MainProfile from './Pages/MainProfile'
 import MyEarnings from './components/MyProfile/Money/MyEarnings'
-import RequestPayment from './components/MyProfile/Money/RequestPayment'
 import PaymentHistory from './components/MyProfile/Money/PaymentHistory'
 import Reports from './components/MyProfile/Reports/Reports'
 import FlipKartReport from './components/MyProfile/Reports/FlipkartReport'
@@ -41,6 +40,9 @@ import AccountSettings from './components/MyProfile/More/AccountSettings'
 import PrivacyPolicy from './components/MyProfile/More/PrivacyPolicy'
 import Logout from './components/MyProfile/More/Logout'
 
+import { Navigate } from 'react-router-dom';
+
+
 const App = () => {
   return (
     <Router>
@@ -57,7 +59,8 @@ const App = () => {
         {/* MyProfile Routes */}
         <Route path="/myprofile" element={<MainProfile/>} />
         <Route path="/my-earnings" element={<MyEarnings/>} />
-        <Route path='/request-payment' element={<RequestPayment/>}/>
+        {/* <Route path='/request-payment' element={<MyEarnings/>}/> */}
+        <Route path="/request-payment" element={<Navigate to="/my-earnings?popup=true" replace />} />
         <Route path='/payment-history' element={<PaymentHistory/>} />
         <Route path='/reports' element={<Reports/>} />  
         <Route path='/flipkart-report' element={<FlipKartReport/>} />
