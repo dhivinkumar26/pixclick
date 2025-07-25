@@ -94,26 +94,26 @@ const FilterSidebar = () => {
             {/* Price Filter */}
             <div className="mb-4">
                 <h3 className="font-semibold text-gray-700 mb-2">Price</h3>
-               <div className="flex flex-col items-start space-y-2">
-    <div className="flex items-center space-x-2">
-        <input
-            type="number"
-            className="border p-1 w-20 text-sm"
-            value={minPrice}
-            onChange={(e) => setMinPrice(e.target.value)}
-        />
-        <span>-</span>
-        <input
-            type="number"
-            className="border p-1 w-20 text-sm"
-            value={maxPrice}
-            onChange={(e) => setMaxPrice(e.target.value)}
-        />
-    </div>
-    <button className="bg-green-600 text-white px-2 py-1 text-sm rounded hover:bg-green-700">
-        SEARCH
-    </button>
-</div>
+                <div className="flex flex-col items-start space-y-2">
+                    <div className="flex items-center space-x-2">
+                        <input
+                            type="number"
+                            className="border p-1 w-20 text-sm"
+                            value={minPrice}
+                            onChange={(e) => setMinPrice(e.target.value)}
+                        />
+                        <span>-</span>
+                        <input
+                            type="number"
+                            className="border p-1 w-20 text-sm"
+                            value={maxPrice}
+                            onChange={(e) => setMaxPrice(e.target.value)}
+                        />
+                    </div>
+                    <button className="bg-green-600 text-white px-2 py-1 text-sm rounded hover:bg-green-700">
+                        SEARCH
+                    </button>
+                </div>
 
             </div>
 
