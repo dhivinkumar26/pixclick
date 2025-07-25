@@ -68,8 +68,8 @@ const App = () => {
         <Route path='/my-link-performance' element={<MyLinksPerformance/>} />
         <Route path='/profit-share' element={<ProfitShare/>} />
         <Route path='/ek-affiliaters' element={<EKAffiliaters/>} />
-        <Route path='/join-telegram' element={<JoinTelegram/>} />
-        <Route path='/how-ek-works' element={<HowEKWorks/>} />
+        <Route path='/join-our-telegram' element={<JoinTelegram/>} />
+        <Route path='/how-earnkaro-works' element={<HowEKWorks/>} />
         <Route path='/top-earners' element={<TopEarners/>} />
         <Route path='/refer-earn' element={<ReferEarn/>} />
         <Route path='/referral-network' element={<ReferralNetwork/>} />
