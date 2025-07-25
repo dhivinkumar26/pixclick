@@ -36,9 +36,16 @@ import Earnmoneythroughaffiliatemarketing from './components/Earnmorechild/Earnk
 import Findavailableretailersonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Findavailableretailersonearnkaro';
 import Changelanguageonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Changelanguageonearnkaro';
 import Checklinkperformance from './components/Earnmorechild/Earnkarobasicgrandchild/Checklinkperformance';
+import Howtocheckprofitrates from './components/Earnmorechild/Allaboutprofitgrandchild/Howtoheckprofitrates';
+import Howtomakeprofitlinks from './components/Earnmorechild/Allaboutprofitgrandchild/Howtomakeprofitlinks';
+import Howisyourprofittracked from './components/Earnmorechild/Allaboutprofitgrandchild/Howisyourprofittracked';
+import Howtocheckyourearnedprofit from './components/Earnmorechild/Allaboutprofitgrandchild/Howtocheckyourearnedprofit';
+import Howtotransfermoneytoyourbankaccount from './components/Earnmorechild/Allaboutprofitgrandchild/Howtotransfermoneytoyourbankaccount';
+import Howtoreferandearnprofitforalifetime from './components/Earnmorechild/Allaboutprofitgrandchild/Howtoreferandearnprofitforalifetime';
+import Howisreferralearningsdifferentfrompartnerprofitearnings from './components/Earnmorechild/Allaboutprofitgrandchild/Howisreferralearningsdifferentfrompartnerprofitearnings';
 
-//About PixClick
-import AboutHero from './components/Footer/About pixclick/AboutUs'; // ✅ Correct path and name
+// About PixClick
+import AboutHero from './components/Footer/About pixclick/AboutUs';
 import FAQ from './components/Footer/About pixclick/faq';
 import Blog from './components/Footer/About pixclick/blog';
 import Read_more from './components/Footer/About pixclick/blog_readmore';
@@ -49,7 +56,6 @@ import Privacy from './components/Footer/Footer useful reads/privacy';
 import Antispam from './components/Footer/Footer useful reads/Antispampolicy';
 
 // Makelinks Sidebar Pages
-import MyEarnings from './components/Makelinks/Myearnings/Earning';
 import Reports from './components/Makelinks/Reports/Reports';
 import ProfitTrack from './components/Makelinks/ProfitTrack/Track';
 import Request from './components/Makelinks/Request/ShareMoreModal';
@@ -99,7 +105,15 @@ const App = () => {
             <Route path="how-to-check-link-performance" element={<Checklinkperformance />} />
             <Route path="how-to-change-language" element={<Changelanguageonearnkaro />} />
           </Route>
-          <Route path="all-about-profit" element={<AllAboutProfit />} />
+          <Route path="all-about-profit" element={<AllAboutProfit />}>
+            <Route path="how-to-check-profit-rates" element={<Howtocheckprofitrates />} />
+            <Route path="how-to-make-profit-links" element={<Howtomakeprofitlinks />} />
+            <Route path="how-is-your-profit-tracked" element={<Howisyourprofittracked />} />
+            <Route path="how-to-check-your-earned-profit" element={<Howtocheckyourearnedprofit />} />
+            <Route path="how-to-transfer-money-to-your-bank-account" element={<Howtotransfermoneytoyourbankaccount />} />
+            <Route path="how-to-refer-and-earn-profit-for-a-lifetime" element={<Howtoreferandearnprofitforalifetime />} />
+            <Route path="how-is-referral-earnings-different-from-partner-profit-earnings" element={<Howisreferralearningsdifferentfrompartnerprofitearnings />} />
+          </Route>
           <Route path="tips-tricks" element={<TipsTricks />} />
           <Route path="real-user-stories" element={<RealUserStories />} />
           <Route path="affiliaters" element={<Affiliaters />} />
@@ -107,7 +121,7 @@ const App = () => {
         </Route>
 
         {/* Makelinks Sidebar Pages */}
-        <Route path="/my-earnings" element={<MyEarnings />} />
+        <Route path="/my-earnings" element={<Earnings />} />
         <Route path="/reports" element={<Reports />} />
         <Route path="/profit-track" element={<ProfitTrack />} />
         <Route path="/request" element={<Request />} />
@@ -134,7 +148,6 @@ const App = () => {
         <Route path="/about" element={<AboutHero />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blog" element={<Blog />} />
-        {/* updated dynamic read page */}
         <Route path="/read/:id" element={<Read_more />} />
 
         {/* Footer Useful Reads */}
