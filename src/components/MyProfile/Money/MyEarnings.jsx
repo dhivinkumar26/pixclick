@@ -41,7 +41,7 @@ const MyEarnings = () => {
       {/* Top Banner */}
       <div className="absolute h-[100px] w-full bg-[linear-gradient(to_bottom,_#75d268_0%,_#41a234_75%)] z-0" />
       <div className="relative z-10 mx-50">
-        <Breadcrumbs />
+        <Breadcrumbs className='text-white'/>
       </div>
 
       {/* Earnings Summary */}
