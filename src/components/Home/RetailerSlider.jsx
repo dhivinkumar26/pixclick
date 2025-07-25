@@ -58,7 +58,7 @@ const RetailerSlider = () => {
           <h2 className="text-lg font-semibold">TOP RETAILERS</h2>
           <Link
             to="/most-popular-stores"
-            className="text-sm text-black font-medium cursor-pointer flex items-center gap-1"
+            className="text-sm text-gray-600 font-medium cursor-pointer flex items-center gap-1 hover:text-black "
           >
             VIEW ALL <span className="text-xl">›</span>
           </Link>
@@ -121,7 +121,7 @@ const RetailerSlider = () => {
                       onClick={() => handleCopy(idx)}
                       className="border border-gray-400 rounded-full py-2 font-medium text-sm sm:text-base"
                     >
-                      {copiedIndex === idx ? "Copied" : "Copy Link"}
+                      {copiedIndex === idx ? "Copied" : "COPY LINK"}
                     </button>
                   </div>
                 </div>
