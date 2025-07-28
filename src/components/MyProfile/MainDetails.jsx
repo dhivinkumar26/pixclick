@@ -20,20 +20,24 @@ import {
 import { IoSettingsOutline } from "react-icons/io5";
 import { PiNoteDuotone } from "react-icons/pi";
 
-//convert label to URL-friendly path
+// Generate clean route paths
 const generatePath = (label) =>
   "/" + label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
+// Detail Item component
 const DetailItem = ({ icon: Icon, label }) => (
   <Link to={generatePath(label)} className="no-underline">
-    <div className="flex items-center rounded-xl border border-gray-300 py-2 hover:bg-gray-50 transition">
-      <Icon className="text-green-600 text-2xl font-semibold w-12 h-12 p-2 bg-gray-200 rounded-full mx-5" />
-      <span className="px-3 text-lg font-semibold text-gray-700">{label}</span>
-      <FaGreaterThan className="text-green-600 ml-auto mr-5 text-xl" />
+    <div className="flex items-center gap-3 rounded-xl border border-gray-300 p-3 hover:bg-gray-100 transition duration-200">
+      <Icon className="text-green-600 text-2xl min-w-[2.5rem] h-10 p-2 bg-gray-200 rounded-full" />
+      <span className="text-base sm:text-lg font-semibold text-gray-700 flex-1">
+        {label}
+      </span>
+      <FaGreaterThan className="text-green-600 text-lg sm:text-xl" />
     </div>
   </Link>
 );
 
+// Main container
 const MainDetails = () => {
   const detailSections = [
     {
@@ -96,13 +100,13 @@ const MainDetails = () => {
   ];
 
   return (
-    <div className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="p-4 sm:p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
       {detailSections.map((section, idx) => (
         <div
           key={idx}
-          className="bg-white border border-gray-300 rounded-2xl shadow p-5 flex flex-col gap-5"
+          className="bg-white border border-gray-200 rounded-2xl shadow-sm p-5 flex flex-col gap-4"
         >
-          <h2 className="text-xl font-bold text-gray-800">{section.title}</h2>
+          <h2 className="text-lg sm:text-xl font-bold text-gray-800">{section.title}</h2>
           {section.items.map((item, i) => (
             <DetailItem key={i} icon={item.icon} label={item.label} />
           ))}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import OTP from './components/Login&signup/otp'
@@ -41,13 +41,13 @@ import AccountSettings from './components/MyProfile/More/AccountSettings'
 import PrivacyPolicy from './components/MyProfile/More/PrivacyPolicy'
 import Logout from './components/MyProfile/More/Logout'
 
-import { Navigate } from 'react-router-dom';
+const AppRoutes = () => {
+  const location = useLocation()
+  const hideHeaderFooter = location.pathname === '/join-our-telegram'
 
-
-const App = () => {
   return (
-    <Router>
-      <Header />
+    <>
+      {!hideHeaderFooter && <Header />}
 
       <Routes>
         {/* Common Routes */}
@@ -58,28 +58,25 @@ const App = () => {
         <Route path="/make-links" element={<Makelinks />} />
 
         {/* MyProfile Routes */}
-        <Route path="/myprofile" element={<MainProfile/>} />
-        <Route path="/my-earnings" element={<MyEarnings/>} />
-        {/* <Route path='/request-payment' element={<MyEarnings/>}/> */}
+        <Route path="/myprofile" element={<MainProfile />} />
+        <Route path="/my-earnings" element={<MyEarnings />} />
         <Route path="/request-payment" element={<Navigate to="/my-earnings?popup=true" replace />} />
-        <Route path='/payment-history' element={<PaymentHistory/>} />
-        <Route path='/reports' element={<Reports/>} />  
-        <Route path='/flipkart-reports' element={<FlipKartReport/>} />
-        <Route path='/my-link-performance' element={<MyLinksPerformance/>} />
-        <Route path='/profit-share' element={<ProfitShare/>} />
-        <Route path='/ek-affiliaters' element={<EKAffiliaters/>} />
-        <Route path='/join-our-telegram' element={<JoinTelegram/>} />
-        <Route path='/how-earnkaro-works' element={<HowEKWorks/>} />
-        <Route path='/top-earners' element={<TopEarners/>} />
-        <Route path='/refer-earn' element={<ReferEarn/>} />
-        <Route path='/referral-network' element={<ReferralNetwork/>} />
-        <Route path='/profit-track' element={<ProfitTrack/>} />
-        <Route path='/email-us' element={<EmailUs/>} />
-        <Route path='/account-settings' element={<AccountSettings/>} />
-        <Route path='/terms-conditions' element={<TermsConditions/>} />
-        <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
-        <Route path='/logout' element={<Logout/>} />
-
+        <Route path="/payment-history" element={<PaymentHistory />} />
+        <Route path="/reports" element={<Reports />} />
+        <Route path="/flipkart-reports" element={<FlipKartReport />} />
+        <Route path="/my-link-performance" element={<MyLinksPerformance />} />
+        <Route path="/profit-share" element={<ProfitShare />} />
+        <Route path="/ek-affiliaters" element={<EKAffiliaters />} />
+        <Route path="/how-earnkaro-works" element={<HowEKWorks />} />
+        <Route path="/hear-from-our-top-earners" element={<TopEarners />} />
+        <Route path="/refer-earn" element={<ReferEarn />} />
+        <Route path="/referral-network" element={<ReferralNetwork />} />
+        <Route path="/profit-track" element={<ProfitTrack />} />
+        <Route path="/email-us" element={<EmailUs />} />
+        <Route path="/account-settings" element={<AccountSettings />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/logout" element={<Logout />} />
 
         {/* Footer useful reads */}
         <Route path="/terms" element={<TermsConditions />} />
@@ -98,9 +95,20 @@ const App = () => {
 
         {/* Dynamic category route with sidebar */}
         <Route path="/:category" element={<CategoryLayout />} />
+
+        {/* This route must render without header/footer */}
+        <Route path="/join-our-telegram" element={<JoinTelegram />} />
       </Routes>
 
-      <Footer />
+      {!hideHeaderFooter && <Footer />}
+    </>
+  )
+}
+
+const App = () => {
+  return (
+    <Router>
+      <AppRoutes />
     </Router>
   )
 }
