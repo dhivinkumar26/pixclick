@@ -7,12 +7,12 @@ import Footer from './components/Footer/Footer';
 
 // Auth
 import OTP from './components/Login&signup/otp';
-import Signup from './pages/login&signup';
+import Signup from './Pages/login&signup';
 
 // Pages
 import Homepage from './Pages/Homepage';
 import Partners from './Pages/Partners';
-import Makelinks from './pages/MakeLinkPages';
+import Makelinks from './Pages/MakeLinkPages';
 import CategoryLayout from './components/CategoryLayout';
 import MostPopularStores from './components/Home/MostPopularStores';
 
