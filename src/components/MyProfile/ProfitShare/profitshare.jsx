@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import first from "./../../../assets/Profit/profit1.png";
+import second from "./../../../assets/Profit/profit2.png";
+// import third from "./../../../assets/Profit/profit3.png";
+// import fourth from "./../../../assets/Profit/profit4.png";
 
 export default function ProfitShareSection() {
   const [activeTab, setActiveTab] = useState('forYou');
@@ -9,6 +13,9 @@ export default function ProfitShareSection() {
     <>Buyers get Cashback as Amazon Gift Cards <span className="text-[10px]"><br />*T&C Apply</span></>,
     "Your earnings are credited to your EarnKaro account",
   ];
+
+  // 🪄 Images array: each image corresponds to each step
+  const images = [first, second ];
 
   const testimonials = [
     { name: "Himanshu", text: "I’ve been using Profit Share for 2 months, and I love it. Now I get more orders as I share Profit where the percentage is higher." },
@@ -21,18 +28,19 @@ export default function ProfitShareSection() {
       {/* Header */}
       <div className="max-w-md mx-auto bg-gradient-to-br from-[#3b3b3b] via-gray-800 to-[#2b2b2b] rounded-2xl shadow-lg p-8 text-center space-y-2">
         <p className="text-xl text-yellow-400">Let’s Simplify the Joy Of</p>
-        <p className="text-4xl font-semibold">Earning & Saving More</p><br /><hr />
+        <p className="text-4xl font-semibold">Earning & Saving More</p>
+        <hr className="my-2 border-gray-600" />
         <p className="text-sm text-gray-400">PixClick's Exclusive Tool</p>
         <span className="inline-block mt-3 bg-yellow-500 text-black px-6 py-2 rounded-xl text-md font-bold">PROFIT SHARE</span>
       </div>
 
       {/* How Profit Sharing Works */}
       <div className="max-w-md mx-auto mt-8 p-4 rounded-2xl bg-gradient-to-br from-[#3b3b3b] via-gray-800 to-[#2b2b2b] shadow-lg">
-        <p className="text-l font-semibold text-yellow-400 mb-4">How Profit Sharing works</p>
+        <p className="text-lg font-semibold text-yellow-400 mb-4">How Profit Sharing works</p>
         <div className="space-y-4">
           {steps.map((step, idx) => (
             <div key={idx} className="bg-gradient-to-br from-yellow-700/20 via-gray-800 to-gray-900 rounded-lg p-3 flex items-center space-x-3">
-              <img src="https://via.placeholder.com/40x70" alt="" className="w-10 h-20 object-contain" />
+              <img src={images[idx]} alt={`Step ${idx + 1}`} className="w-10 h-20 object-contain" />
               <p className="text-md text-gray-200">{step}</p>
             </div>
           ))}
@@ -41,7 +49,7 @@ export default function ProfitShareSection() {
 
       {/* Video Section */}
       <div className="max-w-md mx-auto mt-8 p-4 rounded-2xl bg-gradient-to-br from-[#3b3b3b] via-gray-800 to-[#2b2b2b] shadow-lg">
-        <p className="text-l font-semibold text-yellow-400 mb-4">Watch the video to know more</p>
+        <p className="text-lg font-semibold text-yellow-400 mb-4">Watch the video to know more</p>
         <div className="relative w-full pt-[56.25%]">
           <iframe
             className="absolute top-0 left-0 w-full h-full rounded"
@@ -54,7 +62,7 @@ export default function ProfitShareSection() {
 
       {/* Benefits Tabs */}
       <div className="max-w-md mx-auto mt-8 p-4 rounded-2xl bg-gradient-to-br from-[#3b3b3b] via-gray-800 to-[#2b2b2b] shadow-lg">
-        <p className="text-l font-semibold text-yellow-400 mb-4">Benefits for you and your buyers</p>
+        <p className="text-lg font-semibold text-yellow-400 mb-4">Benefits for you and your buyers</p>
         <div className="flex border-b border-gray-700 mb-3">
           {['forYou', 'forBuyers'].map(tab => (
             <button
@@ -89,7 +97,7 @@ export default function ProfitShareSection() {
 
       {/* Testimonials */}
       <div className="max-w-md mx-auto mt-8 p-4 rounded-2xl bg-gradient-to-br from-[#3b3b3b] via-gray-800 to-[#2b2b2b] shadow-lg">
-        <p className="text-l font-semibold text-yellow-400 mb-4">See what our users have to say</p>
+        <p className="text-lg font-semibold text-yellow-400 mb-4">See what our users have to say</p>
         <div className="space-y-3">
           {testimonials.map((user, idx) => (
             <div key={idx} className="bg-gray-800 rounded p-3 text-md border border-yellow-500">
@@ -104,7 +112,7 @@ export default function ProfitShareSection() {
       <div className="max-w-md mx-auto mt-8 p-4 rounded-2xl bg-gradient-to-br from-[#3b3b3b] via-gray-800 to-[#2b2b2b] shadow-lg text-center space-y-3">
         <div className="flex justify-center items-center space-x-2">
           <img src="/path-to-your-logo.png" alt="Profit Share Logo" className="h-5" />
-          <span className="text-yellow-400 font-semibold tracking-widest text-l">PROFIT SHARE</span>
+          <span className="text-yellow-400 font-semibold tracking-widest text-lg">PROFIT SHARE</span>
         </div>
         <hr className="border-gray-600 mx-auto max-w-xs" />
         <div className="flex justify-center space-x-4 text-md text-gray-300">
@@ -118,13 +126,13 @@ export default function ProfitShareSection() {
           ))}
         </div>
       </div>
-      <br />
+
+      {/* Button outside footer */}
       <div className="max-w-md mx-auto mt-4 text-center">
         <button className="bg-yellow-500 text-black text-md px-6 py-2 rounded-xl font-bold hover:bg-yellow-400 transition">
           Go to Profit Share
         </button>
       </div>
     </div>
-    
   );
 }
