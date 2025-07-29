@@ -212,8 +212,8 @@ export default function FlashDeals() {
   return (
     <div className="py-6 px-1 relative">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg md:text-xl font-bold text-black">FLASH DEALS</h2>
-        <a href="#" className="text-sm text-gray-600 hover:text-black font-medium">VIEW ALL</a>
+        <h2 className="text-lg md:text-xl font-bold ml-4 text-black">FLASH DEALS</h2>
+        <a href="#" className="text-sm text-gray-600 mr-4 hover:text-black font-medium">VIEW ALL</a>
       </div>
 
       <div className="relative">
@@ -253,11 +253,12 @@ export default function FlashDeals() {
                   <span className="block font-semibold text-[12px]">STARTING FROM</span>
                 <span className="text-[22px]">  {item.startsFrom}</span>
                 </div>
-                <div className="bg-gray-100 rounded px-2 py-2">
-                  <span className="block font-semibold text-[12px]">PER SALE YOU EARN</span>
+                <div className="bg-gray-100  px-2 py-2">
+                  <span className="block font-semibold shadow-2xl border-b-[1.5px] border-[rgba(255,255,255,0.3)] text-[12px]">PER SALE YOU EARN</span>
                  <span className="text-[14px]"> {item.profit}</span>
                 </div>
               </div>
+              <hr className="mt-2"/>
 
               <div className="flex flex-col-1 gap-2 mt-4 px-2 pb-3">
                 <button
