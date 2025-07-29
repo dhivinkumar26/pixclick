@@ -263,7 +263,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    to="/profile"
+                    to="/myprofile"
                     className="flex items-center p-3 text-gray-800 hover:bg-gray-100 rounded-md text-base"
                     onClick={toggleProfileModal}
                   >

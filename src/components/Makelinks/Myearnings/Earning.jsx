@@ -74,7 +74,7 @@ const MyEarnings = () => {
             </div>
             <h3 className="text-white font-bold text-xl mb-2">Reports</h3>
             <div className="w-full border-t border-dotted border-green-200 opacity-75 mb-3"></div>
-            <Link to="/report"><p className="text-white text-base flex items-center font-medium">Know More <span className="ml-2">→</span></p></Link>
+            <Link to="/reports"><p className="text-white text-base flex items-center font-medium">Know More <span className="ml-2">→</span></p></Link>
           </div>
 
           {/* Request Payment - show modal on click */}

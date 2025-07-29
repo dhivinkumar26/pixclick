@@ -30,9 +30,7 @@ import AccountSettings from './components/Makelinks/Account/AccountSettings';
 
 // MyProfile Pages
 import MainProfile from './Pages/MainProfile';
-import MyEarnings from './components/Makelinks/Myearnings/Earning';
 import PaymentHistory from './components/MyProfile/Money/PaymentHistory';
-// import RequestPayment from './components/MyProfile/Money/PaymentHistory';
 import FlipKartReport from './components/MyProfile/Reports/FlipkartReport';
 import MyLinksPerformance from './components/MyProfile/Reports/MyLinksPerformance';
 import ProfitShare from './components/MyProfile/ExclusiveTools/ProfitShare';
@@ -45,9 +43,9 @@ import ReferralNetwork from './components/MyProfile/EarnExtraProfit/ReferralNetw
 import ProfitTrackProfile from './components/MyProfile/GetHelp/ProfitTrack';
 import EmailUs from './components/MyProfile/GetHelp/EmailUs';
 import AccountSettingsProfile from './components/MyProfile/More/AccountSettings';
-import PrivacyPolicy from './components/MyProfile/More/PrivacyPolicy';
+import PrivacyPolicy from './components/Footer/Footer useful reads/privacy';
 import Logout from './components/MyProfile/More/Logout';
-import Profit_Share from './components/MyProfile/ProfitShare/profitshare';
+
 
 // Earnmore Nested & Grandchild Pages
 import Earnmore from './Pages/Earnmore';
@@ -68,6 +66,12 @@ import Howtocheckyourearnedprofit from './components/Earnmorechild/Allaboutprofi
 import Howtotransfermoneytoyourbankaccount from './components/Earnmorechild/Allaboutprofitgrandchild/Howtotransfermoneytoyourbankaccount';
 import Howtoreferandearnprofitforalifetime from './components/Earnmorechild/Allaboutprofitgrandchild/Howtoreferandearnprofitforalifetime';
 import Howisreferralearningsdifferentfrompartnerprofitearnings from './components/Earnmorechild/Allaboutprofitgrandchild/Howisreferralearningsdifferentfrompartnerprofitearnings';
+import Howtofindexclusivedealsontheappdaily from './components/Earnmorechild/Tipstricksgrandchild/Howtofindexclusivedealsontheappdaily';
+import Howotmakegooddeallinkspart1 from './components/Earnmorechild/Tipstricksgrandchild/Howtomakegooddeallinkspart1';
+import Howtomakegooddeallinkspart2 from './components/Earnmorechild/Tipstricksgrandchild/Howtomakegooddeallinkspart2';
+import Differenttipstoshareprofitlinks from './components/Earnmorechild/Tipstricksgrandchild/Differenttipstoshareprofitlinks';
+import Howtogrownetworkandearnmoreprofit from './components/Earnmorechild/Tipstricksgrandchild/Howtogrownetworkandearnmoreprofit';
+import Dosanddontstoavoidmissingprofit from './components/Earnmorechild/Tipstricksgrandchild/Dosanddontstoavoidmissingprofit';
 
 // About PixClick
 import AboutHero from './components/Footer/About pixclick/AboutUs';
@@ -93,12 +97,13 @@ const App = () => {
         <Route path="/make-links" element={<Makelinks />} />
         <Route path="/most-popular-stores" element={<MostPopularStores />} />
 
-        {/* Makelinks Earnings & Sidebar */}
+        {/* Makelinks Sidebar */}
         <Route path="/earnings" element={<Earnings />} />
         <Route path="/total_earn" element={<Total_Earnings />} />
         <Route path="/reports" element={<Report />} />
         <Route path="/order" element={<Order />} />
         <Route path="/bonus" element={<Bonus />} />
+        <Route path="/my-earnings" element={<Earnings />} />
         <Route path="/profit-track" element={<ProfitTrack />} />
         <Route path="/request" element={<Request />} />
         <Route path="/payment-history" element={<History />} />
@@ -106,7 +111,6 @@ const App = () => {
 
         {/* MyProfile Pages */}
         <Route path="/myprofile" element={<MainProfile />} />
-        <Route path="/my-earnings" element={<MyEarnings />} />
         <Route path="/request-payment" element={<Navigate to="/my-earnings?popup=true" replace />} />
         <Route path="/payment-history-profile" element={<PaymentHistory />} />
         <Route path="/flipkart-report" element={<FlipKartReport />} />
@@ -123,9 +127,9 @@ const App = () => {
         <Route path="/account-settings-profile" element={<AccountSettingsProfile />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/logout" element={<Logout />} />
-        <Route path="/profit" element={<Profit_Share />} />
+       
 
-        {/* Earnmore Nested & Grandchild Routes */}
+        {/* Earnmore Nested & Grandchild */}
         <Route path="/profitshala" element={<Earnmore />}>
           <Route path="earnkaro-basics" element={<EarnkaroBasics />}>
             <Route path="how-to-earn-money-through-affiliate-marketing" element={<Earnmoneythroughaffiliatemarketing />} />
@@ -142,7 +146,14 @@ const App = () => {
             <Route path="how-to-refer-and-earn-profit-for-a-lifetime" element={<Howtoreferandearnprofitforalifetime />} />
             <Route path="how-is-referral-earnings-different-from-partner-profit-earnings" element={<Howisreferralearningsdifferentfrompartnerprofitearnings />} />
           </Route>
-          <Route path="tips-tricks" element={<TipsTricks />} />
+          <Route path="tips-tricks" element={<TipsTricks />}>
+            <Route path="how-to-find-exclusive-deals-on-the-app-daily" element={<Howtofindexclusivedealsontheappdaily />} />
+            <Route path="how-to-make-good-deal-links-part-1" element={<Howotmakegooddeallinkspart1 />} />
+            <Route path="how-to-make-good-deal-links-part-2" element={<Howtomakegooddeallinkspart2 />} />
+            <Route path="different-tips-to-share-profit-links" element={<Differenttipstoshareprofitlinks />} />
+            <Route path="how-to-grow-network-and-earn-more-profit" element={<Howtogrownetworkandearnmoreprofit />} />
+            <Route path="dos-and-donts-to-avoid-missing-profit" element={<Dosanddontstoavoidmissingprofit />} />
+          </Route>
           <Route path="real-user-stories" element={<RealUserStories />} />
           <Route path="affiliaters" element={<Affiliaters />} />
           <Route path="contact-us" element={<ContactUs />} />
@@ -155,11 +166,11 @@ const App = () => {
         <Route path="/read/:id" element={<Read_more />} />
 
         {/* Footer Useful Reads */}
-        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/anti-spam" element={<Antispam />} />
 
-        {/* Dynamic category page */}
+        {/* Dynamic Category */}
         <Route path="/:category" element={<CategoryLayout />} />
       </Routes>
       <Footer />
