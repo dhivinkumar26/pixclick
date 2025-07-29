@@ -172,6 +172,9 @@ const App = () => {
 
         {/* Dynamic Category */}
         <Route path="/:category" element={<CategoryLayout />} />
+
+        {/* This route must render without header/footer */}
+        <Route path="/join-our-telegram" element={<JoinTelegram />} />
       </Routes>
       <Footer />
     </Router>

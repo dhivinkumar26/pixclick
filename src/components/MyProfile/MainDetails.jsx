@@ -100,13 +100,13 @@ const MainDetails = () => {
   ];
 
   return (
-    <div className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="p-4 sm:p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
       {detailSections.map((section, idx) => (
         <div
           key={idx}
-          className="bg-white border border-gray-300 rounded-2xl shadow p-5 flex flex-col gap-5"
+          className="bg-white border border-gray-200 rounded-2xl shadow-sm p-5 flex flex-col gap-4"
         >
-          <h2 className="text-xl font-bold text-gray-800">{section.title}</h2>
+          <h2 className="text-lg sm:text-xl font-bold text-gray-800">{section.title}</h2>
           {section.items.map((item, i) => (
             <DetailItem
               key={i}
