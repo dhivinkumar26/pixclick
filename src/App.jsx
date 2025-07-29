@@ -107,12 +107,12 @@ const App = () => {
         </Route>
 
         {/* Makelinks Sidebar Pages */}
-        <Route path="/my-earnings" element={<MyEarnings />} />
-        <Route path="/reports" element={<Reports />} />
-        <Route path="/profit-track" element={<ProfitTrack />} />
-        <Route path="/request" element={<Request />} />
-        <Route path="/payment-history" element={<History />} />
-        <Route path="/account-settings" element={<AccountSettings />} />
+   <Route path="/my-earnings" element={<MyEarnings />} />
+  <Route path="/reports" element={<Reports />} />
+  <Route path="/track" element={<ProfitTrack />} />
+  <Route path="/request" element={<Request />} />
+  <Route path="/payment" element={< History />} />
+  <Route path="/settings" element={<AccountSettings />} />
 
         {/* MyProfile Pages */}
         <Route path="/myprofile" element={<MainProfile />} />
