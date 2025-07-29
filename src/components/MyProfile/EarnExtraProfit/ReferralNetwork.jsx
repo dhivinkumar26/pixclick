@@ -19,7 +19,7 @@ const ReferralNetwork = () => {
             <Link to='/my-earnings' className="hover:text-green-600 hover:bg-green-600 hover:text-white hover:rounded-lg border-b py-2 px-5 border-gray-100">My Earnings</Link>
             <Link to='/reports' className="hover:text-green-600 hover:bg-green-600 hover:text-white hover:rounded-lg border-b py-2 px-5 border-gray-100">Reports</Link>
             <Link to='/profit-track' className="hover:text-green-600 hover:bg-green-600 hover:text-white hover:rounded-lg border-b py-2 px-5 border-gray-100">Profit Didn't Track?</Link>
-            <Link to='/request-payment' className="hover:text-green-600 hover:bg-green-600 hover:text-white hover:rounded-lg border-b py-2 px-5 border-gray-100">Request Payment</Link>
+            <Link to='/request' className="hover:text-green-600 hover:bg-green-600 hover:text-white hover:rounded-lg border-b py-2 px-5 border-gray-100">Request Payment</Link>
             <Link to='/payment-history' className="hover:text-green-600 hover:bg-green-600 hover:text-white hover:rounded-lg border-b py-2 px-5 border-gray-100">Payment History</Link>
             <Link to='/account-settings' className="hover:text-green-600 hover:bg-green-600 hover:text-white hover:rounded-lg border-b py-2 px-5 border-gray-100">Account Settings</Link>
           </nav>
