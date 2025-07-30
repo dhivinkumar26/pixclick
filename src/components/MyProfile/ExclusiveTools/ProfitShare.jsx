@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import first from "./../../../assets/Profit/profit1.png";
 import second from "./../../../assets/Profit/profit2.png";
-// import third from "./../../../assets/Profit/profit3.png";
-// import fourth from "./../../../assets/Profit/profit4.png";
-
+import third from "./../../../assets/Profit/profit5.png";
+import fourth from "./../../../assets/Profit/profit4.png";
+import Himanshu from "./../../../assets/Profit/avatar1.png";
+import Neha from "./../../../assets/Profit/avatar2.png";
+import Raman from "./../../../assets/Profit/avatar3.png";
+import { Link } from "react-router-dom";
 export default function ProfitShareSection() {
   const [activeTab, setActiveTab] = useState('forYou');
 
@@ -15,13 +18,14 @@ export default function ProfitShareSection() {
   ];
 
   // 🪄 Images array: each image corresponds to each step
-  const images = [first, second ];
+  const images = [first, second, fourth, third];
 
-  const testimonials = [
-    { name: "Himanshu", text: "I’ve been using Profit Share for 2 months, and I love it. Now I get more orders as I share Profit where the percentage is higher." },
-    { name: "Neha", text: "With Profit Share, I doubled my earnings by offering buyers cashback as Gift Cards. It helped scale my earnings." },
-    { name: "Raman", text: "Thanks to Profit Share, now I am a market leader. Buyers trust me and I can offer them higher profit percentages." },
-  ];
+const testimonials = [
+  { name: "Himanshu", text: "I’ve been using Profit Share for 2 months, and I love it. Now I get more orders as I share Profit where the percentage is higher.", avatar: Himanshu },
+  { name: "Neha", text: "With Profit Share, I doubled my earnings by offering buyers cashback as Gift Cards. It helped scale my earnings.", avatar: Neha },
+  { name: "Raman", text: "Thanks to Profit Share, now I am a market leader. Buyers trust me and I can offer them higher profit percentages.", avatar: Raman },
+];
+
 
   return (
     <div className="bg-black text-white font-sans py-8">
@@ -31,7 +35,7 @@ export default function ProfitShareSection() {
         <p className="text-4xl font-semibold">Earning & Saving More</p>
         <hr className="my-2 border-gray-600" />
         <p className="text-sm text-gray-400">PixClick's Exclusive Tool</p>
-        <span className="inline-block mt-3 bg-yellow-500 text-black px-6 py-2 rounded-xl text-md font-bold">PROFIT SHARE</span>
+        <span className="inline-block mt-3 text-yellow-500 px-6 py-2 text-3xl font-bold">PROFIT SHARE</span>
       </div>
 
       {/* How Profit Sharing Works */}
@@ -40,7 +44,7 @@ export default function ProfitShareSection() {
         <div className="space-y-4">
           {steps.map((step, idx) => (
             <div key={idx} className="bg-gradient-to-br from-yellow-700/20 via-gray-800 to-gray-900 rounded-lg p-3 flex items-center space-x-3">
-              <img src={images[idx]} alt={`Step ${idx + 1}`} className="w-10 h-20 object-contain" />
+              <img src={images[idx]} alt={`Step ${idx + 1}`} className="w-15 h-25 object-contain" />
               <p className="text-md text-gray-200">{step}</p>
             </div>
           ))}
@@ -99,20 +103,24 @@ export default function ProfitShareSection() {
       <div className="max-w-md mx-auto mt-8 p-4 rounded-2xl bg-gradient-to-br from-[#3b3b3b] via-gray-800 to-[#2b2b2b] shadow-lg">
         <p className="text-lg font-semibold text-yellow-400 mb-4">See what our users have to say</p>
         <div className="space-y-3">
-          {testimonials.map((user, idx) => (
-            <div key={idx} className="bg-gray-800 rounded p-3 text-md border border-yellow-500">
-              <p className="font-semibold mb-1 text-yellow-300">{user.name}</p>
-              <p className="text-gray-200">{user.text}</p>
-            </div>
-          ))}
-        </div>
+  {testimonials.map((user, idx) => (
+    <div key={idx} className="bg-gray-800 rounded p-3 text-md border border-yellow-500 flex justify-between items-center space-x-3">
+      <div className="flex-1">
+        <p className="font-semibold mb-1 text-yellow-300">{user.name}</p>
+        <p className="text-gray-200">{user.text}</p>
+      </div>
+      <img src={user.avatar} alt={user.name} className="w-25 h-25 rounded-full object-cover border border-yellow-400" />
+    </div>
+  ))}
+</div>
+
       </div>
 
       {/* Footer */}
       <div className="max-w-md mx-auto mt-8 p-4 rounded-2xl bg-gradient-to-br from-[#3b3b3b] via-gray-800 to-[#2b2b2b] shadow-lg text-center space-y-3">
         <div className="flex justify-center items-center space-x-2">
-          <img src="/path-to-your-logo.png" alt="Profit Share Logo" className="h-5" />
-          <span className="text-yellow-400 font-semibold tracking-widest text-lg">PROFIT SHARE</span>
+          
+          <span className="text-yellow-400 font-semibold tracking-widest text-xl">PROFIT SHARE</span>
         </div>
         <hr className="border-gray-600 mx-auto max-w-xs" />
         <div className="flex justify-center space-x-4 text-md text-gray-300">
@@ -129,9 +137,10 @@ export default function ProfitShareSection() {
 
       {/* Button outside footer */}
       <div className="max-w-md mx-auto mt-4 text-center">
+        <Link to="/goto">
         <button className="bg-yellow-500 text-black text-md px-6 py-2 rounded-xl font-bold hover:bg-yellow-400 transition">
           Go to Profit Share
-        </button>
+        </button></Link>
       </div>
     </div>
   );
