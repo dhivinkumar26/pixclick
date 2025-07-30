@@ -39,7 +39,7 @@ const TestimonialSection = () => {
             spaceBetween={20}
             slidesPerView={1}
             loop
-            autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+            autoplay={{ delay: 1000, disableOnInteraction: false, pauseOnMouseEnter: true }}
             navigation={{
               prevEl: '.swiper-button-prev-custom',
               nextEl: '.swiper-button-next-custom',
