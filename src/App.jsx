@@ -22,7 +22,7 @@ import Total_Earnings from './components/Makelinks/Myearnings/total_earning';
 import Report from './components/Makelinks/Myearnings/report';
 import Order from './components/Makelinks/Myearnings/order';
 import Bonus from './components/Makelinks/Myearnings/bonus';
-import Reports from './components/Makelinks/Reports/Reports';
+import Reports from './components/Makelinks/Reports/Reports'; // This was duplicated, kept the one with 'Reports'
 import ProfitTrack from './components/Makelinks/ProfitTrack/Track';
 import Request from './components/Makelinks/Request/ShareMoreModal';
 import History from './components/Makelinks/History/History';
@@ -43,7 +43,6 @@ import ReferralNetwork from './components/MyProfile/EarnExtraProfit/ReferralNetw
 import ProfitTrackProfile from './components/MyProfile/GetHelp/ProfitTrack';
 import EmailUs from './components/MyProfile/GetHelp/EmailUs';
 import AccountSettingsProfile from './components/MyProfile/More/AccountSettings';
-import PrivacyPolicy from './components/Footer/Footer useful reads/privacy';
 import Logout from './components/MyProfile/More/Logout';
 import Goto from './components/MyProfile/ExclusiveTools/goto_profit';
 import Profit_Affiliaters from './Pages/EKAffiliaters';
@@ -56,12 +55,10 @@ import TipsTricks from './components/Earnmorechild/Tipstricks';
 import RealUserStories from './components/Earnmorechild/Realuserstories';
 import Affiliaters from './components/Earnmorechild/Affilaters';
 import ContactUs from './components/Earnmorechild/ContactUs';
-
 import Earnmoneythroughaffiliatemarketing from './components/Earnmorechild/Earnkarobasicgrandchild/Earnmoneythroughaffiliatemarketing';
 import Findavailableretailersonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Findavailableretailersonearnkaro';
 import Changelanguageonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Changelanguageonearnkaro';
 import Checklinkperformance from './components/Earnmorechild/Earnkarobasicgrandchild/Checklinkperformance';
-
 import Howtocheckprofitrates from './components/Earnmorechild/Allaboutprofitgrandchild/Howtoheckprofitrates';
 import Howtomakeprofitlinks from './components/Earnmorechild/Allaboutprofitgrandchild/Howtomakeprofitlinks';
 import Howisyourprofittracked from './components/Earnmorechild/Allaboutprofitgrandchild/Howisyourprofittracked';
@@ -69,13 +66,24 @@ import Howtocheckyourearnedprofit from './components/Earnmorechild/Allaboutprofi
 import Howtotransfermoneytoyourbankaccount from './components/Earnmorechild/Allaboutprofitgrandchild/Howtotransfermoneytoyourbankaccount';
 import Howtoreferandearnprofitforalifetime from './components/Earnmorechild/Allaboutprofitgrandchild/Howtoreferandearnprofitforalifetime';
 import Howisreferralearningsdifferentfrompartnerprofitearnings from './components/Earnmorechild/Allaboutprofitgrandchild/Howisreferralearningsdifferentfrompartnerprofitearnings';
-
 import Howtofindexclusivedealsontheappdaily from './components/Earnmorechild/Tipstricksgrandchild/Howtofindexclusivedealsontheappdaily';
 import Howotmakegooddeallinkspart1 from './components/Earnmorechild/Tipstricksgrandchild/Howtomakegooddeallinkspart1';
 import Howtomakegooddeallinkspart2 from './components/Earnmorechild/Tipstricksgrandchild/Howtomakegooddeallinkspart2';
 import Differenttipstoshareprofitlinks from './components/Earnmorechild/Tipstricksgrandchild/Differenttipstoshareprofitlinks';
 import Howtogrownetworkandearnmoreprofit from './components/Earnmorechild/Tipstricksgrandchild/Howtogrownetworkandearnmoreprofit';
 import Dosanddontstoavoidmissingprofit from './components/Earnmorechild/Tipstricksgrandchild/Dosanddontstoavoidmissingprofit';
+import Watchsahiltalkabouthisexperiencewithearnkaro from "./components/Earnmorechild/Realuserstoriesgrandchild/Watchsahiltalkabouthisexperiencewithearnkaro";
+import Souravakaeagletektalksabouthisfinancialgrowthwithearnkaro from "./components/Earnmorechild/Realuserstoriesgrandchild/Souravakaeagletektalksabouthisfinancialgrowthwithearnkaro";
+import Getinspiredbyprabhusearnkarojourney from "./components/Earnmorechild/Realuserstoriesgrandchild/Getinspiredbyprabhusearnkarojourney";
+import Listentoabdulsfinanceearningsviaearnkaro from "./components/Earnmorechild/Realuserstoriesgrandchild/Listentoabdulsfinanceearningsviaearnkaro";
+import Watchabhilashrecounthisearnkarojourney from "./components/Earnmorechild/Realuserstoriesgrandchild/Watchabhilashrecounthisearnkarojourney";
+import Listentorajsinspiringearnkarojourney from "./components/Earnmorechild/Realuserstoriesgrandchild/Listentorajsinspiringearnkarojourney";
+import Whatisekaffiliaters from "./components/Earnmorechild/Affilatersgrandchild/Whatisekaffiliaters";
+import Howtosetupthetelegramautoforwarderbot from "./components/Earnmorechild/Affilatersgrandchild/Howtosetupthetelegramautoforwarderbot";
+import Howtoautomatetelegramchannelforautoposting from "./components/Earnmorechild/Affilatersgrandchild/Howtoautomatetelegramchannelforautoposting";
+import Howtoautomatewhatsappgroupsforautoposting from "./components/Earnmorechild/Affilatersgrandchild/Howtoautomatewhatsappgroupsforautoposting";
+import Howtogetyourownflipkarttag from "./components/Earnmorechild/Affilatersgrandchild/Howtogetyourownflipkarttag";
+import Howtosyncyouramazontagwithekaffiliaters from "./components/Earnmorechild/Affilatersgrandchild/Howtosyncyouramazontagwithekaffiliaters";
 
 // About PixClick
 import AboutHero from './components/Footer/About pixclick/AboutUs';
@@ -104,11 +112,10 @@ const App = () => {
         {/* Makelinks Sidebar */}
         <Route path="/earnings" element={<Earnings />} />
         <Route path="/total_earn" element={<Total_Earnings />} />
-        <Route path="/reports" element={<Report />} />
+        <Route path="/reports" element={<Reports />} /> {/* Corrected to Reports */}
         <Route path="/order" element={<Order />} />
         <Route path="/bonus" element={<Bonus />} />
-        <Route path="/my-earnings" element={<Earnings />} />
-        <Route path="/reports" element={<Reports />} />
+        <Route path="/my-earnings" element={<Earnings />} /> {/* Duplicate, but kept if explicitly needed */}
         <Route path="/profit-track" element={<ProfitTrack />} />
         <Route path="/request" element={<Request />} />
         <Route path="/payment-history" element={<History />} />
@@ -130,12 +137,12 @@ const App = () => {
         <Route path="/profit-track-profile" element={<ProfitTrackProfile />} />
         <Route path="/email-us" element={<EmailUs />} />
         <Route path="/account-settings-profile" element={<AccountSettingsProfile />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacy-policy" element={<Privacy />} /> {/* Using the Privacy component from Footer Useful Reads */}
         <Route path="/logout" element={<Logout />} />
         <Route path="/goto" element={<Goto />} />
         <Route path="/EKA" element={<Profit_Affiliaters />} />
 
-        {/* Earnmore Nested & Grandchild */}
+        {/* Earnmore Nested & Grandchild Routes */}
         <Route path="/profitshala" element={<Earnmore />}>
           <Route path="earnkaro-basics" element={<EarnkaroBasics />}>
             <Route path="how-to-earn-money-through-affiliate-marketing" element={<Earnmoneythroughaffiliatemarketing />} />
@@ -143,25 +150,44 @@ const App = () => {
             <Route path="how-to-check-link-performance" element={<Checklinkperformance />} />
             <Route path="how-to-change-language" element={<Changelanguageonearnkaro />} />
           </Route>
-          <Route path="all-about-profit" element={<AllAboutProfit />}>
-            <Route path="how-to-check-profit-rates" element={<Howtocheckprofitrates />} />
-            <Route path="how-to-make-profit-links" element={<Howtomakeprofitlinks />} />
-            <Route path="how-is-your-profit-tracked" element={<Howisyourprofittracked />} />
-            <Route path="how-to-check-your-earned-profit" element={<Howtocheckyourearnedprofit />} />
-            <Route path="how-to-transfer-money-to-your-bank-account" element={<Howtotransfermoneytoyourbankaccount />} />
-            <Route path="how-to-refer-and-earn-profit-for-a-lifetime" element={<Howtoreferandearnprofitforalifetime />} />
-            <Route path="how-is-referral-earnings-different-from-partner-profit-earnings" element={<Howisreferralearningsdifferentfrompartnerprofitearnings />} />
+
+          <Route path="all-about-profit" element={<AllAboutProfit />} >
+            <Route path="how-to-check-profit-rates" element={<Howtocheckprofitrates/>}/>
+            <Route path="how-to-make-profit-links" element ={<Howtomakeprofitlinks/>}/>
+            <Route path="how-is-your-profit-tracked" element ={<Howisyourprofittracked/>}/>
+            <Route path="how-to-check-your-earned-profit" element={<Howtocheckyourearnedprofit/>}/>
+            <Route path="how-to-transfer-money-to-your-bank-account" element={<Howtotransfermoneytoyourbankaccount/>}/>
+            <Route path="how-to-refer-and-earn-profit-for-a-lifetime" element={<Howtoreferandearnprofitforalifetime/>}/>
+            <Route path="how-is-referral-earnings-different-from-partner-profit-earnings" element={<Howisreferralearningsdifferentfrompartnerprofitearnings/>}/>
           </Route>
-          <Route path="tips-tricks" element={<TipsTricks />}>
-            <Route path="how-to-find-exclusive-deals-on-the-app-daily" element={<Howtofindexclusivedealsontheappdaily />} />
-            <Route path="how-to-make-good-deal-links-part-1" element={<Howotmakegooddeallinkspart1 />} />
-            <Route path="how-to-make-good-deal-links-part-2" element={<Howtomakegooddeallinkspart2 />} />
-            <Route path="different-tips-to-share-profit-links" element={<Differenttipstoshareprofitlinks />} />
-            <Route path="how-to-grow-network-and-earn-more-profit" element={<Howtogrownetworkandearnmoreprofit />} />
-            <Route path="dos-and-donts-to-avoid-missing-profit" element={<Dosanddontstoavoidmissingprofit />} />
+
+          <Route path="tips-tricks" element={<TipsTricks />} >
+            <Route path="how-to-find-exclusive-deals-on-the-app-daily" element={<Howtofindexclusivedealsontheappdaily/>}/>
+            <Route path="how-to-make-good-deal-links-part-1" element={<Howotmakegooddeallinkspart1/>}/>
+            <Route path="how-to-make-good-deal-links-part-2" element={<Howtomakegooddeallinkspart2/>}/>
+            <Route path="different-tips-to-share-profit-links" element={<Differenttipstoshareprofitlinks/>}/>
+            <Route path="how-to-grow-network-and-earn-more-profit" element={<Howtogrownetworkandearnmoreprofit/>}/>
+            <Route path="dos-and-donts-to-avoid-missing-profit" element={<Dosanddontstoavoidmissingprofit/>}/>
           </Route>
-          <Route path="real-user-stories" element={<RealUserStories />} />
-          <Route path="affiliaters" element={<Affiliaters />} />
+
+          <Route path="real-user-stories" element={<RealUserStories />} >
+            <Route path="Watch-sahil-talk-about-his-experience-with-earnKaro" element={<Watchsahiltalkabouthisexperiencewithearnkaro/>}/>
+            <Route path="Sourav-aka-eagle-tek-talks-about-his-financial-growth-with-earnKaro" element={<Souravakaeagletektalksabouthisfinancialgrowthwithearnkaro/>}/>
+            <Route path="Get-inspired-by-prabhus-earnKaro-journey" element={<Getinspiredbyprabhusearnkarojourney/>}/>
+            <Route path="Listen-to-abduls-finance-earnings-via-earnkaro" element={<Listentoabdulsfinanceearningsviaearnkaro/>}/>
+            <Route path="Watch-abhilash-recount-his-earnKkaro-journey" element={<Watchabhilashrecounthisearnkarojourney/>}/>
+            <Route path="Listen-to-rajs-inspiring-earnkaro-journey" element={<Listentorajsinspiringearnkarojourney/>}/>
+          </Route>
+
+          <Route path="affiliaters" element={<Affiliaters />} >
+            <Route path="What-is-ek-affiliaters" element={<Whatisekaffiliaters/>}/>
+            <Route path="How-to-set-up-the-telegram-auto-forwarder-bot" element={<Howtosetupthetelegramautoforwarderbot/>}/>
+            <Route path="How-to-automate-telegram-channel-for-auto-posting" element={<Howtoautomatetelegramchannelforautoposting/>}/>
+            <Route path="How-to-automate-whatsapp-groups-for-auto-posting" element={<Howtoautomatewhatsappgroupsforautoposting/>}/>
+            <Route path="How-to-get-your-own-flipkart-tag" element={<Howtogetyourownflipkarttag/>}/>
+            <Route path="How-to-sync-your-amazon-tag-with-ek-affiliaters" element={<Howtosyncyouramazontagwithekaffiliaters/>}/>
+          </Route>
+          
           <Route path="contact-us" element={<ContactUs />} />
         </Route>
 

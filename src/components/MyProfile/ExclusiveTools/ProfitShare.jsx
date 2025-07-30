@@ -124,14 +124,21 @@ const testimonials = [
         </div>
         <hr className="border-gray-600 mx-auto max-w-xs" />
         <div className="flex justify-center space-x-4 text-md text-gray-300">
-          {["Terms & Conditions", "Privacy Policy"].map((label, idx) => (
-            <a key={idx} href="#" className="flex items-center space-x-1 hover:text-yellow-400">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M4 2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V8.414A2 2 0 0017.586 7L13 2.414A2 2 0 0011.586 2H4zm0 2h7v4h4v8H4V4z" />
-              </svg>
-              <span>{label}</span>
-            </a>
-          ))}
+         {[
+  { label: "Terms & Conditions", path: "/terms-conditions" },
+  { label: "Privacy Policy", path: "/privacy" },
+].map((item, idx) => (
+  <Link
+    key={idx}
+    to={item.path}
+    className="flex items-center space-x-1 hover:text-yellow-400"
+  >
+    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M4 2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V8.414A2 2 0 0017.586 7L13 2.414A2 2 0 0011.586 2H4zm0 2h7v4h4v8H4V4z" />
+    </svg>
+    <span>{item.label}</span>
+  </Link>
+))}
         </div>
       </div>
 
