@@ -2,15 +2,15 @@
 import { Link, useLocation } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ({className=""}) => {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   return (
-    <nav className="text-sm text-white mb-4 pt-2" aria-label="Breadcrumb">
+    <nav className={`text-sm ${className} mb-4 pt-2`} aria-label="Breadcrumb">
       <ol className="flex items-center space-x-2">
         <li>
-          <Link to="/" className="text-white font-medium text-base">
+          <Link to="/" className={`${className} font-medium text-base`}>
             Home
           </Link>
         </li>
@@ -22,12 +22,12 @@ const Breadcrumbs = () => {
 
           return (
             <li key={to} className="flex items-center space-x-2">
-              <span className="text-white select-none text-base">/</span>
+              <span className="select-none text-base">/</span>
               <Link
                 to={to}
                 className={`${
                   index === pathnames.length - 1
-                    ? "text-white font-medium text-base"
+                    ? "font-medium text-base"
                     : "text-white"
                 }`}
               >

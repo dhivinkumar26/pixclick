@@ -84,6 +84,18 @@ const Earnmore = () => {
         return "How to refer and earn profit for a lifetime?";
       case "how-is-referral-earnings-different-from-partner-profit-earnings":
         return "How is referral earnings different from partner profit earnings?";
+      case "how-to-find-exclusive-deals-on-the-app-daily":
+        return "How To Find Exclusive Deals On The App Daily";
+      case "how-to-make-good-deal-links-part-1":
+        return "How To Make Good Deal Links - Part 1";
+      case "how-to-make-good-deal-links-part-2":
+        return "How To Make Good Deal Links - Part 2";
+      case "different-tips-to-share-profit-links":
+        return "Different Tips to Share Profit Links";
+      case "how-to-grow-network-and-earn-more-profit":
+        return "How to grow network and earn more profit?";
+      case "dos-and-donts-to-avoid-missing-profit":
+        return "Do's and Don'ts to avoid missing Profit?";
       default:
         return slug.replace(/-/g, " ");
     }

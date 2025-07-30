@@ -109,6 +109,7 @@ const FinanceDeals = () => {
                 <div className="px-2 py-3 space-y-2">
                   <p className="text-xs font-medium text-gray-600 text-center">PER SALE YOU EARN</p>
                   <p className="text-lg font-bold text-center">Flat {card.profit} Profit</p>
+                  <hr className="border-gray-300"/>
                   <div className="flex justify-between gap-2 pt-2">
                     <button
                       onClick={() => handleCopy(index)}
