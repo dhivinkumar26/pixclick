@@ -45,7 +45,6 @@ import EmailUs from './components/MyProfile/GetHelp/EmailUs';
 import AccountSettingsProfile from './components/MyProfile/More/AccountSettings';
 import PrivacyPolicy from './components/Footer/Footer useful reads/privacy';
 import Logout from './components/MyProfile/More/Logout';
-
 import Goto from './components/MyProfile/ExclusiveTools/goto_profit';
 import Profit_Affiliaters from './Pages/EKAffiliaters';
 
@@ -57,10 +56,12 @@ import TipsTricks from './components/Earnmorechild/Tipstricks';
 import RealUserStories from './components/Earnmorechild/Realuserstories';
 import Affiliaters from './components/Earnmorechild/Affilaters';
 import ContactUs from './components/Earnmorechild/ContactUs';
+
 import Earnmoneythroughaffiliatemarketing from './components/Earnmorechild/Earnkarobasicgrandchild/Earnmoneythroughaffiliatemarketing';
 import Findavailableretailersonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Findavailableretailersonearnkaro';
 import Changelanguageonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Changelanguageonearnkaro';
 import Checklinkperformance from './components/Earnmorechild/Earnkarobasicgrandchild/Checklinkperformance';
+
 import Howtocheckprofitrates from './components/Earnmorechild/Allaboutprofitgrandchild/Howtoheckprofitrates';
 import Howtomakeprofitlinks from './components/Earnmorechild/Allaboutprofitgrandchild/Howtomakeprofitlinks';
 import Howisyourprofittracked from './components/Earnmorechild/Allaboutprofitgrandchild/Howisyourprofittracked';
@@ -68,6 +69,7 @@ import Howtocheckyourearnedprofit from './components/Earnmorechild/Allaboutprofi
 import Howtotransfermoneytoyourbankaccount from './components/Earnmorechild/Allaboutprofitgrandchild/Howtotransfermoneytoyourbankaccount';
 import Howtoreferandearnprofitforalifetime from './components/Earnmorechild/Allaboutprofitgrandchild/Howtoreferandearnprofitforalifetime';
 import Howisreferralearningsdifferentfrompartnerprofitearnings from './components/Earnmorechild/Allaboutprofitgrandchild/Howisreferralearningsdifferentfrompartnerprofitearnings';
+
 import Howtofindexclusivedealsontheappdaily from './components/Earnmorechild/Tipstricksgrandchild/Howtofindexclusivedealsontheappdaily';
 import Howotmakegooddeallinkspart1 from './components/Earnmorechild/Tipstricksgrandchild/Howtomakegooddeallinkspart1';
 import Howtomakegooddeallinkspart2 from './components/Earnmorechild/Tipstricksgrandchild/Howtomakegooddeallinkspart2';
@@ -106,6 +108,7 @@ const App = () => {
         <Route path="/order" element={<Order />} />
         <Route path="/bonus" element={<Bonus />} />
         <Route path="/my-earnings" element={<Earnings />} />
+        <Route path="/reports" element={<Reports />} />
         <Route path="/profit-track" element={<ProfitTrack />} />
         <Route path="/request" element={<Request />} />
         <Route path="/payment-history" element={<History />} />
@@ -129,7 +132,6 @@ const App = () => {
         <Route path="/account-settings-profile" element={<AccountSettingsProfile />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/logout" element={<Logout />} />
-    
         <Route path="/goto" element={<Goto />} />
         <Route path="/EKA" element={<Profit_Affiliaters />} />
 
