@@ -48,6 +48,8 @@ import AccountSettingsProfile from './components/MyProfile/More/AccountSettings'
 import PrivacyPolicy from './components/MyProfile/More/PrivacyPolicy';
 import Logout from './components/MyProfile/More/Logout';
 import Profit_Share from './components/MyProfile/ProfitShare/profitshare';
+import Goto from './components/MyProfile/ProfitShare/goto_profit';
+import Profit_Affiliaters from './Pages/EKAffiliaters';
 
 // Earnmore Nested & Grandchild Pages
 import Earnmore from './Pages/Earnmore';
@@ -124,6 +126,8 @@ const App = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/profit" element={<Profit_Share />} />
+        <Route path="/goto" element={<Goto />} />
+        <Route path="/EKA" element={<Profit_Affiliaters />} />
 
         {/* Earnmore Nested & Grandchild Routes */}
         <Route path="/profitshala" element={<Earnmore />}>
