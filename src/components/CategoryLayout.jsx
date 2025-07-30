@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { useParams } from 'react-router-dom';
-import CategoryPage from '../pages/CategoryPage';
+import CategoryPage from '../Pages/CategoryPage';
 import FilterSidebar from './FilterSidebar/FilterSidebar';
 import { Menu } from 'lucide-react';
 

@@ -54,7 +54,7 @@ import AllAboutProfit from './components/Earnmorechild/Allaboutprofit';
 import TipsTricks from './components/Earnmorechild/Tipstricks';
 import RealUserStories from './components/Earnmorechild/Realuserstories';
 import Affiliaters from './components/Earnmorechild/Affilaters';
-import ContactUs from './components/Earnmorechild/ContactUs';
+import ContactUs from './components/Earnmorechild/Contactus';
 import Earnmoneythroughaffiliatemarketing from './components/Earnmorechild/Earnkarobasicgrandchild/Earnmoneythroughaffiliatemarketing';
 import Findavailableretailersonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Findavailableretailersonearnkaro';
 import Changelanguageonearnkaro from './components/Earnmorechild/Earnkarobasicgrandchild/Changelanguageonearnkaro';
