@@ -26,28 +26,19 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validation
-    if (!topic) {
-      return setFeedback("Please select a topic.");
-    }
-    if (!name.trim()) {
-      return setFeedback("Please enter your name.");
-    }
-    if (!email.trim()) {
-      return setFeedback("Please enter your email.");
-    }
-    if (!message.trim()) {
-      return setFeedback("Please enter your message.");
-    }
+    if (!topic) return setFeedback("Please select a topic.");
+    if (!name.trim()) return setFeedback("Please enter your name.");
+    if (!email.trim()) return setFeedback("Please enter your email.");
+    if (!message.trim()) return setFeedback("Please enter your message.");
+
     const allowedChars = /^[a-zA-Z0-9\s\/\-+,\.?@#()!&%_]*$/;
     if (!allowedChars.test(message)) {
       return setFeedback(
         "Message contains invalid characters. Only / - + , . ? @ # () ! & % _ are allowed."
       );
     }
-    if (!captchaInput.trim()) {
-      return setFeedback("Please enter the captcha.");
-    }
+
+    if (!captchaInput.trim()) return setFeedback("Please enter the captcha.");
     if (captchaInput !== captcha) {
       setCaptcha(generateCaptcha());
       return setFeedback("Captcha does not match.");
@@ -55,8 +46,6 @@ const ContactForm = () => {
 
     setFeedback("Your message has been sent successfully, we will contact you soon.");
     setCaptcha(generateCaptcha());
-
-    // Reset form (optional)
     setTopic("");
     setName("");
     setEmail("");
@@ -158,9 +147,10 @@ const ContactForm = () => {
           <button
             type="button"
             onClick={() => setCaptcha(generateCaptcha())}
-            className="text-sm text-blue-600 underline"
+            className="text-xl text-gray-600 hover:text-black"
+            title="Refresh Captcha"
           >
-            Refresh
+            🔄
           </button>
           <input
             type="text"
