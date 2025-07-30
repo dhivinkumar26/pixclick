@@ -54,6 +54,21 @@ import Differenttipstoshareprofitlinks from "./components/Earnmorechild/Tipstric
 import Howtogrownetworkandearnmoreprofit from "./components/Earnmorechild/Tipstricksgrandchild/Howtogrownetworkandearnmoreprofit";
 import Dosanddontstoavoidmissingprofit from "./components/Earnmorechild/Tipstricksgrandchild/Dosanddontstoavoidmissingprofit";
 
+// Real User Stories Grandchild pages
+import Watchsahiltalkabouthisexperiencewithearnkaro from "./components/Earnmorechild/Realuserstoriesgrandchild/Watchsahiltalkabouthisexperiencewithearnkaro";
+import Souravakaeagletektalksabouthisfinancialgrowthwithearnkaro from "./components/Earnmorechild/Realuserstoriesgrandchild/Souravakaeagletektalksabouthisfinancialgrowthwithearnkaro";
+import Getinspiredbyprabhusearnkarojourney from "./components/Earnmorechild/Realuserstoriesgrandchild/Getinspiredbyprabhusearnkarojourney";
+import Listentoabdulsfinanceearningsviaearnkaro from "./components/Earnmorechild/Realuserstoriesgrandchild/Listentoabdulsfinanceearningsviaearnkaro";
+import Watchabhilashrecounthisearnkarojourney from "./components/Earnmorechild/Realuserstoriesgrandchild/Watchabhilashrecounthisearnkarojourney";
+import Listentorajsinspiringearnkarojourney from "./components/Earnmorechild/Realuserstoriesgrandchild/Listentorajsinspiringearnkarojourney";
+
+//Affilaters Grandchild pages
+import Whatisekaffiliaters from "./components/Earnmorechild/Affilatersgrandchild/Whatisekaffiliaters";
+import Howtosetupthetelegramautoforwarderbot from "./components/Earnmorechild/Affilatersgrandchild/Howtosetupthetelegramautoforwarderbot";
+import Howtoautomatetelegramchannelforautoposting from "./components/Earnmorechild/Affilatersgrandchild/Howtoautomatetelegramchannelforautoposting";
+import Howtoautomatewhatsappgroupsforautoposting from "./components/Earnmorechild/Affilatersgrandchild/Howtoautomatewhatsappgroupsforautoposting";
+import Howtogetyourownflipkarttag from "./components/Earnmorechild/Affilatersgrandchild/Howtogetyourownflipkarttag";
+import Howtosyncyouramazontagwithekaffiliaters from "./components/Earnmorechild/Affilatersgrandchild/Howtosyncyouramazontagwithekaffiliaters";
 
 //About PixClick
 import AboutHero from './components/Footer/About pixclick/AboutUs'; // ✅ Correct path and name
@@ -89,6 +104,7 @@ import ReferralNetwork from './components/MyProfile/EarnExtraProfit/ReferralNetw
 import EmailUs from './components/MyProfile/GetHelp/EmailUs';
 import PrivacyPolicy from './components/MyProfile/More/PrivacyPolicy';
 import Logout from './components/MyProfile/More/Logout';
+import { Watch } from 'lucide-react';
 
 
 const App = () => {
@@ -139,8 +155,24 @@ const App = () => {
           <Route path="dos-and-donts-to-avoid-missing-profit" element={<Dosanddontstoavoidmissingprofit/>}/>
           </Route>
           
-          <Route path="real-user-stories" element={<RealUserStories />} />
-          <Route path="affiliaters" element={<Affiliaters />} />
+          <Route path="real-user-stories" element={<RealUserStories />} >
+          <Route path="Watch-sahil-talk-about-his-experience-with-earnKaro" element={<Watchsahiltalkabouthisexperiencewithearnkaro/>}/>
+          <Route path="Sourav-aka-eagle-tek-talks-about-his-financial-growth-with-earnKaro" element={<Souravakaeagletektalksabouthisfinancialgrowthwithearnkaro/>}/>
+          <Route path="Get-inspired-by-prabhus-earnKaro-journey" element={<Getinspiredbyprabhusearnkarojourney/>}/>
+          <Route path="Listen-to-abduls-finance-earnings-via-earnkaro" element={<Listentoabdulsfinanceearningsviaearnkaro/>}/>
+          <Route path="Watch-abhilash-recount-his-earnKkaro-journey" element={<Watchabhilashrecounthisearnkarojourney/>}/>
+          <Route path="Listen-to-rajs-inspiring-earnkaro-journey" element={<Listentorajsinspiringearnkarojourney/>}/>
+          </Route>
+
+          <Route path="affiliaters" element={<Affiliaters />} >
+          <Route path="What-is-ek-affiliaters" element={<Whatisekaffiliaters/>}/>
+          <Route path="How-to-set-up-the-telegram-auto-forwarder-bot" element={<Howtosetupthetelegramautoforwarderbot/>}/>
+          <Route path="How-to-automate-telegram-channel-for-auto-posting" element={<Howtoautomatetelegramchannelforautoposting/>}/>
+          <Route path="How-to-automate-whatsapp-groups-for-auto-posting" element={<Howtoautomatewhatsappgroupsforautoposting/>}/>
+          <Route path="How-to-get-your-own-flipkart-tag" element={<Howtogetyourownflipkarttag/>}/>
+          <Route path="How-to-sync-your-amazon-tag-with-ek-affiliaters" element={<Howtosyncyouramazontagwithekaffiliaters/>}/>
+          </Route>
+
           <Route path="contact-us" element={<ContactUs />} />
         </Route>
 
