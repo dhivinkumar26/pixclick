@@ -16,9 +16,8 @@ const Sidebar = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full bg-white w-64 shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 h-full bg-white w-64 shadow-lg transform transition-transform duration-300 ease-in-out z-[999] ${isOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <div className="p-4 border-b border-gray-200 flex justify-between items-center">
           <h2 className="text-xl font-semibold text-green-950">CATEGORY</h2>
@@ -44,21 +43,21 @@ const Sidebar = ({ isOpen, onClose }) => {
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
               <Link to="/electronics" className="flex items-center w-full" onClick={onClose}>
-                <img src="https://img.icons8.com/ios-filled/24/333333/electronics.png" alt="Electronics" className="mr-3"/>
+                <img src="https://img.icons8.com/ios-filled/24/333333/electronics.png" alt="Electronics" className="mr-3" />
                 Electronics
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
               <Link to="/grocery" className="flex items-center w-full" onClick={onClose}>
-                <img src="https://img.icons8.com/ios-filled/24/333333/shopping-basket.png" alt="Grocery & Essentials" className="mr-3"/>
+                <img src="https://img.icons8.com/ios-filled/24/333333/shopping-basket.png" alt="Grocery & Essentials" className="mr-3" />
                 Grocery & Essentials
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
               <Link to="/mensfashion" className="flex items-center w-full" onClick={onClose}>
-                <img src="https://img.icons8.com/ios-filled/24/333333/t-shirt.png" alt="Men's Fashion" className="mr-3"/>
+                <img src="https://img.icons8.com/ios-filled/24/333333/t-shirt.png" alt="Men's Fashion" className="mr-3" />
                 Men's Fashion
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
@@ -72,21 +71,21 @@ const Sidebar = ({ isOpen, onClose }) => {
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
               <Link to="/menfootwear" className="flex items-center w-full" onClick={onClose}>
-                <img src="https://img.icons8.com/ios-filled/24/333333/mens-shoe.png" alt="Men's Footwear" className="mr-3"/>
+                <img src="https://img.icons8.com/ios-filled/24/333333/mens-shoe.png" alt="Men's Footwear" className="mr-3" />
                 Men's Footwear
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
               <Link to="/womenfootwear" className="flex items-center w-full" onClick={onClose}>
-                <img src="https://img.icons8.com/ios-filled/24/333333/womens-shoe.png" alt="Women's Footwear" className="mr-3"/>
+                <img src="https://img.icons8.com/ios-filled/24/333333/womens-shoe.png" alt="Women's Footwear" className="mr-3" />
                 Women's Footwear
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
               <Link to="/beauty" className="flex items-center w-full" onClick={onClose}>
-                <img src="https://img.icons8.com/ios-filled/24/333333/lipstick.png" alt="Beauty Products" className="mr-3"/>
+                <img src="https://img.icons8.com/ios-filled/24/333333/lipstick.png" alt="Beauty Products" className="mr-3" />
                 Beauty Products
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
@@ -100,14 +99,14 @@ const Sidebar = ({ isOpen, onClose }) => {
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
               <Link to="/babyproducts" className="flex items-center w-full" onClick={onClose}>
-                <img src="https://img.icons8.com/ios-filled/24/333333/baby-bottle.png" alt="Baby Products" className="mr-3"/>
+                <img src="https://img.icons8.com/ios-filled/24/333333/baby-bottle.png" alt="Baby Products" className="mr-3" />
                 Baby Products
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
             </li>
             <li className="flex items-center p-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-base">
               <Link to="/homeandkitchen" className="flex items-center w-full" onClick={onClose}>
-                <img src="https://img.icons8.com/ios-filled/24/333333/kitchen-room.png" alt="Home & Kitchen" className="mr-3"/>
+                <img src="https://img.icons8.com/ios-filled/24/333333/kitchen-room.png" alt="Home & Kitchen" className="mr-3" />
                 Home & Kitchen
                 <span className="ml-auto text-gray-400">+</span>
               </Link>
@@ -205,9 +204,8 @@ const Header = () => {
 
         {/* Mobile Search Input (Conditionally Rendered below main header) */}
         <div
-          className={`md:hidden absolute left-0 w-full bg-green-950 transition-all duration-300 ease-in-out ${
-            isMobileSearchVisible ? 'top-full opacity-100 h-auto p-4' : 'top-full opacity-0 h-0 overflow-hidden pt-0 pb-0'
-          }`}
+          className={`md:hidden absolute left-0 w-full bg-green-950 transition-all duration-300 ease-in-out ${isMobileSearchVisible ? 'top-full opacity-100 h-auto p-4' : 'top-full opacity-0 h-0 overflow-hidden pt-0 pb-0'
+            }`}
         >
           <div className="flex items-center bg-green-930 rounded-full">
             <input
@@ -233,9 +231,8 @@ const Header = () => {
 
           {/* Profile Modal Content */}
           <div
-            className={`fixed bottom-0 left-0 w-full bg-white rounded-t-lg shadow-lg p-4 z-50 transform transition-transform duration-300 ease-out md:hidden ${
-              isProfileModalOpen ? "translate-y-0" : "translate-y-full"
-            }`}
+            className={`fixed bottom-0 left-0 w-full bg-white rounded-t-lg shadow-lg p-4 z-50 transform transition-transform duration-300 ease-out md:hidden ${isProfileModalOpen ? "translate-y-0" : "translate-y-full"
+              }`}
           >
             <div className="flex justify-between items-center border-b pb-3 mb-3">
               <h3 className="text-lg font-semibold text-green-950">My Account</h3>
@@ -266,7 +263,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    to="/profile"
+                    to="/myprofile"
                     className="flex items-center p-3 text-gray-800 hover:bg-gray-100 rounded-md text-base"
                     onClick={toggleProfileModal}
                   >

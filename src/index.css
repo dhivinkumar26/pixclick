@@ -7,11 +7,13 @@
 .swiper-pagination-bullet-active {
   background-color: #22c55e; /* Tailwind green-500 */
 }
-/* tailwind.css or index.css */
-.no-scrollbar::-webkit-scrollbar {
+
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }
