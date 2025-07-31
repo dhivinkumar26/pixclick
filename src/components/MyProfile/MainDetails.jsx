@@ -58,7 +58,7 @@ const MainDetails = () => {
       title: "Exclusive Tools",
       items: [
         { icon: FaRegShareFromSquare, label: "Profit Share", path: "/profit-share" },
-        { icon: SiStackbit, label: "EK Affiliaters", path: "/ek-affiliaters" },
+        { icon: SiStackbit, label: "EK Affiliaters", path: "/EKA" },
       ],
     },
     {
