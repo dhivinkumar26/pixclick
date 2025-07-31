@@ -15,7 +15,7 @@ const HighlightsSection = () => {
           <img
             src={LeftRobot}
             alt="Left Robot"
-            className="w-36 sm:w-40 md:w-48 lg:w-62"
+            className="w-36 sm:w-40 md:w-48 lg:w-60"
           />
         </div>
 
