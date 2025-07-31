@@ -84,6 +84,43 @@ const Earnmore = () => {
         return "How to refer and earn profit for a lifetime?";
       case "how-is-referral-earnings-different-from-partner-profit-earnings":
         return "How is referral earnings different from partner profit earnings?";
+      case "how-to-find-exclusive-deals-on-the-app-daily":
+        return "How To Find Exclusive Deals On The App Daily";
+      case "how-to-make-good-deal-links-part-1":
+        return "How To Make Good Deal Links - Part 1";
+      case "how-to-make-good-deal-links-part-2":
+        return "How To Make Good Deal Links - Part 2";
+      case "different-tips-to-share-profit-links":
+        return "Different Tips to Share Profit Links";
+      case "how-to-grow-network-and-earn-more-profit":
+        return "How to grow network and earn more profit?";
+      case "dos-and-donts-to-avoid-missing-profit":
+        return "Do's and Don'ts to avoid missing Profit?";
+      case "Watch-sahil-talk-about-his-experience-with-earnkaro":
+        return "Watch Sahil talk about his experience with EarnKaro";
+      case "Sourav-aka-eagletek-talks-about-his-financial-growth-with-earnkaro":
+        return "Sourav aka EagleTek talks about his financial growth with EarnKaro";
+      case "Get-inspired-by-prabhus-earnkaro-journey":
+        return "Get inspired by Prabhu's EarnKaro journey";
+      case "Listen-to-abduls-finance-earnings-via-earnkaro":
+        return "Listen to Abdul's finance earnings via EarnKaro";
+      case "Watch-abhilash-recount-his-earnkaro-journey":
+        return "Watch Abhilash recount his EarnKaro journey";
+      case "Listen-to-rajs-inspiring-earnkaro-journey":
+        return "Listen to Raj's inspiring EarnKaro journey";
+      case "What-is-ek-affiliaters":
+        return "What is EK Affiliaters?";
+      case "How-to-set-up-the-telegram-auto-forwarder-bot":
+        return "How to set up the Telegram auto-forwarder bot?";
+      case "How-to-automate-telegram-channel-for-auto-posting":
+        return "How to automate Telegram channel for auto-posting?";
+      case "How-to-automate-whatsapp-groups-for-auto-posting":
+        return "How to automate WhatsApp groups for auto-posting?";
+      case "How-to-get-your-own-flipkart-tag":
+        return "How to get your own Flipkart tag?";
+      case "How-to-sync-your-amazon-tag-with-ek-affiliaters":
+        return "How to sync your Amazon tag with EK Affiliaters?";
+
       default:
         return slug.replace(/-/g, " ");
     }

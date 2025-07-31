@@ -30,7 +30,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>
-              <a href="/terms" className="hover:text-red-500">Terms and Conditions</a>
+              <a href="/terms-conditions" className="hover:text-red-500">Terms and Conditions</a>
             </li>
             <li className="group flex items-center space-x-2">
               <span className="transition-transform duration-200 group-hover:translate-x-1">›</span>

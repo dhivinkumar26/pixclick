@@ -31,7 +31,7 @@ export default function BlogSection() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8">
+    <div className="mx-auto  w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20  py-8">
       <h2 className="text-3xl font-bold mb-6 underline">Latest News</h2>
 
       {/* Big top blog */}

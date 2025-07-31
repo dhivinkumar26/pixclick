@@ -1,4 +1,3 @@
-// src/components/FilterSidebar.jsx
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -36,23 +35,16 @@ const filtersByCategory = {
             "AJIO", "Campus", "VAN HEUSEN", "ARBUNORE", "MFT Couture", "RED TAPE", "SHEZONE"]
     },
     beauty: {
-        subcategories: [
-            "Face Wash", "Face Cream", "Foundation", "Lipstick",
-            "Serum", "Toner", "Moisturizer", "Sunscreen", "Kajal"],
+        subcategories: ["Face Wash", "Face Cream", "Foundation", "Lipstick", "Serum", "Toner", "Moisturizer", "Sunscreen", "Kajal"],
         sellers: ["Amazon", "Flipkart", "Nykaa", "AJIO"],
-        brands: [
-            "Lakme", "Maybelline", "Mamaearth", "L'Oreal", "Plum", "Biotique", "NIVEA", "The Body Shop",
+        brands: ["Lakme", "Maybelline", "Mamaearth", "L'Oreal", "Plum", "Biotique", "NIVEA", "The Body Shop",
             "Pond's", "Dot & Key", "mCaffeine", "WOW", "Neutrogena", "Lacto Calamine", "Minimalist",
-            "The Derma Co", "Good Vibes", "RENEE", "Faces Canada", "Swiss Beauty", "Insight", "SUGAR", "Blue Heaven"
-        ]
+            "The Derma Co", "Good Vibes", "RENEE", "Faces Canada", "Swiss Beauty", "Insight", "SUGAR", "Blue Heaven"]
     },
     healthpersonalcare: {
         subcategories: ["Toothpaste", "Shampoo", "Deodorant", "Soaps", "Face Wash", "Hair Oil", "Talc", "Lotion", "Intimate Hygiene", "Shaving & Razors"],
         sellers: ["Amazon", "Flipkart", "Nykaa", "BigBasket"],
-        brands: [
-            "Colgate", "Dove", "NIVEA", "Lifebuoy", "Head & Shoulders", "Gillette", "Dettol", "Fiama", "Himalaya",
-            "Parachute", "Pears", "Vaseline", "Pond's", "Beardo", "The Man Company", "WOW", "Dabur", "Tresemme",
-            "Clinic Plus", "VWash", "Santoor", "Old Spice"]
+        brands: ["Colgate", "Dove", "NIVEA", "Lifebuoy", "Head & Shoulders", "Gillette", "Dettol", "Fiama", "Himalaya", "Parachute", "Pears", "Vaseline", "Pond's", "Beardo", "The Man Company", "WOW", "Dabur", "Tresemme", "Clinic Plus", "VWash", "Santoor", "Old Spice"]
     },
     babyproducts: {
         subcategories: ["Diapers", "Baby Lotion", "Shampoo", "Body Wash", "Wipes", "Powder", "Oils", "Creams & Rash Care", "Toothbrush", "Accessories"],
@@ -60,16 +52,10 @@ const filtersByCategory = {
         brands: ["Pampers", "Johnson's", "Himalaya", "MamyPoko", "Sebamed", "Mee Mee", "Mamaearth", "Chicco", "Baby Dove", "Pigeon", "Farlin", "Babyhug", "The Moms Co."]
     },
     homeandkitchen: {
-        subcategories: ["Cookware","Storage Containers","Kitchen Appliances","Furniture","Dining","HomFurnishings"],
+        subcategories: ["Cookware", "Storage Containers", "Kitchen Appliances", "Furniture", "Dining", "HomFurnishings"],
         sellers: ["Amazon", "Flipkart", "AJIO"],
-        brands: ["Milton", "Prestige", "Pigeon", "Philips", "Cello","Borosil", "AmazonBasics", "Butterfly"]
+        brands: ["Milton", "Prestige", "Pigeon", "Philips", "Cello", "Borosil", "AmazonBasics", "Butterfly"]
     }
-
-
-
-
-
-
 };
 
 const FilterSidebar = () => {
@@ -88,7 +74,7 @@ const FilterSidebar = () => {
     };
 
     return (
-        <div className="w-64 p-4 border-r bg-white min-h-screen hidden md:block">
+        <div className="w-full md:w-64 p-4 border-r bg-white min-h-screen">
             <h2 className="text-lg font-bold mb-4 text-gray-800">FILTER BY</h2>
 
             {/* Subcategories */}
@@ -108,24 +94,27 @@ const FilterSidebar = () => {
             {/* Price Filter */}
             <div className="mb-4">
                 <h3 className="font-semibold text-gray-700 mb-2">Price</h3>
-                <div className="flex items-center space-x-2">
-                    <input
-                        type="number"
-                        className="border p-1 w-20 text-sm"
-                        value={minPrice}
-                        onChange={(e) => setMinPrice(e.target.value)}
-                    />
-                    <span>-</span>
-                    <input
-                        type="number"
-                        className="border p-1 w-20 text-sm"
-                        value={maxPrice}
-                        onChange={(e) => setMaxPrice(e.target.value)}
-                    />
+                <div className="flex flex-col items-start space-y-2">
+                    <div className="flex items-center space-x-2">
+                        <input
+                            type="number"
+                            className="border p-1 w-20 text-sm"
+                            value={minPrice}
+                            onChange={(e) => setMinPrice(e.target.value)}
+                        />
+                        <span>-</span>
+                        <input
+                            type="number"
+                            className="border p-1 w-20 text-sm"
+                            value={maxPrice}
+                            onChange={(e) => setMaxPrice(e.target.value)}
+                        />
+                    </div>
                     <button className="bg-green-600 text-white px-2 py-1 text-sm rounded hover:bg-green-700">
-                        GO
+                        SEARCH
                     </button>
                 </div>
+
             </div>
 
             {/* Seller Filter */}

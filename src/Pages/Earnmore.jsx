@@ -5,6 +5,7 @@ const Earnmore = () => {
   return (
     <div>
         <GetHelp/>
+        
     </div>
   )
 }

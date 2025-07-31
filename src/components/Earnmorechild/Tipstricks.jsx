@@ -9,34 +9,34 @@ const Tipstricks = () => {
 
   const helpData = [
     {
-      title: "How to check Profit rates?",
+      title: "How To Find Exclusive Deals On The App Daily",
       videoUrl: "https://www.youtube.com/embed/HYJznS2H8Cg?si=yz19iMR1d6Rjs1-E",
-      linkTo: "/profitshala/tips-tricks/how-to-check-profit-rates",
+      linkTo: "/profitshala/tips-tricks/how-to-find-exclusive-deals-on-the-app-daily",
     },
     {
-      title: "How to make Profit Links?",
+      title: "How To Make Good Deal Links - Part 1",
       videoUrl: "https://www.youtube.com/embed/wnZ0Crref4A?si=Tkq3JhjEV3F0ZnrF",
-      linkTo: "/profitshala/tips-tricks/how-to-make-profit-links",
+      linkTo: "/profitshala/tips-tricks/how-to-make-good-deal-links-part-1",
     },
     {
-      title: " How is your Profit tracked?",
+      title: " How To Make Good Deal Links - Part 2",
       videoUrl: "https://www.youtube.com/embed/_qEBGhVj4wI?si=KTR16vhSwqXV3XHT" , 
-      linkTo: "/profitshala/tips-tricks/how-is-your-profit-tracked",
+      linkTo: "/profitshala/tips-tricks/how-to-make-good-deal-links-part-2",
     },
     {
-      title: "How to check your earned Profit?",
+      title: "Different Tips to Share Profit Links",
       videoUrl: "https://www.youtube.com/embed/Fr0irwBLZsk?si=J6y1uhqXj9Ifr2hy",
-      linkTo: "/profitshala/tips-tricks/how-to-check-your-earned-profit",
+      linkTo: "/profitshala/tips-tricks/different-tips-to-share-profit-links",
     },
        {
-      title: "How to transfer money to your bank account?",
+      title: "How to grow network and earn more profit?",
       videoUrl: "https://www.youtube.com/embed/Fr0irwBLZsk?si=J6y1uhqXj9Ifr2hy",
-      linkTo: "/profitshala/tips-tricks/how-to-transfer-money-to-your-bank-account",
+      linkTo: "/profitshala/tips-tricks/how-to-grow-network-and-earn-more-profit",
     },
        {
-      title: "How to refer and earn 10% Profit for a lifetime?",
+      title: "Do's and Don'ts to avoid missing Profit?",
       videoUrl: "https://www.youtube.com/embed/Fr0irwBLZsk?si=J6y1uhqXj9Ifr2hy",
-      linkTo: "/profitshala/tips-tricks/how-to-refer-and-earn-profit-for-a-lifetime",
+      linkTo: "/profitshala/tips-tricks/dos-and-donts-to-avoid-missing-profit",
     },
       
   ];

@@ -19,18 +19,18 @@ export default function ReadMoreBlog() {
   if (!blog) return <p className="text-center py-8">Blog not found!</p>;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div className=" mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20  py-8 grid grid-cols-1 md:grid-cols-4 gap-6">
       {/* Left Sidebar */}
       <div className="hidden md:block space-y-6">
-        <div className="bg-white shadow rounded p-4 text-center">
+        <div className="bg-white shadow rounded p-4 text-center border-2 border-emerald-700">
           <img src="https://i.pravatar.cc/100" alt="" className="w-16 h-16 rounded-full mx-auto mb-2" />
           <p className="text-sm font-semibold">Olivia Rhye</p>
         </div>
-        <div className="bg-white shadow rounded p-4">
-          <h3 className="font-semibold mb-3">Category</h3>
+        <div className="bg-green-100 shadow rounded p-4">
+          <h3 className="font-bold mb-3 text-green-900 text-2xl underline ">Category</h3>
           <ul className="space-y-1 text-sm">
             {categories.map(cat => (
-              <li key={cat} className="hover:text-green-600 cursor-pointer">{cat}</li>
+              <li key={cat} className="hover:text-green-600 cursor-pointer hover:underline">{cat}</li>
             ))}
           </ul>
         </div>
@@ -38,12 +38,11 @@ export default function ReadMoreBlog() {
 
       {/* Main Blog Content */}
       <div className="md:col-span-2">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">{blog.title}</h2>
         <div className="bg-white shadow rounded overflow-hidden mb-4">
           <img src={blog.image} alt="" className="w-full h-60 object-cover" />
           <div className="p-4">
-            <span className="inline-block bg-pink-100 text-pink-600 text-xs px-2 py-0.5 rounded mb-2">Finance Advicer</span>
-            <h3 className="text-lg md:text-xl font-semibold mb-2">{blog.title}</h3>
+            <span className="inline-block bg-green-800 text-white text-xs px-2 py-0.5 rounded mb-2">Finance Advicer</span>
+            <h3 className="text-lg md:text-xl font-semibold mb-2 hover:underline">{blog.title}</h3>
             <p className="text-xs text-gray-500 mb-2">By {blog.author} • {blog.date}</p>
 
             {/* Icons Row */}
@@ -51,8 +50,8 @@ export default function ReadMoreBlog() {
               <span>👁️ 2.5m</span>
               <span>💬 15k</span>
               <span>❤️ 39k</span>
-              <button className="ml-auto border px-2 py-0.5 rounded hover:bg-gray-100 text-xs">Save to pocket</button>
-              <button className="border px-2 py-0.5 rounded hover:bg-gray-100 text-xs">Share</button>
+              <button className="ml-auto border px-2 py-0.5 rounded hover:bg-green-100 text-xs">Save to pocket</button>
+              <button className="border px-2 py-0.5 rounded hover:bg-green-100 text-xs">Share</button>
             </div>
 
             {/* Dummy content */}
@@ -78,9 +77,9 @@ export default function ReadMoreBlog() {
         {relatedBlogs.map(r => (
           <div key={r.id} className="bg-white shadow rounded overflow-hidden">
             <img src={r.image} alt="" className="w-full h-20 object-cover" />
-            <div className="p-2">
-              <span className="inline-block bg-pink-100 text-pink-600 text-[10px] px-1.5 py-0.5 rounded mb-1">Finance Advicer</span>
-              <p className="text-xs font-medium">{r.title}</p>
+            <div className="p-2 bg-green-100">
+              <span className="inline-block bg-green-800 text-white text-[10px] px-1.5 py-0.5 rounded mb-1">Finance Advicer</span>
+              <p className="text-xs font-medium hover:underline">{r.title}</p>
               <p className="text-[10px] text-gray-500 mt-0.5">👁️ 2.5m</p>
             </div>
           </div>
