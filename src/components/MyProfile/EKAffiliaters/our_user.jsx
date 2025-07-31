@@ -27,10 +27,10 @@ const TestimonialSection = () => {
 
         <div className="relative flex justify-center items-center py-6 md:py-10">
           {/* Custom Navigation Buttons */}
-          <button className="swiper-button-prev-custom absolute left-1 sm:left-2 md:-left-8 lg:-left-12 z-10 p-3 md:p-4 rounded-full bg-green-100/70 hover:bg-green-200/90 cursor-pointer shadow-md border border-green-400 transition-all">
+          <button className="swiper-button-prev-custom absolute left-1 sm:left-2 md:-left-8 lg:-left-12 z-10 p-3 md:p-4 rounded-full bg-green-100/70 hover:bg-green-200/90 cursor-pointer shadow-md border-2 border-green-600 transition-all">
             <FaChevronLeft className="text-gray-600 text-lg md:text-xl" />
           </button>
-          <button className="swiper-button-next-custom absolute right-1 sm:right-2 md:-right-8 lg:-right-12 z-10 p-3 md:p-4 rounded-full bg-green-100/70 hover:bg-green-200/90 cursor-pointer shadow-md border border-green-400 transition-all">
+          <button className="swiper-button-next-custom absolute right-1 sm:right-2 md:-right-8 lg:-right-12 z-10 p-3 md:p-4 rounded-full bg-green-100/70 hover:bg-green-200/90 cursor-pointer shadow-md border-2 border-green-600 transition-all">
             <FaChevronRight className="text-gray-600 text-lg md:text-xl" />
           </button>
 
@@ -39,7 +39,7 @@ const TestimonialSection = () => {
             spaceBetween={20}
             slidesPerView={1}
             loop
-            autoplay={{ delay: 1000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+            autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
             navigation={{
               prevEl: '.swiper-button-prev-custom',
               nextEl: '.swiper-button-next-custom',
