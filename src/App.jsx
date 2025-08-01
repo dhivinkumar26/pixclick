@@ -41,6 +41,8 @@ import AccountSettings from './components/MyProfile/More/AccountSettings'
 import PrivacyPolicy from './components/MyProfile/More/PrivacyPolicy'
 import Logout from './components/MyProfile/More/Logout'
 
+import BrandForm from './components/From/BrandFrom'
+
 const AppRoutes = () => {
   const location = useLocation()
   const hideHeaderFooter = location.pathname === '/join-our-telegram'
@@ -77,6 +79,12 @@ const AppRoutes = () => {
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/logout" element={<Logout />} />
+
+
+        {/* Brand Form */}
+
+        <Route path="/brand-form" element={<BrandForm />} />
+
 
         {/* Footer useful reads */}
         <Route path="/terms" element={<TermsConditions />} />
