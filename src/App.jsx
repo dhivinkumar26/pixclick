@@ -19,7 +19,6 @@ import MostPopularStores from './components/Home/MostPopularStores';
 // Makelinks Sidebar Pages
 import Earnings from './components/Makelinks/Myearnings/Earning';
 import Total_Earnings from './components/Makelinks/Myearnings/total_earning';
-import Report from './components/Makelinks/Myearnings/report';
 import Order from './components/Makelinks/Myearnings/order';
 import Bonus from './components/Makelinks/Myearnings/bonus';
 import Reports from './components/Makelinks/Reports/Reports'; // This was duplicated, kept the one with 'Reports'
