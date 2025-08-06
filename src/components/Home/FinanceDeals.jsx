@@ -99,7 +99,7 @@ const FinanceDeals = () => {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="min-w-[282px] max-w-[300px] bg-white shadow-md rounded-lg flex flex-col justify-between"
+                className="min-w-[282px] max-w-[300px] bg-white shadow rounded-lg flex flex-col justify-between"
               >
                 <img
                   src={card.image}
