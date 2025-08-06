@@ -1,20 +1,39 @@
 import React from 'react'
 import {
-  FaFileAlt,
-  FaStar,
-  FaTags,
-  FaChartBar,
-  FaListAlt
+  FaFileAlt, FaStar, FaTags, FaChartBar, FaListAlt
 } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 import Breadcrumbs from '../Breadcrumbs'
 
 const FlipkartReport = () => {
+  const navigate = useNavigate()
+
   const reports = [
-    { label: 'Flipkart Panel Live Order Report', icon: <FaFileAlt size={20} /> },
-    { label: 'Your Best-Selling Products', icon: <FaStar size={20} /> },
-    { label: 'Overall Best-Selling Products', icon: <FaTags size={20} /> },
-    { label: 'Your Best-Selling Categories', icon: <FaListAlt size={20} /> },
-    { label: 'Order Status', icon: <FaChartBar size={20} /> },
+    {
+      label: 'Flipkart Panel Live Order Report',
+      icon: <FaFileAlt size={20} />,
+      path: '/flipkart-live-order-report'
+    },
+    {
+      label: 'Your Best-Selling Products',
+      icon: <FaStar size={20} />,
+      path: '/best-selling-products' // (future path)
+    },
+    {
+      label: 'Overall Best-Selling Products',
+      icon: <FaTags size={20} />,
+      path: '/overall-best-selling-products' // (future path)
+    },
+    {
+      label: 'Your Best-Selling Categories',
+      icon: <FaListAlt size={20} />,
+      path: '/best-selling-categories' // (future path)
+    },
+    {
+      label: 'Order Status',
+      icon: <FaChartBar size={20} />,
+      path: '/order-status' // (future path)
+    }
   ]
 
   return (
@@ -25,7 +44,6 @@ const FlipkartReport = () => {
       </div>
 
       <div className="sm:mx-3 md:mx-10">
-
         {/* Header */}
         <h2 className="text-2xl font-bold bg-white p-4 rounded shadow-sm mb-6 text-center sm:text-left">
           Flipkart Reports & Insights
@@ -36,6 +54,7 @@ const FlipkartReport = () => {
           {reports.map((report, index) => (
             <div
               key={index}
+              onClick={() => navigate(report.path)}
               className="border border-green-500 rounded-lg p-6 bg-white hover:bg-green-50 transition group cursor-pointer shadow-sm"
             >
               <div className="flex flex-col items-center space-y-4">
@@ -52,7 +71,6 @@ const FlipkartReport = () => {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   )

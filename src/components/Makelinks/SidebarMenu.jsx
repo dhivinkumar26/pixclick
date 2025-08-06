@@ -28,16 +28,16 @@ export default function SidebarMenu() {
         <Link to="/reports" className={linkClasses("/reports")}>
           Reports
         </Link>
-        <Link to="/track" className={linkClasses("/track")}>
+        <Link to="/profit-track" className={linkClasses("/track")}>
           Profit Didn't Track?
         </Link>
         <Link to="/request" className={linkClasses("/request")}>
           Request
         </Link>
-        <Link to="/payment" className={linkClasses("/payment")}>
+        <Link to="/payment-history" className={linkClasses("/payment")}>
           Payment History
         </Link>
-        <Link to="/settings" className={linkClasses("/settings")}>
+        <Link to="/account-settings" className={linkClasses("/settings")}>
           Account Settings
         </Link>
       </div>
