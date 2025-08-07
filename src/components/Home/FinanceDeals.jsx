@@ -11,6 +11,7 @@ import card7 from "../../assets/Home/cards/card7.jpg";
 import card8 from "../../assets/Home/cards/card8.png";
 import card9 from "../../assets/Home/cards/card9.png";
 import card10 from "../../assets/Home/cards/card10.png";
+import FinanceDeals1 from "./FinanceDeals1";
 
 const cards = [
   { image: card1, profit: "Rs 2380", title: "Axis My Zone Credit Card" },
@@ -74,7 +75,7 @@ const FinanceDeals = () => {
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl ml-5 font-semibold">FINANCE DEALS</h2>
           <Link
-            to="/"
+            to="/finance-deals1"
             className="text-sm font-medium text-gray-600 hover:text-black flex items-center gap-1 mr-5"
           >
             VIEW ALL <FaChevronRight className="text-xs" />

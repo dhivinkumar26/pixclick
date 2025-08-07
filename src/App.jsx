@@ -10,11 +10,13 @@ import OTP from './components/Login&signup/otp';
 import Signup from './Pages/login&signup';
 
 // Pages
-import Homepage from './Pages/Homepage';
+import Homepage from './pages/Homepage';
 import Partners from './Pages/Partners';
 import Makelinks from './Pages/MakeLinkPages';
 import CategoryLayout from './components/CategoryLayout';
+//Homepages links
 import MostPopularStores from './components/Home/MostPopularStores';
+import FinanceDeals1 from './components/Home/FinanceDeals1';
 
 // Makelinks Sidebar Pages
 import Earnings from './components/Makelinks/Myearnings/Earning';
@@ -108,6 +110,7 @@ const App = () => {
         <Route path="/partners" element={<Partners />} />
         <Route path="/make-links" element={<Makelinks />} />
         <Route path="/most-popular-stores" element={<MostPopularStores />} />
+        <Route path="/finance-deals1" element={<FinanceDeals1 />} />
 
         {/* Makelinks Sidebar */}
         <Route path="/earnings" element={<Earnings />} />
