@@ -86,7 +86,7 @@ export default function FlashDeals() {
   return (
     <div className="py-6 px-1 relative">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg md:text-xl font-bold ml-4 text-black">AJIO - TOP DEALS</h2>
+        <h2 className="text-lg md:text-xl font-bold ml-4 text-black">NEW ON EARNKARO</h2>
         <a href="#" className="text-sm text-gray-600 hover:text-black mr-4 font-medium">VIEW ALL</a>
       </div>
 
