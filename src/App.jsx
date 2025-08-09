@@ -21,7 +21,6 @@ import FinanceDeals1 from './components/Home/FinanceDeals1';
 // Makelinks Sidebar Pages
 import Earnings from './components/Makelinks/Myearnings/Earning';
 import Total_Earnings from './components/Makelinks/Myearnings/total_earning';
-import Report from './components/Makelinks/Myearnings/report';
 import Order from './components/Makelinks/Myearnings/order';
 import Bonus from './components/Makelinks/Myearnings/bonus';
 import Reports from './components/Makelinks/Reports/Reports'; // This was duplicated, kept the one with 'Reports'
@@ -34,6 +33,11 @@ import AccountSettings from './components/Makelinks/Account/AccountSettings';
 import MainProfile from './Pages/MainProfile';
 import PaymentHistory from './components/MyProfile/Money/PaymentHistory';
 import FlipKartReport from './components/MyProfile/Reports/FlipkartReport';
+import FlipkartLiveOrderReport from './components/MyProfile/Reports/FliveReport';
+import BestSellingProducts from './components/MyProfile/Reports/BestSellingProducts';
+import OverAllBestSelling from './components/MyProfile/Reports/OverAllBestSellingProducts';
+import SellingCategories from './components/MyProfile/Reports/SellingCategories';
+import OrderStatus from './components/MyProfile/Reports/OrderStatus';
 import MyLinksPerformance from './components/MyProfile/Reports/MyLinksPerformance';
 import ProfitShare from './components/MyProfile/ExclusiveTools/ProfitShare';
 import EKAffiliaters from './components/MyProfile/ExclusiveTools/EKAffiliaters';
@@ -129,6 +133,11 @@ const App = () => {
         <Route path="/request-payment" element={<Navigate to="/my-earnings?popup=true" replace />} />
         <Route path="/payment-history-profile" element={<PaymentHistory />} />
         <Route path="/flipkart-report" element={<FlipKartReport />} />
+        <Route path="/flipkart-live-order-report" element={<FlipkartLiveOrderReport />} />
+        <Route path="/best-selling-products" element={<BestSellingProducts />} />
+        <Route path="/overall-best-selling-products" element={< OverAllBestSelling/>} />
+        <Route path="/best-selling-categories" element={< SellingCategories />} />
+        <Route path="/order-status" element={<OrderStatus />} />
         <Route path="/my-links-performance" element={<MyLinksPerformance />} />
         <Route path="/profit-share" element={<ProfitShare />} />
         <Route path="/ek-affiliaters" element={<EKAffiliaters />} />
