@@ -9,9 +9,10 @@ const ContactForm = () => {
   const [captcha, setCaptcha] = useState(generateCaptcha());
   const [selectedFile, setSelectedFile] = useState(null);
   const [feedback, setFeedback] = useState("");
- 
+
   function generateCaptcha() {
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const chars =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     let result = "";
     for (let i = 0; i < 6; i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -21,7 +22,7 @@ const ContactForm = () => {
 
   const handleFileChange = (e) => {
     setSelectedFile(e.target.files[0]);
-  };  
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,7 +35,7 @@ const ContactForm = () => {
     const allowedChars = /^[a-zA-Z0-9\s\/\-+,\.?@#()!&%_]*$/;
     if (!allowedChars.test(message)) {
       return setFeedback(
-        "Message contains invalid characters. Only / - + , . ? @ # () ! & % _ are allowed."
+        "Message contains invalid characters. Only / - + , . ? @ # () ! & % _ are allowed.",
       );
     }
 
@@ -44,7 +45,9 @@ const ContactForm = () => {
       return setFeedback("Captcha does not match.");
     }
 
-    setFeedback("Your message has been sent successfully, we will contact you soon.");
+    setFeedback(
+      "Your message has been sent successfully, we will contact you soon.",
+    );
     setCaptcha(generateCaptcha());
     setTopic("");
     setName("");
@@ -56,9 +59,12 @@ const ContactForm = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-xl mt-10">
-      <h2 className="text-2xl font-semibold text-center mb-2">How can we help?</h2>
+      <h2 className="text-2xl font-semibold text-center mb-2">
+        How can we help?
+      </h2>
       <p className="text-center text-gray-600 mb-6">
-        Please email us for any queries or questions about our program. Our support team will revert within 24 business hours.
+        Please email us for any queries or questions about our program. Our
+        support team will revert within 24 business hours.
       </p>
 
       {feedback && (
@@ -70,7 +76,9 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Topic */}
         <div>
-          <label className="block text-gray-700 font-medium mb-1">Choose Topic</label>
+          <label className="block text-gray-700 font-medium mb-1">
+            Choose Topic
+          </label>
           <select
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
@@ -82,11 +90,12 @@ const ContactForm = () => {
             <option value="general">General Inquiry</option>
           </select>
         </div>
-
         {/* Name & Email */}
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
-            <label className="block text-gray-700 font-medium mb-1">Enter your Name</label>
+            <label className="block text-gray-700 font-medium mb-1">
+              Enter your Name
+            </label>
             <input
               type="text"
               value={name}
@@ -96,7 +105,9 @@ const ContactForm = () => {
             />
           </div>
           <div className="flex-1">
-            <label className="block text-gray-700 font-medium mb-1">Enter your Email ID</label>
+            <label className="block text-gray-700 font-medium mb-1">
+              Enter your Email ID
+            </label>
             <input
               type="email"
               value={email}
@@ -106,10 +117,11 @@ const ContactForm = () => {
             />
           </div>
         </div>
-
         {/* Message */}
         <div>
-          <label className="block text-gray-700 font-medium mb-1">Your Message</label>
+          <label className="block text-gray-700 font-medium mb-1">
+            Your Message
+          </label>
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
@@ -117,10 +129,11 @@ const ContactForm = () => {
             placeholder="Write your message here..."
           ></textarea>
         </div>
-
         {/* File Upload */}
         <div>
-          <label className="block text-gray-700 font-medium mb-2">Upload Attachment</label>
+          <label className="block text-gray-700 font-medium mb-2">
+            Upload Attachment
+          </label>
           <div className="flex items-center gap-4">
             <label className="cursor-pointer bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition text-sm">
               Choose File
@@ -140,10 +153,11 @@ const ContactForm = () => {
             Allowed file size: 2MB.
           </p>
         </div>
-
         {/* Captcha */}
         <div className="flex items-center gap-4">
-          <div className="bg-gray-100 p-3 font-bold text-lg tracking-widest">{captcha}</div>
+          <div className="bg-gray-100 p-3 font-bold text-lg tracking-widest">
+            {captcha}
+          </div>
           <button
             type="button"
             onClick={() => setCaptcha(generateCaptcha())}
@@ -160,8 +174,7 @@ const ContactForm = () => {
             placeholder="Enter captcha"
           />
         </div>
-
-        {/* Submit */}
+        {/* Submit */}4
         <div>
           <button
             type="submit"
