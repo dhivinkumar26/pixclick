@@ -9,7 +9,7 @@ const ContactForm = () => {
   const [captcha, setCaptcha] = useState(generateCaptcha());
   const [selectedFile, setSelectedFile] = useState(null);
   const [feedback, setFeedback] = useState("");
-
+ 
   function generateCaptcha() {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     let result = "";
@@ -21,7 +21,7 @@ const ContactForm = () => {
 
   const handleFileChange = (e) => {
     setSelectedFile(e.target.files[0]);
-  };
+  };  
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -1,10 +1,11 @@
 import React from "react";
+import { SiD } from "react-icons/si";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
 const Affilaters = () => {
   const location = useLocation();
 
-  // ✅ Check if it's a grandchild route
+  
   const isGrandchild = location.pathname !== "/profitshala/affiliaters";
 
   const helpData = [
@@ -42,7 +43,7 @@ const Affilaters = () => {
 
   return (
     <div className="bg-gray-100 py-10 px-4 sm:px-10">
-      {/* ✅ Show grandchild route page only */}
+    
       {isGrandchild ? (
         <Outlet />
       ) : (

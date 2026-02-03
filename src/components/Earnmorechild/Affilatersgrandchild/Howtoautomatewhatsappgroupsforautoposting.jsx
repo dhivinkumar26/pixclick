@@ -6,17 +6,17 @@ const Howtoautomatewhatsappgroupsforautoposting = () => {
   const videoUrl = "https://www.youtube.com/embed/Fr0irwBLZsk?si=J6y1uhqXj9Ifr2hy";
   const shareText = `Check out this video on how to change language in EarnKaro: ${videoUrl}`;
 
-  // ✅ Copy handler
+ 
   const handleCopy = () => {
     navigator.clipboard.writeText(videoUrl);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // revert icon after 2 seconds
+    setTimeout(() => setCopied(false), 2000); 
   };
 
   return (
     <div className="bg-white p-4 sm:p-8 rounded-xl shadow-lg max-w-7xl mx-auto mt-10">
       <div className="flex flex-col lg:flex-row gap-8">
-        {/* Left Section */}
+        
         <div className="flex-1">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
           Different Tips to Share Profit Links
@@ -28,9 +28,9 @@ const Howtoautomatewhatsappgroupsforautoposting = () => {
           </ul>
         </div>
 
-        {/* Right Section */}
+      
         <div className="flex-1 space-y-4">
-          {/* Video */}
+       
           <div className="w-full aspect-video">
             <iframe
               className="w-full h-full rounded-lg"
@@ -41,9 +41,9 @@ const Howtoautomatewhatsappgroupsforautoposting = () => {
             ></iframe>
           </div>
 
-          {/* Share Buttons */}
+    
           <div className="flex gap-4">
-            {/* ✅ WhatsApp Share */}
+          
             <a
               href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
               target="_blank"
@@ -53,7 +53,7 @@ const Howtoautomatewhatsappgroupsforautoposting = () => {
               <FaWhatsapp size={20} />
             </a>
 
-            {/* ✅ Email Share */}
+          
             <a
               href={`mailto:?subject=How to change language in EarnKaro&body=${encodeURIComponent(shareText)}`}
               className="bg-gray-400 text-white p-3 rounded-full shadow hover:bg-gray-500"
@@ -61,7 +61,7 @@ const Howtoautomatewhatsappgroupsforautoposting = () => {
               <FaEnvelope size={20} />
             </a>
 
-            {/* ✅ Copy Link */}
+          
             <button
               onClick={handleCopy}
               className={`p-3 rounded-full shadow text-white ${

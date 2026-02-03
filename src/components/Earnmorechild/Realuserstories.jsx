@@ -4,7 +4,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 const RealUserStories = () => {
   const location = useLocation();
 
-  // ✅ Check if it's a grandchild route
+ 
   const isGrandchild = location.pathname !== "/profitshala/real-user-stories";
 
   const helpData = [
@@ -42,7 +42,6 @@ const RealUserStories = () => {
 
   return (
     <div className="bg-gray-100 py-10 px-4 sm:px-10">
-      {/* ✅ Show grandchild route page only */}
       {isGrandchild ? (
         <Outlet />
       ) : (
