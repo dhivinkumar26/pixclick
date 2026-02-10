@@ -22,7 +22,7 @@ const ContactForm = () => {
 
   const handleFileChange = (e) => {
     setSelectedFile(e.target.files[0]);
-  };
+  }; 
 
   const handleSubmit = (e) => {
     e.preventDefault();
