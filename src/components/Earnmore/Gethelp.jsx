@@ -8,36 +8,39 @@ import {
   FaPhoneAlt,
   FaSearch,
 } from "react-icons/fa";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const cards = [
   {
     title: "EARNKARO BASICS",
-    icon: <FaBookOpen className="text-4xl text-green-600 mb-4" />,
+    icon: <FaBookOpen className="text-4xl text-white mb-4" />,
     link: "earnkaro-basics",
   },
   {
     title: "ALL ABOUT PROFIT",
-    icon: <FaRupeeSign className="text-4xl text-green-600 mb-4" />,
+    icon: <FaRupeeSign className="text-4xl text-white mb-4" />,
     link: "all-about-profit",
   },
   {
     title: "TIPS & TRICKS",
-    icon: <FaLightbulb className="text-4xl text-yellow-500 mb-4" />,
+    icon: <FaLightbulb className="text-4xl text-white mb-4" />,
     link: "tips-tricks",
   },
   {
     title: "REAL USER STORIES",
-    icon: <FaUserFriends className="text-4xl text-blue-500 mb-4" />,
+    icon: <FaUserFriends className="text-4xl text-white mb-4" />,
     link: "real-user-stories",
   },
   {
     title: "AFFILATERS",
-    icon: <FaHandshake className="text-4xl text-purple-500 mb-4" />,
+    icon: <FaHandshake className="text-4xl text-white mb-4" />,
     link: "affiliaters",
   },
   {
     title: "CONTACT US",
-    icon: <FaPhoneAlt className="text-4xl text-red-500 mb-4" />,
+    icon: <FaPhoneAlt className="text-4xl text-white mb-4" />,
     link: "contact-us",
   },
 ];
@@ -45,6 +48,14 @@ const cards = [
 const Earnmore = () => {
   const location = useLocation();
   const pathParts = location.pathname.split("/").filter(Boolean);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
 
   const getPageTitle = (slug) => {
     switch (slug) {
@@ -62,65 +73,6 @@ const Earnmore = () => {
         return "Affiliaters";
       case "contact-us":
         return "Contact Us";
-      case "how-to-find-retailers-on-earnkaro":
-        return "How to find available retailers on EarnKaro?";
-      case "how-to-earn-money-through-affiliate-marketing":
-        return "How to earn money through affiliate marketing?";
-      case "how-to-check-link-performance":
-        return "How to check link performance?";
-      case "how-to-change-language":
-        return "How to change language on EarnKaro?";
-      case "how-to-check-profit-rates":
-        return "How to check profit rates?";
-      case "how-to-make-profit-links":
-        return "How to make profit links?";
-      case "how-is-your-profit-tracked":
-        return "How is your profit tracked?";
-      case "how-to-check-your-earned-profit":
-        return "How to check your earned profit?";
-      case "how-to-transfer-money-to-your-bank-account":
-        return "How to transfer money to your bank account?";
-      case "how-to-refer-and-earn-profit-for-a-lifetime":
-        return "How to refer and earn profit for a lifetime?";
-      case "how-is-referral-earnings-different-from-partner-profit-earnings":
-        return "How is referral earnings different from partner profit earnings?";
-      case "how-to-find-exclusive-deals-on-the-app-daily":
-        return "How To Find Exclusive Deals On The App Daily";
-      case "how-to-make-good-deal-links-part-1":
-        return "How To Make Good Deal Links - Part 1";
-      case "how-to-make-good-deal-links-part-2":
-        return "How To Make Good Deal Links - Part 2";
-      case "different-tips-to-share-profit-links":
-        return "Different Tips to Share Profit Links";
-      case "how-to-grow-network-and-earn-more-profit":
-        return "How to grow network and earn more profit?";
-      case "dos-and-donts-to-avoid-missing-profit":
-        return "Do's and Don'ts to avoid missing Profit?";
-      case "Watch-sahil-talk-about-his-experience-with-earnkaro":
-        return "Watch Sahil talk about his experience with EarnKaro";
-      case "Sourav-aka-eagletek-talks-about-his-financial-growth-with-earnkaro":
-        return "Sourav aka EagleTek talks about his financial growth with EarnKaro";
-      case "Get-inspired-by-prabhus-earnkaro-journey":
-        return "Get inspired by Prabhu's EarnKaro journey";
-      case "Listen-to-abduls-finance-earnings-via-earnkaro":
-        return "Listen to Abdul's finance earnings via EarnKaro";
-      case "Watch-abhilash-recount-his-earnkaro-journey":
-        return "Watch Abhilash recount his EarnKaro journey";
-      case "Listen-to-rajs-inspiring-earnkaro-journey":
-        return "Listen to Raj's inspiring EarnKaro journey";
-      case "What-is-ek-affiliaters":
-        return "What is EK Affiliaters?";
-      case "How-to-set-up-the-telegram-auto-forwarder-bot":
-        return "How to set up the Telegram auto-forwarder bot?";
-      case "How-to-automate-telegram-channel-for-auto-posting":
-        return "How to automate Telegram channel for auto-posting?";
-      case "How-to-automate-whatsapp-groups-for-auto-posting":
-        return "How to automate WhatsApp groups for auto-posting?";
-      case "How-to-get-your-own-flipkart-tag":
-        return "How to get your own Flipkart tag?";
-      case "How-to-sync-your-amazon-tag-with-ek-affiliaters":
-        return "How to sync your Amazon tag with EK Affiliaters?";
-
       default:
         return slug.replace(/-/g, " ");
     }
@@ -128,7 +80,7 @@ const Earnmore = () => {
 
   return (
     <div className="pb-10 bg-green-500 sm:bg-green-500 lg:bg-gray-100">
-      {/* ✅ Updated Breadcrumb */}
+      {/* Breadcrumb */}
       <div className="relative">
         <div className="bg-gradient-to-b from-green-400 to-green-600 p-6 hidden sm:block">
           <div className="text-white font-bold text-lg space-x-1">
@@ -146,16 +98,12 @@ const Earnmore = () => {
             {pathParts[1] && (
               <>
                 <span>/</span>
-                <Link to={`/profitshala/${pathParts[1]}`} className="hover:text-gray-200">
+                <Link
+                  to={`/profitshala/${pathParts[1]}`}
+                  className="hover:text-gray-200"
+                >
                   {getPageTitle(pathParts[1])}
                 </Link>
-              </>
-            )}
-
-            {pathParts.length >= 3 && (
-              <>
-                <span>/</span>
-                <span>{getPageTitle(pathParts[2])}</span>
               </>
             )}
           </div>
@@ -184,17 +132,30 @@ const Earnmore = () => {
               <Link
                 to={card.link}
                 key={index}
-                className="w-full h-64 bg-white p-6 rounded-xl shadow-md flex flex-col items-center justify-center hover:shadow-xl transition"
+                data-aos="zoom-in"
+                data-aos-delay={index * 100}
+                className="
+                  w-full h-64
+                  bg-green-600 text-white
+                  p-6 rounded-xl
+                  border-2 border-green-700
+                  shadow-md
+                  flex flex-col items-center justify-center
+                  transition-all duration-300 ease-out
+                  hover:scale-105 hover:-translate-y-2 hover:shadow-2xl
+                "
               >
                 {card.icon}
-                <h2 className="text-center font-semibold text-lg">{card.title}</h2>
+                <h2 className="text-center font-semibold text-lg">
+                  {card.title}
+                </h2>
               </Link>
             ))}
           </div>
         </div>
       )}
 
-      {/* Render nested subpages here */}
+      {/* Nested Routes */}
       <div className="mt-10 px-4 sm:px-8">
         <Outlet />
       </div>

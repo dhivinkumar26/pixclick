@@ -174,7 +174,7 @@ const ContactForm = () => {
             placeholder="Enter captcha"
           />
         </div>
-        {/* Submit */}4
+        {/* Submit */}
         <div>
           <button
             type="submit"
